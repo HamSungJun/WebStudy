@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>객체와 반복문</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //  우리는 배열에서 for(var i = 0 ; arr.length ; i++){}
+      //  와 같은 반복문을 통해서 배열에 담긴 내용을 출력하였다.
+
+      // 하지만 객체에서는 그 KEY가 일정한 순서가 있는것이 아니기 때문에 다른 방식
+      // 이 필요하다.
+
+      var objects = {};
+      objects["key_1"] = 9;
+      objects["key_2"] = 8;
+      objects["key_3"] = 7;
+      objects["key_4"] = 6;
+
+      // for - in 문 : for(key in (오브젝트변수이름)){}
+      // 동작 : 변수내에 존재하는 오브젝트 키들에 대해서 ~ 해당 블록을 실행하라.
+
+      for(var key_name in objects){
+        document.write("key is \'" + key_name +"\' and value is \'" + objects[key_name] + "\'<br />");
+        // key_name의 변수안에 담겨있는 값들은 오브젝트의 키값들이 된다.
+      }
+    </script>
+  </body>
+</html>

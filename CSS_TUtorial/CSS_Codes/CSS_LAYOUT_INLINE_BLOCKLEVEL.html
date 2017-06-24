@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LAYOUT</title>
+  <style>
+    h1,a {
+      border: 1px solid red;
+    }
+    h1{
+      display:inline; /*display Property를 통해 경계레벨을 컨트롤 가능.*/
+    }
+    a{
+      display :block;
+    }
+  </style>
+</head>
+<!-- 결과를 보면 h1은 페이지 전체를 경계로 가지지만 a는 자신의 크기만큼만 쓴다. 이때 h1과 같은 태그를 block Level이라 하고 a를 inline 이라고 한다. 이 경계 레벨은 컨트롤이 가능하다. -->
+<body>
+  <h1>Hello World</h1> 안녕하세요
+  <a href="https://opentutorials.org">생활코딩</a>입니다.
+</body>
+
+</html>

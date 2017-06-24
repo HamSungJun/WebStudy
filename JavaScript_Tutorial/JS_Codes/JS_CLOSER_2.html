@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>클로저2</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function outter() {
+        var title = 'coding everybody'
+        return function() {
+          alert(title);
+        }
+      }
+      inner = outter();
+      inner();
+    </script>
+  </body>
+</html>

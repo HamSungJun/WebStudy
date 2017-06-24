@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 화면상에 어디에 위치할 것인가? -->
+    <style>
+
+      #parent , #other , #grand {
+        border : 5px solid tomato;
+        margin : 10px;
+      }
+      #grand{
+        position : relative;
+      }
+      #me{
+        background-color: black;
+        color : white;
+        position: absolute;
+        /*relative : 부모의 위치의 기준에 대해서 상대적인 포지션*/
+        /*absolute : html페이지 자체를 기준으로 해서 잡히는 포지션 포지션을 앱솔로 주면 더이상 부모관계가 적용되지 않음.*/
+        left : 0;
+        top : 0;
+
+        /*오프셋을 주지 않으면 html페이지를 참조하지 않고 부모 element를 참조하여 자신이 원래 있기로 기대되는 곳에 위치한다.*/
+      }
+    </style>
+    <meta charset="utf-8">
+    <title> 포지션 </title>
+  </head>
+  <body>
+    <div id = "other"> other </div>
+    <div id = "grand">
+      grand
+      <div id = "parent"> parent
+        <div id = "me"> me </div>
+        <!-- me는 포지션이 앱솔이므로 부모 포지션이 static인건 무시하고 포지션이 relative상태인 부모를 참조하여 자신의 오프값을 통해 위치가 지정된다. -->
+      </div>
+    </div>
+  </body>
+</html>

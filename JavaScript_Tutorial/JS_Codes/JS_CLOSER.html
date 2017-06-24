@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS클로저?</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 외부함수에서 새로운 내부함수를 선언하는게 가능하다.
+      function outter() {
+        function inner() {
+          alert("opentutorials");
+        }
+        inner();
+      }
+      outter();
+
+      // 내부함수에서 외부함수의 지역변수에 접근이 가능하다.
+
+      function fruitstore() {
+        var apple = 100;
+        function fruiteater() {
+          apple = apple - 30;
+          alert(apple);
+        }
+        fruiteater();
+      }
+      fruitstore();
+    </script>
+  </body>
+</html>

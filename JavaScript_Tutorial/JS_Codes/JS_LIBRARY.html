@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery 탐험</title>
+    <script src = "jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <ul id = "list">
+      <li class = "list">empty</li>
+      <li class = "list">empty</li>
+      <li class = "list">empty</li>
+      <li class = "list">empty</li>
+      <li class = "list">empty</li>
+    </ul>
+    <input type ="button" value= "execute" id = "execute_btn" />
+    <script type="text/javascript">
+
+    // jquery의 모든 메소드의 시작은 '$' 로 시작한다.
+      $('#execute_btn').click(function(){
+          $('#list .list').text("full");
+      })
+
+    </script>
+  </body>
+</html>

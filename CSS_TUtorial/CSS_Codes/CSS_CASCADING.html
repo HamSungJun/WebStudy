@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 우선순위에 대한 내용 : 제작자 > 사용자 > 웹브라우저 -->
+  <!--  하나의 태그에 여러 CSS가 적용되었을때는 어떠한가? -->
+  <Style>
+    li {
+      color: red !important
+    }
+
+    #idsel {
+      color: blue;
+    }
+
+    .classsel {
+      color: green;
+    }
+  </Style>
+</head>
+
+<body>
+  <ul>
+    <li>HTML</li>
+    <li id="idsel" class="classsel" style="color:powderblue">CSS</li>
+    <!-- 결과적으로 태그안의 스타일 속성이 1순위 , 아이디 선택자가 2순위 클래스 선택자가 3순위 , 태그 선택자가 4순위. 즉, 선택자의 범위가 좁고 자세할 수록 순위가 높아진다. 하지만 !important 키워드를 추가해주면 우선순위를 최상위로 컨트롤 해줄 수 있다.-->
+    <li>JS</li>
+  </ul>
+</body>
+
+</html>

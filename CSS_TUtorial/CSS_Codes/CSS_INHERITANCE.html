@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+  html{color: red} /*조상의 속성을 컨트롤 해주면 물려받는 자식도 속성이 변한다*/
+  #black{color: black;} /*이후 ID선택자를 통해서 개별적으로 컨트롤 해주면 코딩하는 입장에서도 효율성이 생긴다 */
+  body{border:1px solid red;}
+  </style>
+</head>
+
+<body>
+  <h1>수업내용</h1>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="black">JavaScripts</li>
+  </ul>
+</body>
+
+</html>

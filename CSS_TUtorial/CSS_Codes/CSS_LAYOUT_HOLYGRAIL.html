@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>홀리그레일레이아웃</title>
+    <style>
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+      .header{
+        border-bottom: 1px solid green;
+      }
+
+      .footer{
+        border-top: 1px solid green;
+        padding : 20px;
+        text-align: center;
+      }
+      .content{
+        display: flex;
+      }
+
+      .content nav{
+        border-right: 1px solid green;
+      }
+      .content aside{
+        border-left : 1px solid green;
+      }
+      nav , aside{
+        flex-basis:150px;
+        flex-shrink: 0;
+      }
+      main{
+        padding : 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "container">
+      <header class = "header">
+        <h1>생활코딩</h1>
+      </header>
+      <section class = "content">
+        <nav>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+          </ul>
+        </nav>
+        <main>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut hendrerit mi. Phasellus maximus tempus nisi, ut mollis neque vulputate eget. Suspendisse posuere erat non eros vestibulum, non hendrerit velit placerat. Ut viverra tempus dolor scelerisque commodo. Vivamus ac lectus sodales risus efficitur ultricies nec ut mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et feugiat enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vel auctor urna. Fusce luctus magna mattis nisi blandit posuere. Duis ligula ex, volutpat at odio et, vulputate congue nisi.생활코딩은 일반인을 위한 코딩 수업입니다.
+        </main>
+        <aside>
+          AD
+        </aside>
+      </section>
+      <footer class = "footer">
+        <a href ="http://opentutorials.org" target="_blank">홈페이지</a>
+      </footer>
+    </div>
+  </body>
+</html>

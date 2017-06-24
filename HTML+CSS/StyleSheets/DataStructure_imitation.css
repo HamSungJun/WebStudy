@@ -1,0 +1,44 @@
+.BodyBox{
+  display: flex;
+  flex-direction: column;
+  padding : 30px;
+  margin : 30px;
+  background-color: white;
+}
+.NavBox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 120px;
+}
+.item{
+  display: inline;
+  background-color: gray;
+  color: white;
+  margin-right: 10px;
+  padding-left : 20px;
+  padding-right : 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size : 150%
+}
+
+header{
+  /*border : 2px solid tomato;*/
+  text-align: center;
+  background-image: url(http://www.myfreetextures.com/wp-content/uploads/2015/01/another-grass-texture-background-600x600.jpg);
+  font-size : 200%;
+  color : white;
+}
+body{
+  background-color: gray;
+}
+
+.content{
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  width : 1200px;
+  height : 600px;
+}

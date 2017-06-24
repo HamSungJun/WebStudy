@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>루프</title>
+  <style>
+    .container{
+    border : 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    }
+    .item{
+      border-right: 2px solid gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">
+      <script type="text/javascript">
+        var n = 0;
+        while (n < 10) {
+          document.write("coding everybody <br/>")
+          // 웹페이지에 텍스트를 출력하는 메소드
+          n++;
+        }
+      </script>
+    </div>
+   <div class="item">
+      <script type="text/javascript">
+        var o = 0;
+        while (o < 10) {
+          if (o === 7) {
+            break;
+          }
+          document.write("break at 7<br/>");
+          o++;
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

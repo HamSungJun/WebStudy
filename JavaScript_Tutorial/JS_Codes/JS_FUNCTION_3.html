@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>재밌는 JS함수</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function cal( func_name , number_1 , number_2 ){
+
+        if(func_name === "add"){
+          return (number_1 + number_2);
+        }
+        if(func_name === "sub"){
+          return (number_1 - number_2);
+        }
+        if(func_name === "mul"){
+          return (number_1 * number_2);
+        }
+        if(func_name === "div"){
+          return (number_1 / number_2);
+        }
+        if(func_name === "mod"){
+          return (number_1 % number_2);
+        }
+      }
+
+      document.write(cal("add" , 3 , 5));
+      document.write(cal("sub" , 3 , 5));
+      document.write(cal("mul" , 3 , 5));
+      document.write(cal("div" , 3 , 5));
+      document.write(cal("mod" , 3 , 5));
+    </script>
+  </body>
+</html>

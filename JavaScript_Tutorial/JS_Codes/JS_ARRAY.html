@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS어레이</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // 같은 자료형의 데이터가 담길때 이걸쓰면 좋지
+      var Arr_1 = ["a" , "b" , "c"];
+      document.write(Arr_1[0]);
+      document.write(Arr_1[1]);
+      document.write(Arr_1[2]);
+
+      function getMembers() {
+        return ['momo' , "popo" , "koko"];
+      }
+
+      var members = getMembers();
+        document.write('<br />')
+      for(var i = 0 ; i<members.length ; i++){
+        document.write(members[i].toUpperCase());
+        document.write('<br/>')
+      }
+    </script>
+  </body>
+</html>

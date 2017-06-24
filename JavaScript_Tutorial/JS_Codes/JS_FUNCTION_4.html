@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS함수4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Function_Selector(Func_name , num) {
+        return Func_name(num);
+      }
+      function plusfive(num) {
+        return (num+5);
+      }
+      function multiplyTwo(num) {
+        return (num*2);
+      }
+
+      alert(Function_Selector(plusfive,5));
+      alert(Function_Selector(multiplyTwo,3));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS함수5</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function cal(mode) {
+        var funcs = {
+          'plus' : function (left , right) {
+            return (left + right);
+          },
+          'minus' : function (left , right) {
+            return (left - right);
+          }
+          return funcs[mode];
+        }
+      }
+
+      alert(cal.('plus')(3,5));
+    </script>
+  </body>
+</html>

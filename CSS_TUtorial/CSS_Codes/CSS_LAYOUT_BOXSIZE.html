@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BOXSIZE</title>
+    <style>
+      *{
+        /*이 페이지에 등장하는 모든 태그에 대한 선택자*/
+        box-sizing:border-box;
+      }
+      div{
+        margin : 10px;
+        width : 150px;
+        /*박스자체의 테두리 두께가 너무 두꺼워서 크기가 달라보인다.*/
+        /*이럴때는 box-sizing property 이용.*/
+      }
+      .small{
+        border : 10px solid black;
+      }
+      .large{
+        border : 30px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="small">
+      hello
+    </div>
+    <div class="large">
+      hello
+    </div>
+  </body>
+</html>

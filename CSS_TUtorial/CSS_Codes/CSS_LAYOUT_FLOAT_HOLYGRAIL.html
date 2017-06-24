@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>플렉스홀리그레일레이아웃</title>
+    <style>
+    .container{
+      border : 1px solid gray;
+      display: flex;
+      flex-direction: column;
+      width : 50%;
+      align-items: center;
+      margin : auto;
+
+    }
+    .section{
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      display: flex;
+      flex-direction: row;
+    }
+    .nav
+    {
+      border-right : 1px solid gray;
+      text-align : center;
+    }
+    .aside
+    {
+      border-left : 1px solid gray;
+      text-align: center;
+    }
+    .main{
+      text-align: center;
+    }
+    .footer{
+      text-align: center;
+      height: 2rem;
+      padding-bottom: 1px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class = "container">
+      <header class ="header">
+        <h1>CSS</h1>
+      </header>
+      <section class = "section">
+        <nav class = "nav">
+          <ul>
+            <li>position</li>
+            <li>float</li>
+            <li>flex</li>
+          </ul>
+        </nav>
+        <main class = "main">
+          <h2>float</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </main>
+        <aside class="aside">
+          AD
+        </aside>
+      </section>
+      <footer class ="footer">Copyright = HSJPRIME</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Conditional Statement</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      if (true) {
+        alert("result true");
+      }
+      // 조건문이 true이면 해당 블록의 내용을 실행.
+      if (false) {
+        alert("result false");
+      }
+      // 조건문이 false이면 해당 블록의 내용을 실행하지 않음.
+
+      if (1 === 0) {
+        alert("1 === 0");
+      }
+      // 조건이 만족되지 않을경우 else 블록의 내용을 실행.
+      else {
+        alert("1 !== 0");
+      }
+
+      if (false) {
+        alert("if문 블록 실행됨");
+      }
+      else if (false) {
+        alert("else if문 블록 실행됨");
+      }
+      else {
+        alert("else문 블록 실행됨");
+      }
+      //if - else if - else 형태는 모든 조건식이 false이면 else가 실행되고 조건식중 위에서 순서대로 하나라도 true가 있으면 그 해당 블록만 실행되고 나머지는 패스
+    </script>
+  </body>
+</html>

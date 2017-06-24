@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>객체 내의 객체</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var LOB = {
+        "list" : {"minsu" : 30 , "asdf" : 60 , "qwer" : 90},
+        "show" : function() {
+          for(var name in this.list){
+            document.write("name is " + name + "grade is " + this.list[name]);
+          }
+        }
+      };
+      alert(LOB["list"]["minsu"]);
+      // LOB객체의 List 객체의 key "minsu"에 접근
+      LOB["show"]();
+      // 함수객체에 접근했을때
+      // 객체의 키에대한 두가지 접근
+      // 1.객체.키이름 , 함수이면 옆에() LOB.show();
+      // 2.객체["키이름"] , 함수이면 대괄호 옆에 () LOB["show"]()
+    </script>
+
+  </body>
+</html>

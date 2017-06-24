@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>유효범위 - Scope</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 변수의 수명?
+      var vscope = 'global';
+      function fscope(){
+        // var vscope = 'local'
+        // 함수내에 같은 이름의 변수가 선언되어 있다면 (지역변수) 를 먼저 접근
+        // 함수내에 해당하는 변수가 없다면 (전역변수) 를 먼저 접근
+          alert(vscope);
+      }
+      fscope();
+    </script>
+  </body>
+</html>
