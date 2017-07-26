@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>라벨로 묶은 체크박스</title>
+  </head>
+  <body>
+    <h1>진지한 설문조사</h1>
+
+    <form class="Survey" action="Survey.php" method="post">
+      <ol type="A">
+        <li>오늘 방을 둘러본 결과 적당한 투자 시간은?</li>
+        <br>
+          <ul>
+            <li><label for="Time_1"><input type="checkbox" id="Time_1" value="">1~2시간</label>
+            </li>
+
+            <li><label for="Time_2"><input type="checkbox" id="Time_2" value="">2~3시간</label>
+            </li>
+
+            <li><label for="Time_3"><input type="checkbox" id="Time_3" value="">3~4시간</label>
+            </li>
+
+            <li><label for="Time_4"><input type="checkbox" id="Time_4" value="">4~5시간</label>
+            </li>
+          </ul>
+          <br>
+          <li>맘에드는 빌딩은?</li>
+          <br>
+          <ul>
+            <li><label for="Building_1"><input type="checkbox" id="Building_1" value="">아당빌</label>
+            </li>
+
+            <li><label for="Building_2"><input type="checkbox" id="Building_2" value="">재능빌딩</label>
+            </li>
+
+            <li><label for="Building_3"><input type="checkbox" id="Building_3" value="">민서헤어샵</label>
+            </li>
+
+            <li><label for="Building_4"><input type="checkbox" id="Building_4" value="">떼드떼커피마시쪙</label>
+            </li>
+          </ul>
+      </ol>
+
+      <br>
+
+      <input type="submit" name="제출" value="결과제출">
+    </form>
+
+  </body>
+</html>
