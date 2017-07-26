@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>회원가입창 만들어보기</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            li{
+                padding: 5px;
+                text-align: left;
+            }
+            label , input{
+                
+                padding: 5px;
+                
+                
+            }
+            fieldset{
+                padding: px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HSJPRIMES 회원가입</h1>
+      <form action="register.php">
+          <fieldset>
+              <legend>개인정보</legend>
+            <ul>
+
+                <li>성함<label for="name"><input type="text" id="name" value=""></label></li>
+                <li>아이디<label for="id"><input type="text" id="id" value=""></label></li>
+                <li>비밀번호<label for="pw"><input type="password" id="pw" value=""></label></li>
+                <li>주소<label for="adr"><input type="text" id="adr" value=""></label></li>
+
+            </ul>
+            
+          </fieldset>
+          <br>
+          <fieldset>
+              <legend>선택사항</legend>
+            <li><label for="sns">SNS수신<input type="checkbox" name="sns" value=""></label></li>
+            <li><label for="marry">혼인유무<input type="checkbox" name="marry" value=""></label></li>
+            <li><label for="privacy">개인정보이용동의<input type="checkbox" name="privacy" value=""></label></li>
+          </fieldset>
+          <br>       
+      </form>
+        <input type="submit" name="" value="회원가입하기">
+        <input type="submit" name="" value="회원가입 취소">
+    </body>
+</html>
