@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            label{
+                color: greenyellow;
+                margin: 10px;
+                
+
+            }
+            input , select{
+                color: black;
+                margin-left: 10px;
+                width: 150px;
+            }
+
+            #submit{
+                background-color :antiquewhite;
+                margin : 10px;
+                width: 6rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>여름방학 특강 신청</h1>
+        <fieldset>
+            <legend>수강과목</legend>
+            <label for="Eng"><b>영어회화 초급</b><input type="text" name="Eng" value="오전 09:00 - 11:00" readonly></label>    
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>신청자</legend>
+             <label for="name"><b>이름</b><input type="text" name="Eng" value=""></label>
+             <br>
+              <label for="number"><b>학번</b><input type="text" name="Eng" placeholder="하이픈 없이 입력..."></label>
+              <br>
+               <label for="major"><b>학과</b>
+               <select>
+                    <option value="a">재료공학과</option>
+                    <option value="b">컴퓨터공학과</option>
+                    <option value="c">기계공학과</option>
+                    <option value="d">불어불문학과</option>
+                </select>
+                </label>
+        </fieldset>
+
+        <input type="submit" name="" value="신청하기" id = "submit">
+    </body>
+</html>

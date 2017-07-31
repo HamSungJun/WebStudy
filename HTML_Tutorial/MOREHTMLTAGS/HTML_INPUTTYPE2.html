@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+           .container{
+               background-color: #80ffff;
+               padding: 5px;
+               margin : 5px;
+               border: 2px solid black;
+               display: inline-block
+               
+           }
+           input,option,select{
+               background-color : white;
+               width: 150px;
+           }
+           input{
+                text-align: right;
+           }
+           .submit , .reset{
+               text-align: center;
+               background-color: yellow;
+               width: 6rem;
+           }
+        </style>
+    </head>
+    <body>
+        <h1>호텔 예약하기</h1>
+        <fieldset>
+            <legend>호텔정보선택</legend>
+            <div class = "container">
+                <label  for="job">호텔이름
+                    <select name="job">
+                        <option value="">지역군선택</option>
+                        <option value="울진">울진</option>
+                        <option value="삼척">삼척</option>
+                        <option value="양양">양양</option>
+                        <option value="강릉">강릉</option>
+                    </select>
+                </label>
+            </div>
+                <br>
+             <div class = "container">
+                    <label for="">인원<input type="number" name="" value="">명</label>    
+            </div>
+                <br>
+            <div class = "container">
+                    <label for="">객실<input type="number" name="" value="">개</label>    
+            </div>
+                <br>
+            <div class = "container">
+                    <label for="">체크인 시간<input type="datetime-local" name="" value=""></label>    
+            </div>
+                <br>
+        </fieldset>
+        
+        <div class = "container" >
+            <input class = "submit" type="submit" name="" value="예약하기">
+            <input class = "reset" type="reset" name="" value="초기화">
+            <input type="button" name="" value="새 창 열기" onclick="window.open()">
+            <br>
+            <label for="">예약전표첨부 <input type="file" name="" value=""></label>
+        </div>
+    </body>
+</html>
