@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>보더박스와 콘텐츠 박스</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+        .C-BOX{
+            display: inline-block;
+            box-sizing : content-box;
+            border: 2px solid gray;
+            width : 100px;
+            height: 100px;
+            padding: 30px;
+            /*콘텐츠 영역 :width 100에서 좌우 패딩 60과 테두리 양옆 4px 하면 164  */
+        }
+        .B-BOX{
+            display: inline-block;
+            border: 2px solid red;
+            width : 100px;
+            height: 100px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="C-BOX">
+            나는 콘텐트 박스
+        </div>
+
+        <div class="B-BOX">
+            나는 보더 박스
+        </div>
+    </body>
+</html>

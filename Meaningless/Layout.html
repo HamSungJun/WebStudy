@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>다용도 홈페이지</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            body{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1S4EjNoYbXiY6Nu52h4EqYqMJcNLq-FZBRfBEu_OO4ct_xqGd);
+                background-repeat: no-repeat;
+                background-size :cover;
+                
+            }
+            div{
+                border: 1px solid gray;
+            }
+            #Container{
+
+                width: 960px;
+                 margin : 0 auto; 
+                padding: 20px;
+
+            }
+            #Header{
+                
+                background : -webkit-linear-gradient(tomato , yellow);
+                text-align: center;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            #Content{
+                float : left;
+                box-sizing: border-box;
+                height: 740px;
+                width: 740px;
+                margin-bottom : 20px;
+                padding: 20px;
+            }
+            #Sidebar{
+                float : right;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                height: 740px;
+                width : 200px;
+                padding: 20px;
+            }
+            #Footer{
+                box-sizing: border-box;
+                clear: both;
+                text-align: center;
+                padding: 20px;
+                
+            }
+            .newsframe{
+                width : 700px;
+                height: 700px;
+                border: 2px solid black;
+            }
+            #Footer{
+                background-color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id = "Container">
+
+            <div id = "Header">
+                <h1>네이버 뉴스</h1>
+                
+            </div>
+
+            <div id = "Content">
+                <iframe class="newsframe" name="newsframe"></iframe>
+                <!-- <h2></h2> -->
+                <!-- <p>Laborum esse occaecat Lorem officia officia anim id cillum est ex consectetur. Amet cupidatat officia aliquip magna velit aute velit non culpa commodo quis. Occaecat sint sunt tempor culpa cillum fugiat Lorem. Sit aliqua ad labore ex eiusmod velit consequat ut do.</p> -->
+            </div>
+
+            <div id = "Sidebar">
+                <h2>네비게이션</h2>
+                <ul>
+                    <li><a href="http://news.naver.com/" target = "newsframe">NAVER_News</a></li>
+                    <li><a href="http://media.daum.net/" target = "newsframe">Daum_News</a></li>
+                    <li><a href="https://news.google.com/news/?ned=us&hl=en" target = "newsframe">Google_News</a></li>
+                    <li><a href="https://portal.hanyang.ac.kr/sso/lgin.do" target = "newsframe">HY_IN</a></li>
+                    <li><a href="https://github.com/" target = "newsframe">Github</a></li>
+                    
+                </ul>
+            </div>
+
+            <div id = "Footer">
+               
+                <p>Copyright 2017 HSJPRIME All rights Reserved.</p>
+            </div>
+
+        </div>
+    </body>
+</html>
