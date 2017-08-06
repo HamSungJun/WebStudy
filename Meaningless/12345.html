@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+         .container{
+             border: 3px dotted black;
+             box-sizing: border-box;
+            
+             width : 500px;
+             height : 500px;
+             margin : 0px auto;
+             position: relative;
+         }
+         .BOX{
+             position: absolute;
+             width: 100px;
+             height : 100px;
+             border: 1px solid black;
+         }
+
+         #CARD_1{
+            background: antiquewhite;
+            top : 200px;
+            left : 200px;
+            z-index: 3;
+         }
+         #CARD_2{
+            background: aquamarine;
+            top : 180px;
+            left : 220px;
+            z-index: 2;
+         }
+         #CARD_3{
+            background: blueviolet;
+            top : 160px;
+            left : 240px;
+            z-index: 1;
+         }
+         #CARD_4{
+            background: chartreuse;
+            top : 140px;
+            left : 260px;
+            z-index: 5;
+         }
+         #CARD_5{
+            background: cadetblue;
+            top : 120px;
+            left : 280px;
+            z-index: 4;
+         }
+
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "BOX" id = "CARD_1">
+                1
+            </div>
+            <div class = "BOX" id = "CARD_2">
+                2
+            </div>
+            <div class = "BOX" id = "CARD_3">
+                3
+            </div>
+            <div class = "BOX" id = "CARD_4">
+                4
+            </div>
+            <div class = "BOX" id = "CARD_5">
+                5
+            </div>
+        </div>
+    </body>
+</html>
