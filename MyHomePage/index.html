@@ -1,91 +1,265 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="KO">
     <head>
-        <title>HSJPRIME</title>
+        <title>HSJPRIME Home Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./css/style.css" rel="stylesheet">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+
         <style>
-            #textlink{
-              text-decoration : underline;
-              color : black;
-            }
-            .LOGO{
-                display : block;
-                float: right;
-                margin-right: 100px;
-                width: 300px;
-                height: 300px;
-                border: 5px solid tomato;
-            }
-            .p_1{
-                position: absolute;
-                display: inline;
-                left : 300px;
-            }
-            .p_2{
-                position :absolute;
-                display: inline;
-                top : 300px;
-                left : 300px;
-            }
-            h1 , p , h2 {
-                display: inline;
-            }
+
+        html{
+            background-image: url("./Materials/images/Background_Wood.jpg");
+            font-family :cursive;
+            font-size: 18px;
+            line-height: 1.5em;
+             
+        }
+
+        .container{
+            border: 2px groove gray;
+            width : 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 25px; 
+        }
+        header{
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            border-radius: 30px;
+            padding: 25px;
+            width: 1100px;
+            height: 200px;
+            margin-bottom: 30px;
+
+        }
+        .logo{
+            position: absolute;
+            left: 150px;
+            top: 24px;
+        }
+        .logo img{
+            width : 200px;
+            height: 200px;
+
+        }
+        nav{
+            position: absolute;
+            /* background: red; */
+            top : 180px;
+            left : 550px;
+        }
+        nav ul{
+            margin: 0;
+        }
+        nav ul li{
+            float: left;
+            list-style-type: none;
+            margin-right: 60px;
+            text-decoration-line :underline;
+             
+        }
+        a{
+            color: black;
+        }
+        #home:active{
+
+            color : gray;
+            font-size: 130%;
+        }
+        #pictures:active{
+
+            color : gray;
+            font-size: 130%;
+        }
+        #diary:active{
+
+            color : gray;
+            font-size: 130%;
+        }
+        #guest:active{
+
+            color : gray;
+            font-size: 130%;
+        }
+        li:hover{
+
+           -webkit-transform: rotate(20deg); 
+
+        }
+        .headerpic{
+            position: absolute;
+            top : 0px;
+            left: 600px;
+        }
+        .headerpic img{
+
+            width: 400px;
+            height : 150px;
+            
+        }
+        section{
+
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            border-radius: 30px;
+            padding: 25px;
+            width: 1100px;
+            margin-bottom: 30px;
+            height: auto;
+        }
+        .faceimg{
+
+            float: right;
+            margin-right: 50px;
+            margin-top: 15px;
+            
+
+        }
+        .faceimg img{
+
+            border: 3px dotted chocolate;
+            width: 300px;
+            height: 300px;
+            
+            
+        }
+        footer{
+
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative; 
+            border-radius: 30px;
+            padding: 25px;
+            width: 1100px;
+            height: 500px;
+           
+        }
+       .copyrights{
+           text-align: center;
+       }
+       #map{
+        border-radius: 30px;
+        position: absolute;
+        top : 20px;
+        right: 20px;
+        height: 450px;
+        width: 800px;
+        border: 3px solid black;
+        
+       }
+       footer h3{
+           display: inline;
+           font-size: 25px;
+       }
+       .copyrights{
+
+           position: absolute;
+           top : 500px;
+           left: 380px;
+           text-align: center;
+            
+       }
+       #route{
+           padding-left: 50px;
+       }
+       #HYU{
+        
+        font-size: 20px;
+        padding-left : 20px; 
+       }
+       .Gmap{
+           position: absolute;
+           left : 90px;
+           top : 225px;
+       }
+       .Gmap img{
+           width: 150px;
+           height: 200px;
+       }
         </style>
+        
     </head>
     <body>
-        <div class="p_1">
-            <h1>HSJPRIME</h1>
-            <br><br>
-            <p>Email : wleo12345@naver.com</p>
-            <br><br>
-            <h2>Who Am I?</h2>
-            <br><br>
-            <p>프론트엔드 웹 기술에 관심을 갖고 있습니다.<br>
-                한양대학교 컴퓨터 공학과 2학년 재학중에 있으며 <br>
-                자취방에서 젊은 세월 낭비중입니다.
-            </p>
-            <br><br><br>
-             <hr>
-        </div>
+        <div class="container">
 
-        <div class="p_2">
-           <h2>Skills</h2>
-            <ul>
-                <li><b>사용언어</b></li>
-                    <br>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Polymer</li>
-                        <li>jQuery</li>
-                    </ul>
-                    <br>
-                <li><b>개발 툴</b></li>
-                    <br>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>IntelliJ</li>
-                        <li>Atom</li>
-                    </ul>
-                <li>MY SNS</li>
+            <header>
+                <div class="headerpic">
+                    <img src="./Materials/images/headerpic.png" alt="headerpic">
+                </div>
+                <div class="logo">
+                    <img src="./Materials/images/HSJPRIMELOGO.png" alt="logo">
+                </div>
+                    <nav>
+                        <ul>
+
+                            <li>
+                                <a id ="home" href="#">Home</a> 
+                            </li>
+                            <li>
+                                 <a id ="pictures" href="#">Pictures</a> 
+                            </li>
+                            <li>
+                                 <a id ="diary" href="#">Diary</a> 
+                            </li>
+                            <li>
+                                 <a id ="guest" href="#">Guest</a> 
+                            </li>
+
+                        </ul>
+                       
+                    </nav>
+            </header>
+
+            <section>
+                <div class = "faceimg">
+                    <img src="./Materials/images/myface.jpg" alt="my face">
+                </div>
+
+                <h3>Name : 함성준</h3>
+                <hr>
+                <h3>Email : wleo12345@naver.com</h3>
+                <hr>
+                <h3>Hobby : 배드민턴 , 정다선</h3>
+                <hr>
+                <h3>Phone-call : 010 - 3455 - 1209</h3>
+                <hr>
+                <h3>Who am I? : 한양대 컴퓨터 공학과 13학번 프론트엔드</h3>
+                <hr>
+
+            </section>
+
+            <footer>
+                <h3 id="route">찾아오시는 길</h3>
+                <hr>
                 <br>
-                <ul>
-                  <li><a class = "textlink" target="_blank" href="https://www.facebook.com/">페이스북</a></li>
-                    <li><a class = "textlink" href="History.html">함성준 히스토리 ㄱㄱ?</a></li>
-                </ul>
-            </ul>
+                <br>
+                <p id="HYU">한양대학교 에리카 캠퍼스</p>
+                <!-- google map  -->
+                
+                <div id="map"></div>
+                <script>
+                var map;
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 37.297456, lng: 126.837458},
+                    zoom: 16,
+                    });
+                }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpcSK-cJCEcdcjzISpON4eZSDXdi9nOY&callback=initMap"
+                async defer></script>
+
+                <div class="copyrights">
+                    Copyrights HSJPRIME All Rights Reserved.
+                </div>
+
+                <div class="Gmap">
+                    <img src="http://www.econovill.com/news/photo/201510/267521_68008_1128.jpg" alt="googlemaplogo">
+                </div>
+
+            </footer>
         </div>
-
-        </div>
-        <figure>
-
-          <img src="https://thumb.ibb.co/jKk5k5/HSJPRIMELOGO.png" alt="HSJPRIMELOGO.png"
-          class="LOGO">
-
-        </figure>
-
+           
+       
     </body>
 </html>
