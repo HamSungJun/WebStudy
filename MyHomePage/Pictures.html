@@ -107,75 +107,73 @@
             width: 1100px;
             margin-bottom: 30px;
             height: auto;
+            text-align: left;
+            
+        }
+        hr{
+            width: 750px;
+            display: inline-block;
+            
         }
         .faceimg{
 
-            float: right;
-            margin-right: 50px;
-            margin-top: 15px;
+            float: left;
+            margin : 20px;
+            height: auto;
             
-
         }
         .faceimg img{
 
-            border: 3px dotted chocolate;
+            /* border: 3px dotted black; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             width: 300px;
-            height: 300px;
-            
-            
-        }
-        footer{
-
-            background-color: rgba(255, 255, 255, 0.7);
-            position: relative; 
+            height: 350px;
             border-radius: 30px;
-            padding: 25px;
-            width: 1100px;
-            height: 500px;
-           
-        }
-       .copyrights{
-           text-align: center;
-       }
-       #map{
-        border-radius: 30px;
-        position: absolute;
-        top : 20px;
-        right: 20px;
-        height: 450px;
-        width: 800px;
-        border: 3px solid black;
-        
-       }
-       footer h3{
-           display: inline;
-           font-size: 25px;
-       }
-       .copyrights{
-
-           position: absolute;
-           top : 500px;
-           left: 380px;
-           text-align: center;
             
-       }
-       #route{
-           padding-left: 50px;
-       }
-       #HYU{
+            
+        }
+        .page_tag{
+        display : inline;
+        position: absolute;
+        text-align: center;
         
-        font-size: 20px;
-        padding-left : 20px; 
-       }
-       .Gmap{
-           position: absolute;
-           left : 90px;
-           top : 225px;
-       }
-       .Gmap img{
-           width: 150px;
-           height: 200px;
-       }
+        margin: 0 auto;
+        font-family: "Roboto Slab";
+        font-weight: 600;
+        font-size: 4em;
+        background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 80px;
+        top : -60px;
+        left : 700px;
+        }
+        h3{
+            width: 700px;
+            display: inline-block;
+            position:relative;
+            /* line-height: 1.5em; */
+            
+        }
+        .Star_box{
+            display: inline-block;
+            border: 3px dashed gray;
+            margin-bottom: 25px;
+            position: absolute;
+            
+            width: 280px;
+            height: 65px;
+            bottom : 10px;
+            left : 45px;
+            border-radius: 30px;
+        }
+        .Star_box img{
+            width: 280px;
+            height: 65px;
+            border-radius: 30px;
+        }
         </style>
         
     </head>
@@ -196,7 +194,7 @@
                                 <a id ="home" href="http://god1857.dothome.co.kr" target="_self">Home</a> 
                             </li>
                             <li>
-                                 <a id ="pictures" href="./Pictures.html">Pictures</a> 
+                                 <a id ="pictures" href="./Pictures.html" target="_self">Pictures</a> 
                             </li>
                             <li>
                                  <a id ="diary" href="#">Diary</a> 
@@ -205,59 +203,64 @@
                                  <a id ="guest" href="#">Guest</a> 
                             </li>
 
+
                         </ul>
                        
                     </nav>
             </header>
 
             <section>
+
                 <div class = "faceimg">
-                    <img src="./Materials/images/myface.jpg" alt="my face">
+                    <img src="./Materials/images/myface.jpg" alt="samaksa">
                 </div>
 
-                <h3>Name : 함성준</h3>
+                <h3>제목 : 삼막사 계곡 홀로여행</h3>
                 <hr>
-                <h3>Email : wleo12345@naver.com</h3>
+                <h3>일자 : 2017.08.07 월요일</h3>
                 <hr>
-                <h3>Hobby : 배드민턴 , 정다선</h3>
+                <h3>장소 : 안양 삼막사</h3>
                 <hr>
-                <h3>Phone-call : 010 - 3455 - 1209</h3>
+                <h3>느낌 : 적막하고 신선놀음 하게 생긴 곳</h3>
                 <hr>
-                <h3>Who am I? : 한양대 컴퓨터 공학과 13학번 프론트엔드</h3>
-                <hr>
+                <h3>에피소드 : 시간도 많아서 삼막사 본당까지 걸어서 가보려고 했는데
+                    본당까지 10KM이라고 표지에 나와서 중간에 내려옴.
+                </h3>
+             
+                
+                
+                <p class="page_tag">PICTURES</p>
+                 <div class="Star_box">
+                    <!-- <img src="./Materials/images/FIVE_STAR.PNG" alt=""> -->
+                </div>
 
             </section>
 
-            <footer>
-                <h3 id="route">찾아오시는 길</h3>
+            <section>
+
+                <div class = "faceimg">
+                    <img src="./Materials/images/chicken_girl.jpg" alt="chicken_girl">
+                </div>
+
+                <h3>제목 : 치킨 걸 정다선</h3>
                 <hr>
-                <br>
-                <br>
-                <p id="HYU">한양대학교 에리카 캠퍼스</p>
-                <!-- google map  -->
-                
-                <div id="map"></div>
-                <script>
-                var map;
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 37.297456, lng: 126.837458},
-                    zoom: 16,
-                    });
-                }
-                </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhpcSK-cJCEcdcjzISpON4eZSDXdi9nOY&callback=initMap"
-                async defer></script>
+                <h3>일자 : YYYY / MM / DD</h3>
+                <hr>
+                <h3>장소 : 한양대 안단테 광장 앞 유가네 닭갈비</h3>
+                <hr>
+                <h3>느낌 : 차분한 미소와 앞치마가 모성을 느끼게 해줍니다.</h3>
+                <hr>
+                <h3>에피소드 : 카카오톡 같이 하다가 전원 안눌러서 1이 자꾸 사라지는데 답장이 없는거에요 무슨일 생긴줄 알아서
+                    후다닥 뛰어갔더니 점심밥을 먹고 있던데요?
+                </h3>
 
-                <div class="copyrights">
-                    Copyrights HSJPRIME All Rights Reserved.
+                  <div class="Star_box">
+                    <!-- <img src="./Materials/images/FIVE_STAR.PNG" alt=""> -->
                 </div>
 
-                <div class="Gmap">
-                    <img src="http://www.econovill.com/news/photo/201510/267521_68008_1128.jpg" alt="googlemaplogo">
-                </div>
+            </section>
 
-            </footer>
+           
         </div>
            
        
