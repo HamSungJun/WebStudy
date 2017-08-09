@@ -10,7 +10,7 @@
 
         html{
             background-image: url("./Materials/images/Background_Wood.jpg");
-            font-family :cursive;
+            font-family :sans-serif;
             font-size: 18px;
             line-height: 1.5em;
              
@@ -101,37 +101,13 @@
         section{
 
             background-color: rgba(255, 255, 255, 0.7);
-            position: relative;
+            position: relative; 
             border-radius: 30px;
             padding: 25px;
             width: 1100px;
             margin-bottom: 30px;
-            height: auto;
-            text-align: left;
-            
-        }
-        hr{
-            width: 750px;
-            display: inline-block;
-            
-        }
-        .faceimg{
-
-            float: left;
-            margin : 20px;
-            height: auto;
-            
-        }
-        .faceimg img{
-
-            /* border: 3px dotted black; */
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 300px;
-            height: 350px;
-            border-radius: 30px;
-            
+           
+           
             
         }
         .page_tag{
@@ -150,29 +126,57 @@
         top : -60px;
         left : 700px;
         }
-        h3{
-            width: 700px;
-            display: inline-block;
-            position:relative;
-            /* line-height: 1.5em; */
+        div.imgbox{
+            border: 2px solid black;
+            width: 300px;
+            height: 350px;
+            display :inline-block;
+            box-sizing: border-box;
+            border-radius: 30px;
+            margin-bottom : 25px;
+            margin-right : 25px;
+            float: left; 
             
         }
-        .Star_box{
+        div.textbox{
+            border: 2px solid black;
+            width: 770px;
+            height: 450px;
             display: inline-block;
-            border: 3px dashed gray;
-            margin-bottom: 25px;
-            position: absolute;
-            
-            width: 280px;
-            height: 65px;
-            bottom : 10px;
-            left : 45px;
+            box-sizing: border-box;
             border-radius: 30px;
+            padding: 25px;
+            margin-bottom : 25px;
+            text-align: left;
+            font-size: 20px;
+            float: right;
         }
-        .Star_box img{
-            width: 280px;
-            height: 65px;
+        div.starbox{
+            border: 2px solid black;
+            width: 300px;
+            height: 75px;
+            display: inline-block;
+            box-sizing: border-box;
             border-radius: 30px;
+            margin-bottom : 25px;
+            margin-right : 25px; 
+            clear: both;
+            
+        }
+        #contentimg{
+            
+            width: 296px;
+            height: 346px;
+            border-radius: 28px;
+            }
+        #starimg{
+             width: 296px;
+            height: 71px;
+             border-radius: 28px;
+             opacity: 0.75
+        }
+        p{
+            line-height: 1.5em;
         }
         </style>
         
@@ -210,57 +214,313 @@
             </header>
 
             <section>
-
-                <div class = "faceimg">
-                    <img src="./Materials/images/myface.jpg" alt="samaksa">
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/chicken_girl.jpg" alt="">
                 </div>
 
-                <h3>제목 : 삼막사 계곡 홀로여행</h3>
-                <hr>
-                <h3>일자 : 2017.08.07 월요일</h3>
-                <hr>
-                <h3>장소 : 안양 삼막사</h3>
-                <hr>
-                <h3>느낌 : 적막하고 신선놀음 하게 생긴 곳</h3>
-                <hr>
-                <h3>에피소드 : 시간도 많아서 삼막사 본당까지 걸어서 가보려고 했는데
-                    본당까지 10KM이라고 표지에 나와서 중간에 내려옴.
-                </h3>
-             
-                
-                
-                <p class="page_tag">PICTURES</p>
-                 <div class="Star_box">
-                    <!-- <img src="./Materials/images/FIVE_STAR.PNG" alt=""> -->
+                <div class = "textbox">
+                    
+                    <p>제목 : 치킨 걸 정다선 </p>
+                    <hr>
+                    <p>일자 : YYYY / MM / DD</p>
+                    <hr>
+                    <p>장소 : 한양대 안단테 광장 앞 유가네 닭갈비</p>
+                    <hr>
+                    <p>느낌 : 차분한 미소와 앞치마가 모성을 느끼게 해줍니다.</p>
+                    <hr>
+                    <p>에피소드 : 카카오톡 같이 하다가 전원 안눌러서 1이 자꾸 사라지는데 답장이 없는거에요 무슨일 생긴줄 알아서 후다닥 뛰어갔더니 점심밥을 먹고 있던데요?</p>
+                    
+                    <div class="page_tag">
+                        PICTURES
+                    </div>
                 </div>
 
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FOUR_STAR.jpg" alt="">
+                </div>
+            </section>
+
+             <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/date_movie.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 덩케르크 봤던 날 </p>
+                    <hr>
+                    <p>일자 : 2017 / 07 / 22</p>
+                    <hr>
+                    <p>장소 : 안산 중앙동 MEGABOX</p>
+                    <hr>
+                    <p>느낌 : 빵실한 볼살이 진짜 귀엽다.</p>
+                    <hr>
+                    <p>에피소드 : 크리스토퍼 놀란 감독의 영화라면 무조건 봐야 된대서 보러 갔는데 미남 배우들만 잔뜩 나왔다. 난 속으로 오늘 고백하려고 준비하고
+                        있었는데 나를 더 긴장하게 했다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FIVE_STAR.jpg" alt="">
+                </div>
+            </section>
+
+             <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/donkey_cafe.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 아프리카 당나귀 카페 데이트 </p>
+                    <hr>
+                    <p>일자 : 기억이 안난다.</p>
+                    <hr>
+                    <p>장소 : 한양대 대학가에 있는 아프리카 당나귀 카페</p>
+                    <hr>
+                    <p>느낌 : B612 꾸미기 기능이 겨우 살려낸 기적의 사진</p>
+                    <hr>
+                    <p>에피소드 : 카페에서 서로 공부하던 도중에 다선이가 내 어깨에 고개를 기대주었는데 진짜 행복했다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/THREE_STAR.jpg" alt="">
+                </div>
             </section>
 
             <section>
-
-                <div class = "faceimg">
-                    <img src="./Materials/images/chicken_girl.jpg" alt="chicken_girl">
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/namsan_picnic.jpg" alt="">
                 </div>
 
-                <h3>제목 : 치킨 걸 정다선</h3>
-                <hr>
-                <h3>일자 : YYYY / MM / DD</h3>
-                <hr>
-                <h3>장소 : 한양대 안단테 광장 앞 유가네 닭갈비</h3>
-                <hr>
-                <h3>느낌 : 차분한 미소와 앞치마가 모성을 느끼게 해줍니다.</h3>
-                <hr>
-                <h3>에피소드 : 카카오톡 같이 하다가 전원 안눌러서 1이 자꾸 사라지는데 답장이 없는거에요 무슨일 생긴줄 알아서
-                    후다닥 뛰어갔더니 점심밥을 먹고 있던데요?
-                </h3>
-
-                  <div class="Star_box">
-                    <!-- <img src="./Materials/images/FIVE_STAR.PNG" alt=""> -->
+                <div class = "textbox">
+                    
+                    <p>제목 : 초등학교 동창 친구들 서울 명동 탐방기 </p>
+                    <hr>
+                    <p>일자 : 기억이 안난다.</p>
+                    <hr>
+                    <p>장소 : 서울 남산 가는 길 언덕</p>
+                    <hr>
+                    <p>느낌 : Ugly U4</p>
+                    <hr>
+                    <p>에피소드 : 서로 오늘은 노래방 꼭 찾아서 가자고 하던 중 어쩌다가 남산 가는 길까지 도착해서 사진이나 찍자고 했던 곳.
+                        서로 정말 친해보이지만 연기다.
+                    </p>
+                    
                 </div>
 
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FIVE_STAR.jpg" alt="">
+                </div>
             </section>
 
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/three_poors.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 세 얼간이 <영화> </p>
+                    <hr>
+                    <p>일자 : 기억이 안난다.</p>
+                    <hr>
+                    <p>장소 : 명동 호텔 프린스 304호 객실</p>
+                    <hr>
+                    <p>느낌 : 에너지 낭비 , 시간 낭비</p>
+                    <hr>
+                    <p>에피소드 : 지호가 하루 늦게 도착해서 객실에 짐 내리는 순간을 참지 못하고 침대에 다같이 누워 시간낭비 한 순간을 담았다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/TWO_STAR.jpg" alt="">
+                </div>
+            </section>
+
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/suit.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 명동 열아홉살 상점 방문 </p>
+                    <hr>
+                    <p>일자 : 기억이 안난다.</p>
+                    <hr>
+                    <p>장소 : 명동 상가 어딘가</p>
+                    <hr>
+                    <p>느낌 : 소녀시대 Gee 무대 잘 봤던 기억이 난다.</p>
+                    <hr>
+                    <p>에피소드 : 연수와 명동 이곳저곳 돌아다니다가 발견한 제복! 난 정장이 좋다. 깔끔하고 내 취향이다.
+                        미래의 배우자가 있다면 도전!
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FIVE_STAR.jpg" alt="">
+                </div>
+            </section>
+
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/toy_19.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 남자라면 </p>
+                    <hr>
+                    <p>일자 : 그냥 보고 </p>
+                    <hr>
+                    <p>장소 : 지나 칠 수 없는 곳</p>
+                    <hr>
+                    <p>느낌 : 난 고자가 아니다.</p>
+                    <hr>
+                    <p>에피소드 : 2호점도 있어요 ^^!
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FIVE_STAR.jpg" alt="">
+                </div>
+            </section>
+            
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/libgirl_dasun.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 뽀뽀 걸 정다선 </p>
+                    <hr>
+                    <p>일자 : 2017 / 08 / 08 </p>
+                    <hr>
+                    <p>장소 : 한양대학교 해동학술정보관 세미나실</p>
+                    <hr>
+                    <p>느낌 : 지나친 기술의 발달로 입술의 주름까지 묘사가 되어버렸다. 적나라하다.</p>
+                    <hr>
+                    <p>에피소드 : 공부하다가 내생각이 나서 찍은 거 같은데 해동은 공부하는 곳이다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FOUR_STAR.jpg" alt="">
+                </div>
+            </section>
+
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/ET_sungjun.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 외계인 보이 함성준 </p>
+                    <hr>
+                    <p>일자 : 군생활 휴가나온 어느 시절 </p>
+                    <hr>
+                    <p>장소 : 소마포차 2층 구석진 자리</p>
+                    <hr>
+                    <p>느낌 : 그냥 아무 생각없이 술먹고 찍은 사진. 진짜 좆같이 생겼다.</p>
+                    <hr>
+                    <p>에피소드 : 이때가 군생활 상당히 말년이었는데 이미 전역한 교통과 13학번 친구들과 모여서 술한잔 했었다.
+                        나혼자 비흡연자였기에 애들이 틈만나면 담배피러가서 왕따 시켰다. 술김에 빡쳐서 나도 막판에 같이 담배 피웠다.
+                        근데 담배 존나 맛없다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/TWO_STAR.jpg" alt="">
+                </div>
+            </section>
            
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/dogcat.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 못생긴 개냥이 </p>
+                    <hr>
+                    <p>일자 : 2017 / 07 / DD </p>
+                    <hr>
+                    <p>장소 : 명동 애냥이 카페</p>
+                    <hr>
+                    <p>느낌 : 외견만 포고 판단해선 안되지만 가끔 그래도 된다.</p>
+                    <hr>
+                    <p>에피소드 : 한번 쯤 가보고 싶은 테마 카페여서 9000원 거금의 입장료를 들여 입장했다. 까칠한 야옹이들은 아무도 반겨주지 않고
+                        자기 할일만 했다. 돈을 썼으면 서비스를 받아야 하는데 내가 서비스까지 해줬다 고양이들한테. 다신 안간다. 
+                    </p>
+                    
+                </div>
+           
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/TWO_STAR.jpg" alt="">
+                </div>
+                </section>
+                <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/smile_dasun.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 빙수 주문 넣은 정다선 </p>
+                    <hr>
+                    <p>일자 : 2017 / 08 / 09 </p>
+                    <hr>
+                    <p>장소 : 한양대 대학가 6번지 카페</p>
+                    <hr>
+                    <p>느낌 : 빙수를 주문한 이후 극도의 행복감을 보이고 있다.</p>
+                    <hr>
+                    <p>에피소드 : 냉면먹은 이후 커피먹으러 갈 생각중이었는데 갑작스레 빙수 먹고싶다고 칭얼댔다. 그리심 빙수 맛있게 먹었던 기억이 있어서 데려가려
+                        했는데 "그리심 빙수 시럽 줄줄짜서 별론데..." 라는 말을 해서 저격했다. 6번지 가서 녹차빙수 먹자 ^^
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/FIVE_STAR.jpg" alt="">
+                </div>
+            </section>
+            
+            <section>
+                <div class ="imgbox">
+                    <img id = "contentimg" src="./Materials/images/eyeattack.jpg" alt="">
+                </div>
+
+                <div class = "textbox">
+                    
+                    <p>제목 : 복학생 놀이용 사진 </p>
+                    <hr>
+                    <p>일자 : 2017 / 08 / 07 </p>
+                    <hr>
+                    <p>장소 : 안양 삼막사 계곡 해발 37m</p>
+                    <hr>
+                    <p>느낌 : 내리쬐는 태양 빛과 그윽한 눈빛</p>
+                    <hr>
+                    <p>에피소드 : 개인적으로 맘에드는 사진. 이상하게 내가 잘 나왔다고 느끼는 사진은 사람들이 별로라고 한다.
+                    </p>
+                    
+                </div>
+
+                <div class = "starbox">
+                    <img  id = "starimg" src="./Materials/images/THREE_STAR.jpg" alt="">
+                </div>
+            </section>
+            
         </div>
            
        
