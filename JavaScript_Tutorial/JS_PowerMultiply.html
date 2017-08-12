@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>파워,멀티플라이</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            function power(Param_1 , Param_2) {
+                if(!Param_2){
+                    return Param_1 * Param_1;
+                }
+                else{
+                    return Math.pow(Param_1 , Param_2);
+                }
+            }
+            function multiply() {
+                var result = 1;
+                for(var i = 0 ; i < arguments.length ; i++ ){
+                    result = result * arguments[i];
+                }
+                return result;
+            }
+
+            alert(power(2,4));
+            alert(multiply(1,2,3,4,5));
+
+
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            function pytagoras( width , height ) {
+            //   제곱을 구하는 함수를 내부에 선언
+            //   내부에서 선언한 함수는 해당 함수 유효범위 내에서만 사용가능하다.
+                function Squre(number) {
+                    return number * number;
+                }
+            
+            return Math.sqrt(Squre(width) + Squre(height));
+         
+                
+           }
+           alert(pytagoras( 3 , 4));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

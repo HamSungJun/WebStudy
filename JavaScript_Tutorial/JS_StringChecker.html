@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>숫자로만 되있나보자</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            var User_input = prompt("숫자만 입력해주세요");
+            // alert(Number(User_input));
+            function Checker(input) {
+                var String = input;
+                var Text_Arr = Array();
+               
+                for(var i = 0 ; i < String.length ; i++){
+                   alert(String.charAt(i));
+                   Text_Arr[i] = String.charAt(i);
+                }
+                for(var i = 0 ; i < Text_Arr.length ; i ++){
+                   alert(Number(Text_Arr[i]));
+                   
+                   if (isNaN(Number(Text_Arr[i]))== true){
+                       document.write("이건 숫자 아냐");
+                   }
+               }
+               document.write("숫자만 잘 입력하셨네요?");
+            
+               
+               }
+            
+            Checker(User_input);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

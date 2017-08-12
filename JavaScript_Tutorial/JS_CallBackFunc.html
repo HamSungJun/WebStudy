@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            function CallTenTimes(Func) {
+                var Counter = 0;
+                while (Counter < 10) {
+                    Func();
+                    Counter++;
+                }
+            }
+
+            var callback = function() {
+                alert("함수가 호출되었습니다.");
+            }
+
+            CallTenTimes(callback);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
