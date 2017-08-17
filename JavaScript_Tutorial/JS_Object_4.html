@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            var student = {
+                이름 : '함성준',
+                국어 : "66" , 영어 : "77" , 수학 : "88"
+            }
+
+            var output = "";
+
+            output += "이름 in student : " + ('이름' in student) + "\n";
+            output += "성별 in student : " + ('성별' in student);
+
+            alert(output);
+            var new_ouput = "";
+            with(student){
+                new_ouput += 이름 + 국어 + 영어 + 수학;
+            }
+            alert(new_ouput);
+
+            // 객체에 속성 추가
+
+            var dog = {};
+            dog.이름 = "망망이";
+            alert(dog.이름);
+
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

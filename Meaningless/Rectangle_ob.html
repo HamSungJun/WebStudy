@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>직사각형 객체</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+
+            function rectangleMaker(width , height) {
+                this.width = width;
+                this.height = height;
+            }
+            rectangleMaker.prototype.getArea = function () {
+                return this.width * this.height;
+            }
+            rectangleMaker.prototype.selectColor = function () {
+                var whatColor = prompt("색깔을 입력하세요");
+                this.color = whatColor;
+            }
+            rectangleMaker.prototype.getColor = function () {
+                if(this.color == null){
+                    alert("아직 사각형의 색깔이 정해지지 않았습니다.");
+                    this.selectColor();
+                    return this.color;
+                }
+                return this.color;
+            }
+
+            var rect_1 = new rectangleMaker(5 , 7);
+            alert(rect_1.getArea());
+            alert(rect_1.getColor());
+            
+        </script>
+    <body>
+    
+    </body>
+</html>

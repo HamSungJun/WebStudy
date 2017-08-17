@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            // 객체를 선언해서 그 키값의 속성은 다양한 자료형이 가능하다.
+            // 메소드 또한 객체내의 자료형으로 활용 가능.
+            var Object_1 = {
+                S : "String",
+                N : 1234 ,
+                B : true ,
+                Arr : ["1","2","3","4"],
+                Met : function () {
+                    alert("객체 내의 메소드에요 ㅎㅇㅎㅇ");
+                }
+            }
+            for (var key in Object_1) {
+                alert(key + " : " + Object_1[key]);
+            }
+            Object_1.Met();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

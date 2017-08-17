@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            var Person_Ob = {
+                이름 : "함성준",
+                밥먹기 : function (food) {
+                    alert(this.이름 + food + "를 먹었습니다.!")
+                },
+                공부하기 : function (time) {
+                    alert(this.이름 + time + " (분/시간)동안 공부하였습니다.!")
+                }
+            }   
+
+            Person_Ob.밥먹기("브리또");
+            Person_Ob.공부하기("30");
+        </script>
+         
+
+    </head>
+    <body>
+    
+    </body>
+</html>

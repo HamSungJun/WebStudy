@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <title>스타 유닛 객체</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            function unitMaker(name , mineral , gas , supply) {
+
+                var unit = {이름 : name , 미네랄 : mineral , 가스 : gas , 인구수 : supply,
+
+                unitInfo : function () {
+                    return "이름 : " + this.이름 + "미네랄 : " + this.미네랄 + "가스 : " + this.가스 + "인구수 : "
+                    + this.인구수;
+                    }
+
+                };
+
+                return unit;
+   
+            }
+
+            var Units = [];
+            
+            Units.push(unitMaker("일벌레" , 50 , 0 , 1));
+            Units.push(unitMaker("여왕" , 150 , 0 , 2));
+            Units.push(unitMaker("바퀴" , 75 , 25 , 2));
+            Units.push(unitMaker("히드라리스크" , 100 , 50 , 2));
+            Units.push(unitMaker("타락귀" , 150 , 100 , 2));
+
+            var output = '';
+
+            for (var key in Units) {
+                output += Units[key].unitInfo() + "\n";
+            }
+            alert(output);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

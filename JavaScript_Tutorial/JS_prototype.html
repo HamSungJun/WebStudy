@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>프로토타입</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            // 프로토타입을 붙여두면 객체 생성시마다 쓸수 있는 공통의 메소드로 존재함.
+            function studentMaker(name , id) {
+                this.이름 = name;
+                this.번호 = id;
+            }
+
+            studentMaker.prototype.getName = function () {
+                
+                return this.이름;
+            }
+            studentMaker.prototype.getId = function () {
+                
+                return this.번호;
+            }
+
+            var G = new studentMaker("강균성" , 3344);
+        
+           alert(G.getId());
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

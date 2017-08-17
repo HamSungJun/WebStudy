@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>직사각형 객체2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            function rectMaker(W , H) {
+                var width = W;
+                var height = H;
+
+                this.getWidth = function () {
+                    return width;
+                };
+                this.getHeight = function () {
+                    return height;
+                };
+                this.setWidth = function (W) {
+                    if(W <= 0){
+
+                        throw "폭이 0이하일 수 없습니다. 다시 입력해주세요!";
+                        
+                    }
+                    else{
+                        width = W;
+                    };
+                }
+                 this.setHeight = function (H) {
+                    if(H <= 0){
+
+                        throw "폭이 0이하일 수 없습니다. 다시 입력해주세요!";
+                        
+                    }
+                    else{
+                        height = H;
+                    }
+                }
+            }
+
+            var rect = new rectMaker(5 , 7);
+            rect.setWidth(-2);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

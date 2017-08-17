@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>총점과 평균 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            // 일일히 객체를 만들기 번거로우므로 생성자 함수를 사용해보자.
+
+            function makeStudent(name , nation , math , english , science) {
+
+                var Student = {
+                    이름 : name,
+                    국적 : nation,
+                    수학 : math,
+                    영어 : english,
+                    과학 : science,
+                
+
+                getSum : function () {
+                    return this.수학 + this.영어 + this.과학;    
+                },
+
+                getAverage :  function () {
+                    return this.getSum() / 3;
+                },
+
+                toString : function () {
+                    return this.이름 + this.국적 +this.getSum() + this.getAverage();  
+                }
+
+                };
+
+                return Student;
+
+            }
+
+            var Students = [];
+
+            Students.push(makeStudent('윤인성' , "한국" , 30 , 30 , 30));
+            Students.push(makeStudent('연하진' , "미국" , 40 , 40 , 40));
+
+            var output = "";
+
+            for (var key in Students) {
+
+                output += Students[key].toString() + "\n";
+                
+            }
+            alert(output);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

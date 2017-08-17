@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>배열복제</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+
+            // 배열 복사
+            const oriArr = [1,2,3,4,5];
+            const newArr = [...oriArr];
+
+            oriArr[2] = 7;
+
+            alert(oriArr);
+            alert(newArr);
+            
+            // 배열 병합
+
+            const mergeArr = [...oriArr , ...newArr];
+            alert(mergeArr);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

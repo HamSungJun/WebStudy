@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>객체에 메서드 속성 추가</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+            <script>
+                var AFdonkey = {};
+
+                AFdonkey.메뉴_1 = "아메리카노";
+                AFdonkey.메뉴_2 = "카페라떼";
+                AFdonkey.메뉴_3 = "카페모카";
+                AFdonkey.메뉴_4 = "마끼야또";
+                AFdonkey.메뉴_5 = "페퍼민트";
+
+                AFdonkey.Menus = function () {
+                    var output = "";
+                    for (var key in this) {
+                        if (key != 'Menus') {
+                            output += this[key] + '\n';
+                            
+                        }
+                    }
+                    alert(output);
+                }
+
+                AFdonkey.Menus();
+
+                //  delete() 메서드를 통한 객체의 키 제거.
+
+                delete(AFdonkey.메뉴_5);
+                AFdonkey.Menus();
+            </script>
+    </head>
+    <body>
+
+    </body>
+</html>

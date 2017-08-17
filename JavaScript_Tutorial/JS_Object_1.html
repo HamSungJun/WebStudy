@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <title>객체_1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            alert(typeof([]));
+            // 요고는 배열 배열도 객체들의 집합이지만 접근은 인덱스로 한다!.
+            var Arr = ['동','해','물','과'];
+            alert(Arr);
+
+            var product = {
+                제품명 : '7D 건조 망고',
+                유형 : '당절임',
+                성분 : '망고 , 설탕 , 메타중아황산나트륨 , 치자황색소',
+                원산지 : '필리핀'
+            };
+            var output = "";
+            for (var key in product) {
+                output += key + " : " + product[key] +"\n";
+            }
+            alert(output);
+
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
