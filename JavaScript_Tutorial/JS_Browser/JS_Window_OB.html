@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>윈도우 객체</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+           
+            var child = window.open("" , "" , 'width = 300 , height = 300' , false);
+
+            child.document.write("<h1>From Parent Window</h1>");
+          
+            child.moveTo(0,0);
+
+            setInterval(function () {
+                child.moveBy(10,10);
+            } , 1000);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
