@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>이벤트 연결.1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function () {
+                var header = document.getElementById("header");
+                header.onclick = function () {
+                    if (header.innerHTML == "Click Here!") {
+                        header.innerHTML = "Good Boy";
+                    }
+                    else{
+                        header.innerHTML = "Click Here!";
+                    }
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <h1 id = "header">Click Here!</h1>
+    </body>
+</html>

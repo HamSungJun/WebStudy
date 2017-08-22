@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function () {
+                var clock = document.getElementById("clock");
+
+                setInterval(function () {
+                    clock.innerHTML = new Date().toString();
+                },1000)
+
+                
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1 id = "clock"></h1>
+    </body>
+</html>

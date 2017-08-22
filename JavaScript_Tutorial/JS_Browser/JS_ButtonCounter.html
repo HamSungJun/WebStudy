@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function () {
+
+                var buttonUp = document.getElementById("buttonUp");
+                var buttonDown = document.getElementById("buttonDown");
+                var counter = document.getElementById("counter");
+
+                buttonUp.onclick = function () {
+                    counter.innerHTML = Number(counter.innerHTML) + 1;
+                };
+                buttonDown.onclick = function () {
+                    counter.innerHTML = Number(counter.innerHTML) - 1;
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <button id="buttonUp">BUTTON UP</button>
+        <button id="buttonDown">BUTTON DOWN</button>
+        <h1>Button Clicked - <span id = "counter">0</span></h1>
+
+    </body>
+</html>

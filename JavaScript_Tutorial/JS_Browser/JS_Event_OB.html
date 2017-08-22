@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>이벤트 객체</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function () {
+
+                var header = document.getElementById("header");
+                
+                header.onclick = function () {
+                    this.style.color = "orange";
+                    this.style.backgroundColor = "black"
+                    this.style.display = "inline"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="header">Click</h1>
+    </body>
+</html>
