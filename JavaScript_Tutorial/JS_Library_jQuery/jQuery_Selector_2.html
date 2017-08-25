@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>자손 , 후손 선택자</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $("document").ready(function () {
+                // 자손선택자 : body 태그 바로 밑의 태그
+                // $("body > *").css("color","red");
+                // 후손선택자 : body태그 밑의 모든 태그
+                // $("body *").css("color","red");
+
+                // 속성 선택자 
+                // $("input[type='text']").val("hello");
+
+                // 요소 선택자
+
+                 var submit = document.getElementById("submit");
+                 submit.onclick = function () {
+                     var value = $("select > option:selected").val();
+                 $("select > option:selected").css("backgroundColor","tomato");
+                     alert(value);  
+                 }
+
+                 var check = document.getElementById("check");
+                 check.onclick = function () {
+                     
+                    var result = function () {
+                        
+                        if($("#A").is(":checked")){
+                            return $("#A").val()
+                        }
+                        if($("#B").is(":checked")){
+                            return $("#B").val();
+                        }
+                        if($("#C").is(":checked")){
+                            return $("#C").val();
+                        }
+                        if($("#D").is(":checked")){
+                            return $("#D").val();
+                        }
+                    }
+                    alert(result());
+                 }
+
+
+                
+
+               
+
+                
+              
+
+                    
+
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </div>
+
+        <div>
+            <input type="text">
+            <input type="password">
+            <input type="radio">
+            <input type="checkbox">
+            <input type="file">
+        </div>
+
+        <div>
+            <select>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+            </select>
+
+            <button id="submit">제출</button>
+        </div>
+
+        <div>
+
+            <label for="A">A<input type="checkbox" value="A" id="A" ></label> 
+            <label for="B">B<input type="checkbox" value="B" id="B" ></label>
+            <label for="C">C<input type="checkbox" value="C" id="C" ></label>
+            <label for="D">D<input type="checkbox" value="D" id="D" ></label>
+
+            <button id="check">제출</button>
+        </div>
+    </body>
+</html>
