@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("h3").filter(function (index) {
+                    return index % 2 == 0;
+                }).css("color" , "blue");
+                $("h3").filter(":odd").css("color","red");
+            });
+
+        </script>
+    </head>
+    <body>
+        <h3>header - 0</h3>
+        <h3>header - 1</h3>
+        <h3>header - 2</h3>
+        <h3>header - 3</h3>
+        <h3>header - 4</h3>
+        <h3>header - 5</h3>
+    </body>
+</html>

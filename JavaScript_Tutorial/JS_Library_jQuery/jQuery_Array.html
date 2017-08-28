@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            // 제이쿼리로 배열 관리
+            $(document).ready(function () {
+                var array = [
+                    { name : 'Hanbit media' , link : 'http://hanbit.co.kr'},
+                    { name : 'Naver' , link : 'http://naver.com'},
+                    { name : 'Daum' , link : 'http://daum.net'}
+                ];
+
+                $.each(array , function ( index , item ) {
+                   var output = "";
+
+                   output += '<a href = "'+ item.link + '">';
+                   output += '<h1>' + item.name + '</h1>'
+                   output += '</a>';
+
+                   document.body.innerHTML += output; 
+                });
+            });
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

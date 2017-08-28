@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("h1").css('background','gray').add("h2").css('float','left');
+
+                $("h2").addClass(function (index) {
+                    return 'class'+index;
+                });
+            })
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>Header-0</h1>
+        <h2>Header-1</h2>
+        <h1>Header-2</h1>
+        <h2>Header-3</h2>
+        <h1>Header-4</h1>
+    </body>
+</html>

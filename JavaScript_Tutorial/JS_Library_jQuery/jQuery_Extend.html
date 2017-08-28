@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                var object = {name : "함성준"};
+                
+                $.extend(object , {region : "안산시 상록구" , part : "세컨드기타"});
+
+                var output = "";
+
+                $.each(object , function (key , value) {
+                    output += key + " : " + value + "\n";
+                })
+
+                alert(output);
+            });
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

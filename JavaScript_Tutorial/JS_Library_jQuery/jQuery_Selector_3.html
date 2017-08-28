@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            // 위치 필터 선택자
+            $(document).ready(function () {
+                $("tr:odd").css("background","#F9F9F9");
+                $("tr:even").css("background","#9F9F9F");
+                $("tr:first").css("background","#000000").css('color',"#FFFFFF");
+            })
+        </script>
+    </head>
+    <body>
+        <table border="1px">
+            <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+            <tr><td>강민수</td><td>AB형</td><td>서울특별시 송파구</td></tr>
+            <tr><td>ㅁ</td><td>ㄴ</td><td>ㅇ</td></tr>
+            <tr><td>ㅁ</td><td>ㄴ</td><td>ㅇ</td></tr>
+            <tr><td>ㅁ</td><td>ㄴ</td><td>ㅇ</td></tr>
+            <tr><td>ㅁ</td><td>ㄴ</td><td>ㅇ</td></tr>
+            <tr><td>ㅁ</td><td>ㄴ</td><td>ㅇ</td></tr>
+            
+        </table>
+    </body>
+</html>
