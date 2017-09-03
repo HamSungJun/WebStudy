@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function (){ 
+                $('h1').click(function () {
+                    $(this).html(function (index , html) {
+                        return html + '★';    
+                    });
+                
+               
+                    
+                });
+                setInterval(function () {
+                    $('h2').html(function (index , html) {
+                        return html + '*';
+                    })
+
+                },1000);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Stars ==></h1>
+        <h2>Stars ==></h2>
+    </body>
+</html>

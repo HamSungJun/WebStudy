@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function (){ 
+
+                setInterval(function () {
+                    $('img').first().appendTo('div');
+                },1000);
+               
+            })
+        </script>
+
+        <style>
+            div{
+                
+                display: inline-block;
+                border: 2px solid black;
+                padding: 20px;
+                margin : 0px 50px;
+
+            }
+
+            img{
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <img src="http://www.desicomments.com/dc3/02/218018/2180181.jpg" alt="">
+            <img src="http://www.desicomments.com/dc3/02/216790/2167901.jpg" alt="">
+            <img src="http://www.desicomments.com/dc3/02/212671/2126711.jpg" alt="">
+            <img src="http://www.desicomments.com/dc3/02/212733/2127331.jpg" alt="">
+            <img src="http://www.desicomments.com/dc3/02/212625/2126251.jpg" alt="">
+        </div>
+      
+    </body>
+</html>

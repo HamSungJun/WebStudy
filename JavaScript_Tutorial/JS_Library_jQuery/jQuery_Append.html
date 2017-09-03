@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function (){ 
+                // var header = '<h1>Header</h1>';
+                // var header2 = '<h2>ABCD</h2>';
+
+                // $("div").append(header , header2 , header , header2);
+                // $('Selector').append(content , content , .... content);
+                // // 다수의 문서 객체 부착 가능.
+
+                var Infos = [
+                    {이름 : '김일일' , 직업 : '인력소' , 나이 : 11},
+                    {이름 : '김이이' , 직업 : '력인소' , 나이 : 22},
+                    {이름 : '김삼삼' , 직업 : '소력인' , 나이 : 33}
+                ];
+
+                $('div').append(function (index) {
+                    var Info = Infos[index];
+                    var output = "";
+
+                    for (var key in Info) {
+                        output += key + " : " + Info[key] + "\n"; 
+                    }
+
+                    return output;
+                })
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

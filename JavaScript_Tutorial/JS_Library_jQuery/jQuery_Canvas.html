@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function (){ 
+                var canvas = document.getElementById('canvas');
+                var context = canvas.getContext('2d');
+
+                $(canvas).on({
+                    mousedown : function (event) {
+                        var position = $(this).offset();
+                        var x = event.pageX - position.left;
+                        var y = event.pageY - position.top;
+
+                        context.beginPath();
+                        context.moveTo(x,y);
+
+                    },
+                    mouseup : function (event) {
+                        var position = $(this).offset();
+                        var x = event.pageX - position.left;
+                        var y = event.pageY - position.top;
+
+                        context.lineTo(x,y);
+                        context.stroke();
+                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <canvas id="canvas" width="700" height="400" style="border : 2px solid black">
+
+        </canvas>
+    </body>
+</html>
