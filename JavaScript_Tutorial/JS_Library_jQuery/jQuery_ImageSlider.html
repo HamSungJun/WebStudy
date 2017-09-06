@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                // 6개의 inner_box 클래스가 배열로 담긴다.
+                $('.inner_box').each(function (index) {
+                    $(this).css({
+                        left : index * 90,
+                        top : index * 90
+                    });
+                });
+            });
+        </script>
+        <style>
+            *{
+                margin : 0px; padding : 0px;
+            }
+            #canvas{
+                background : gray;
+                width : 600px;
+                height: 400px;
+                position : relative;
+                /* 해당 Area를 벗어나는 element는 숨겨줘요 */
+                overflow : hidden;
+            }
+            .inner_box{
+                background : orange;
+                width : 100px;
+                height : 100px;
+                position : absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test Header</h1>
+        <div id = "animation_canvas">
+            <div class="inner_box"></div>
+            <div class="inner_box"></div>
+            <div class="inner_box"></div>
+            <div class="inner_box"></div>
+            <div class="inner_box"></div>
+        </div>
+    </body>
+</html>

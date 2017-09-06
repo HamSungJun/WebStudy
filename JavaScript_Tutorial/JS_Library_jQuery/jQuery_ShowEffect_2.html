@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('div').hover(function () {
+                    // 마우스가 올라가면 500 이동
+                    $(this).animate({
+                        left : 500
+                    }, 'slow');
+                    // 마우스가 떨어지면 0 이동
+                } , function () {
+                    $(this).animate({
+                        left : 0
+                    }, 'slow');                    
+                } );
+            });
+                
+                
+            
+        </script>
+
+        <style>
+            button{
+                margin-bottom: 40px;
+            }
+            div{
+                
+                width: 50px;
+                height: 50px;
+                background: gray;
+                position : relative;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <button>Move or Stop</button>
+    
+        <div></div><div></div>
+        <div></div><div></div>
+        <div></div><div></div>
+    </body>
+</html>

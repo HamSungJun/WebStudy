@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('div').hover(function () {
+                    $(this).animate({
+
+                    width : 200,
+                    height : 100,
+                    
+                },'fast');    
+                } , function () {
+                    $(this).animate({
+                        width : 50,
+                        height : 50,
+                    },'fast');
+                });
+                
+            });
+        </script>
+        <style>
+            div{
+                width : 50px;
+                height : 50px;
+                background : tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

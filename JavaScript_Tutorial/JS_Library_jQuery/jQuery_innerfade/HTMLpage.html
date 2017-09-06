@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="../jquery-3.2.1.js"></script>
+        <script src="jquery.innerfade.js"></script>
+        
+        <script>
+            $(document).ready(function () {
+                $('#inner-fade').innerfade({
+                    animationtype : 'fade',
+                    speed : 750,
+                    timeout : 2000,
+                    type : 'random',
+                    containerheight : '350px'
+                });
+            });
+        </script>
+        <style>
+            *{
+                margin : 0px;
+                padding: 0px;
+            }
+            div{
+               width:100%;
+               height : 100%;
+            }
+            ul{
+
+                list-style: none;
+                
+            }
+            li{
+                width : 100%;
+                height : 100%;
+            }
+            li img{
+
+                width : 100%;
+                height : 100%;                
+                background-repeat :no-repeat;
+                background-size :cover;
+                
+
+            }
+        </style>
+    </head>
+    <body>
+    <div>
+            <ul id="inner-fade">
+                    <li><img src="img1.jpg" alt=""></li>
+                    <li><img src="img2.jpg" alt=""></li>
+                    <li><img src="img3.jpg" alt=""></li>
+                    <li><img src="img4.jpg" alt=""></li>
+                    <li><img src="img5.jpg" alt=""></li>
+            </ul>
+          
+    </div>
+    </body>
+</html>
