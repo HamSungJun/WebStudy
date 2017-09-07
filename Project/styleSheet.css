@@ -1,0 +1,97 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    
+}
+html{
+    background-image: url('http://bighdwalls.com/wp-content/uploads/summer-beach-holiday-HD-wallpaper.jpg');
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size : cover;
+    width : 100%;
+    height: 100%;
+}
+@font-face{
+    font-family : 'solidslash';
+    src: url("./Materials/fonts/Typo_DecoSolidSlash.ttf");
+}
+#container {
+     font-family: 'solidslash';
+}
+#header{
+    margin: 0px;
+    padding: 0px; 
+}
+#header h1 {
+    color : rgb(50, 207, 209);
+    font-size : 200px;
+    text-align: center;
+    
+   
+}
+#image_slider{
+    /* border: 2px solid black; */
+    overflow: hidden;
+    margin : 0px;
+    padding : 0px;
+    width : 3080px;
+    /* opacity: 0.7; */
+    position: relative;
+}
+
+#image_slider img{
+    box-sizing : border-box;
+    border-radius: 15px;
+    border: 2px solid tomato;    
+    z-index: 2;
+    
+}
+.ui-button{
+    z-index : 1;
+    position: fixed;
+    left : 30px;
+    top : 75px;
+    border-radius: 50px;
+    opacity: 0.7;
+    font-size : 30px;
+    /* text-align: center; */
+    padding-right: 15px;
+    
+    
+}
+.ui-button:hover{
+    opacity: 1;
+}
+#Move_right {
+    left : 1210px;
+}
+#nav{
+    text-align: center;
+}
+.navigator{
+    width: 7em;
+    height: 7em;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: 4px solid #fff;
+    position: relative;
+}
+.navigator:hover{
+    top : -10px;
+}
+.navigator:active{
+    top : -20px;
+}
+#Nav_1{
+    background-color: #4C1717;
+    border: 4px solid #fff;    
+}
+#Nav_2{
+    background-color: rgb(84, 237, 100);
+    border: 4px solid #fff;    
+}
+#Nav_3{
+    background-color: rgb(255, 0, 151);
+    border: 4px solid #fff;    
+}    

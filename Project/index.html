@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>TRIP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./Materials/library/jquery-3.2.1.js"></script>
+        <script src="./Materials/library/jquery-ui.js"></script>
+        <!-- <script src="./Materials/library/jquery-innerfade.js"></script> -->
+        <link href="jquery-ui.css" rel="stylesheet">
+        <link href="styleSheet.css" rel = "stylesheet">
+
+        <script>
+            $(document).ready(function () {
+                var Transition = 0;
+                $("#Move_left").click(function () {
+                    Transition -= 300;
+                   $('#image_slider').animate({
+                    left : Transition
+                   });
+                });
+                $("#Move_right").click(function () {
+                    Transition += 300;
+                    $('#image_slider').animate({
+                    left : Transition
+                    })
+                });
+
+             
+
+            })
+        </script>
+    </head>
+    <body>
+        <div id="container">
+           
+            <header>
+                <div id = "header">
+                   <h1>T R I P</h1> 
+                </div>
+            </header>
+            <section>
+                <div id = "image_slider">
+                    <img src="./Materials/images/img1.jpg" alt="1">
+                    <img src="./Materials/images/img2.jpg" alt="2">
+                    <img src="./Materials/images/img3.jpg" alt="3">
+                    <img src="./Materials/images/img4.jpg" alt="4">
+                    <img src="./Materials/images/img5.jpg" alt="5">
+                    <img src="./Materials/images/img6.jpg" alt="6">
+                    <img src="./Materials/images/img7.jpg" alt="7">
+                    <img src="./Materials/images/img8.jpg" alt="8">
+                    <img src="./Materials/images/img9.jpg" alt="9">
+                    <img src="./Materials/images/img10.jpg" alt="10">
+
+                        <button class="ui-button" id="Move_left"></button>
+                        <button class="ui-button" id="Move_right"></button>
+
+                </div>
+            </section>
+            <nav>
+                <div id = "nav">
+                    <button class="navigator" id="Nav_1">Navi_1</button>
+                    <button class="navigator" id="Nav_2">Navi_2</button>
+                    <button class="navigator" id="Nav_3">Navi_3</button>
+                </div>
+            </nav>
+            <footer >
+                <div id = "footer">
+
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -8,7 +8,25 @@
         <script src="jquery-3.2.1.js"></script>
         <script>
             $(document).ready(function () {
-                
+                $('#slider_panel').css({ left : -30, top : 60
+                }).each(function (index) {
+                   $(this).attr('data-index' , index); 
+                });
+
+                $('.control_button').each(function (index) {
+                    $(this).attr('data-index' , index);
+                }).click(function () {
+                    var index = $(this).attr('data-index');
+                    moveSlider(index);
+                })
+
+                function moveSlider(index) {
+                    var willMoveLeft = -(index * 600);
+                    $('#slider_panel').animate({ left : willMoveLeft} , 'fast');
+
+                    $('.control_button[data-index = ' + index + ']').addClass('active');
+                    // $('.control_button[data-index != ' + index + ']').removeClass('active');
+                }
             });
         </script>
         <style>
@@ -49,23 +67,25 @@
                 position : absolute;
                 top : 380px;
                 left : 270px;
-                height : 13px;
+                height : 46px;
                 overflow: hidden;
             }
             .control_button{
-                width : 12px;
+                z-index: 1;
+                width : 46px;
                 height : 46px;
                 position:relative;
                 float: left;
                 cursor: pointer;
-                background : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRD_Y9HmNkUPplloI9ViqouLM5vYFMPBtGhUa1Ox2KPI3_Em5M);
-
+                background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRD_Y9HmNkUPplloI9ViqouLM5vYFMPBtGhUa1Ox2KPI3_Em5M);
+                background-size : contain;
+                background-repeat : no-repeat;
             }
-            #control_button:hover{
-                top : -16px;
+            .control_button:hover{
+                top : -5px;
             }
-            #control_button:active{
-                top : -31px;
+            .control_button:active{
+                top : -10px;
             }
         </style>
     </head>
@@ -109,9 +129,7 @@
                 <!-- 컨트롤 패널 -->
                 <div class="control_button"></div>
                 <div class="control_button"></div>
-                <div class="control_button"></div>
-                <div class="control_button"></div>
-                <div class="control_button"></div>
+                
             </div>
         </div>
 
