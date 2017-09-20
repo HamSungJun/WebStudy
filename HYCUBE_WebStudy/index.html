@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <title>What is HTML?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" 
+        type="image/png" 
+        href="http://tinypic.com?ref=fcod9t">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Asap|Righteous" rel="stylesheet">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <style>
+            html{
+                background-image: url(https://img00.deviantart.net/6ee0/i/2008/131/7/8/crumpled_white_paper_texture_by_melemel.jpg);
+                background-repeat: no-repeat;
+                background-size : cover;
+            }
+            *{
+                margin: 0px;
+            }
+            .righteous{
+                font-family: 'Righteous' , cursive;
+            }
+            .asap{
+                font-family: 'Asap', sans-serif;
+            }
+            header{
+                text-align: center;
+            }
+            h1{
+                font-size : 110px;
+                padding-top : 20px;
+                padding-bottom: 20px;
+            }
+            h2{
+                font-size : 50px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            section ul{
+                font-size : 30px;
+                font-weight :bold;
+                list-style-type : square;
+                line-height : 2em; 
+                margin-left : 100px;
+            }
+            section{
+                width : 1600px;
+                box-sizing: border-box;
+                background-color : rgba(255, 255, 255, 0.6);
+                border: 8px solid rbga(0,0,0,0);
+                border-radius : 20px;
+                margin : 0 auto;
+                padding-left: 60px;
+                padding-top : 40px;
+                padding-bottom: 40px;
+                position: relative;
+                
+            }
+            .box{
+                border-radius: 20px;
+                border: 2px solid #2655c4 ;
+                box-sizing :border-box;
+                width : 700px;
+                margin : 40px 20px;
+                display: inline-block;
+                padding-top : 75px;
+                padding-bottom: 75px;
+            }
+            a{
+                color : black;
+            }
+            a:hover{
+                color :dodgerblue;
+                font-size : 110%;
+            }
+            #copyrights{
+                text-align: center;
+                margin-top : 10px;
+                margin-bottom: 10px;
+                font-size : 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="righteous">Welcome To HYCUBE Web Study</h1>        
+        </header>
+        
+        <section>
+            <div class="box" id="instructor">
+               <h2 class="righteous">1. Instructor</h2>
+               <ul class="asap">
+                   <li>Name : Ham Sung Jun</li>
+                   <li>Phone call : 010-3455-1209</li>
+                   <li>Recommend IDE : <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                   <li>Tasting Senior Class - <a href="About_me.html">About_me.html</a></li>
+               </ul> 
+            </div>
+            <div class="box" id="study">
+                <h2 class="righteous">2. Today what we do?</h2>
+                <ul>
+                    <li>Greet each other</li>
+                    <li>Background knowledge about HTML</li>
+                    <li>Learn basic grammar</li>
+                    <li>Use few html tags</li> 
+                </ul>
+            </div>
+            <div class="box" id="assignment">
+                <h2 class="righteous">3. Assignment</h2>
+                <ul>
+                    <li>It depends on your will</li>
+                    <li>Using various html tags</li>
+                    <li>See simple page codes</li>
+                </ul>
+            </div>
+            <div class="box" id="links">
+                <h2 class="righteous">4. Useful Study Links</h2>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
+                    <li><a href="https://www.opentutorials.org/course/2039" target="_blank">opentutorials.org</a></li>
+                    <li><a href="https://hycube2017autumn.slack.com" target="_blank">hycube2017autumn.slack.com</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="righteous" id="copyrights">
+                Copyrights HSJPRIME All Rights Reserved
+            </div>
+        </footer>
+
+    </body>
+</html>
