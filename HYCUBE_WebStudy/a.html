@@ -5,7 +5,41 @@
         <title></title>
         <meta charset="UTF-8">
     </head>
+    <script>
+        window.onload = function () {
+           
+          var S = [];
+          for (var index = 0; index < 20; index++) {
+              S.push(index*2);
+          }
+          alert(S);
+          var finding_N = prompt("찾고자 하는 숫자를 입력하세요 0~38 까지의 짝수");
+          alert(BinarySearch(S , finding_N));
+          function BinarySearch(S , finding_N) {
+              var low = 0;
+              var high = S.length;
+              
 
+              while (low <= high) {
+                var mid = Math.ceil((low+high) / 2);
+                if (finding_N > S[mid]) {
+                    low = mid + 1;
+                }    
+                else if(finding_N < S[mid]){
+                    high = mid - 1;
+                }
+                else{
+                    return mid;
+                }
+              }
+
+          }
+        }
+
+        
+        
+        
+    </script>
     <body>
     
 
