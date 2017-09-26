@@ -12,8 +12,11 @@ h1{
     text-shadow: 3px -3px  green;
 }
 ul li{
-    font-size : 70%;
+    
     list-style-type: square;
+}
+ol dl{
+    font-size: 70%;
 }
 ol li dl dt{
     font-weight : bold;
@@ -47,21 +50,22 @@ table , td , th{
 }
 .italic{
     font-style :italic;
+    color : #FFF86B;
 }
 .bold{
     font-weight : bold;
+    color : #FFF86B;
     
 }
 .HYU{
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted #F7931E
 }
-.hardware_Img{
-    width: 200px;
-    height: 100px;
-    border: medium ridge #F7931E;
+
+.none{
+    outline: none;
 }
-.yellow , #yellow{
-    color : #FFF86B;
+img{
+    outline: medium ridge #F7931E;
 }
 q{
     display: block;
@@ -69,3 +73,4 @@ q{
 tr{
     text-align: center;
 }
+

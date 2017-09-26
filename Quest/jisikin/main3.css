@@ -1,0 +1,115 @@
+/* basic */
+
+html,
+body {
+    overflow-x: hidden;
+}
+body {
+    font-family: "helvetica neue", helvetica, arial, "sans-serif";
+    font-size: 1.8em;
+    margin: 0px;
+    width: 100vw;
+}
+
+/* typestyle */
+
+:lang(kr) {
+	font-family:'Spoqa Han Sans', 'Spoqa Han Sans-JP';}
+
+
+
+/* effect */
+
+a {	
+	text-decoration: none; 
+}
+
+a:visited, a:link {
+	text-decoration: none; 
+	color:black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+/* layouts */
+   
+   /**wings**/
+   #left_wing {
+		position:fixed; 
+		z-index:1000; 
+		left:0px; 
+		width:20px; 
+		height:100%; 
+		background:#FDE002; 
+		font-size:18px; 
+		writing-mode:tb-lr; 
+		-webkit-writing-mode: vertical-lr; 
+			-ms-writing-mode: tb-lr;  
+	}
+	
+	#right_wing {
+		position:fixed; 
+		z-index:1000; 
+		right:0px; 
+		width:20px; 
+		height:100%; 
+		background:#FDE002; 
+		font-size:18px; 
+		writing-mode:tb-lr; 
+		-webkit-writing-mode:vertical-lr;
+			-ms-writing-mode:tb-lr;
+	}
+   
+    /**index**/
+ 
+	.idxrow {
+		padding:5px 7px 2px 7px ;
+		border-bottom:4px solid currentcolor;
+		width:95vw;
+		overflow-x:hidden;
+		overflow-y:hidden;
+		margin:auto;
+	}
+		
+	.section {
+   	 	clear: both;
+    	padding: 0px;
+    	margin: auto;
+    	height: 80vh;
+    	width: 90vw;
+    	overflow: hidden;
+    	position: relative;
+    	border-bottom: solid 4px black;
+	}
+			
+	.project {
+    	position: absolute;
+	}
+
+	.project img {
+    	position: relative;
+   		display: block;
+    	float: left;
+	}
+
+	
+	.col {
+    	display: block;
+    	text-align: center;
+    	z-index: 1;
+	}
+
+	.project_title {
+    	top: 200px;
+		font-size: 4em;
+	}
+
+	.project_info {
+    	top: 600px;
+	}

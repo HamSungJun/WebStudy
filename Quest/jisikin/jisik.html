@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="main3.css" />
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+
+<div id="left_wing">Index</div>
+<div id="right_wing">Contact</div>
+
+
+<nav>
+
+
+	<div class="idxrow">
+		<a href="#a">a</a>
+	</div>
+	<div class="idxrow">
+    	<a href="#b">b</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#c">c</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#d">d</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#e">e</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#f">f</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#g">g</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#h">h</a>
+    </div>
+     <div class="idxrow">
+    	<a href="#i">i</a>
+    </div>
+     <div class="idxrow">
+    	<a href="#j">j</a>
+    </div>
+    <div class="idxrow"> 
+    	<a href="#k">k</a>
+     </div>   
+     <div class="idxrow">
+     	<a href="#l">l</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#m">m</a>
+    </div>
+    <div class="idxrow">
+    	<a href="#n">n</a>
+
+</nav>
+    <a id="a">
+    <div class="section group">
+        <div class="project">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+        </div>
+        <div class="col project_title">Fruits</div>
+        <div class="col project_info">Lorem ipsum dolor sit amet</div>
+    </div>
+    </a>
+    
+    <a id="b">
+    <div class="section group">
+        <div class="project">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+        </div>
+        <div class="col project_title">Fruits</div>
+        <div class="col project_info">Lorem ipsum dolor sit amet</div>
+    </div>
+    </a>
+    
+    <a id="c">
+    <div class="section group">
+        <div class="project">
+           <img src="dummy.jpg">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+            <img src="dummy.jpg">
+             <img src="dummy.jpg">
+            <img src="dummy.jpg">
+        </div>
+        <div class="col project_title">Fruits</div>
+        <div class="col project_info">Lorem ipsum dolor sit amet</div>
+    </div>
+    </a>
+
+    <a id="d">
+    <div class="section group">
+        <div class="project">
+            <img src="dummy.jpg">
+        </div>
+        <div class="col project_title">Fruits </div>
+        <div class="col project_info">Lorem ipsum dolor sit amet</div>
+    </div>
+    </a>
+    
+	<script>
+        $('.project').each(function() {
+            var $imgs = $(this).find('img');
+            var cnt = $imgs.length;
+            for (var i =0; i< cnt; i++) {
+                var $img =$imgs.eq(i);
+                var gw = $('.section.group').width();
+                $img.css({width: 90/cnt+'vw'});
+               
+			    $img.on('click', function(){
+                    $(this).parent().find('img')
+                        .animate({height: '10vw', width: '10vw'});
+                    var l = 45 - 10*cnt / 2;
+                    $(this).parent().animate({width:10*cnt+'vw', left: l + 'vw', top: '50vh'});
+                
+				});
+            }
+        });
+       
+    </script>
+</body>
+</html>
+
