@@ -38,6 +38,13 @@
                 text-align: center;
                 margin-bottom: 30px;
             }
+            h3{
+                font-size : 40px;
+                text-align :left;
+                margin-bottom: 30px;
+                padding-left : 200px;
+                text-decoration-line : none;
+            }
             section ul{
                 font-size : 30px;
                 font-weight :bold;
@@ -62,7 +69,7 @@
                 border-radius: 20px;
                 border: 2px solid #2655c4 ;
                 box-sizing :border-box;
-                width : 700px;
+                width : 1400px;
                 margin : 40px 20px;
                 display: inline-block;
                 padding-top : 75px;
@@ -81,49 +88,70 @@
                 margin-bottom: 10px;
                 font-size : 20px;
             }
+            .blue{
+                color : dodgerblue;
+                font-size : 130%;
+            }
+            .whiteboard{
+                background-color: white;
+                border-radius: 20px;
+                width : 1200px;
+                margin-left : 100px;
+                margin-right : 100px;
+                box-sizing: border-box;
+                padding: 75px;
+                border: 2px solid gray;
+                margin-bottom: 60px;
+            }
+            .codeimg{
+                width : 1050px;
+                height : 600px;
+                border-radius: 20px;
+                margin-bottom: 30px;
+ 
+            }
+            .helplink{
+               font-size : 140%;
+               text-decoration-line :none;
+            }
+            .helplink:hover{
+               font-size : 160%;
+               
+            }
+            
         </style>
     </head>
     <body>
         <header>
-            <h1 class="righteous">Welcome To HYCUBE Web Study</h1>        
+            <h1 class="righteous">What is HTML?</h1>        
         </header>
         
         <section>
-            <div class="box" id="instructor">
-               <h2 class="righteous">1. Instructor</h2>
+
+            <div class="box" id="textbox">
+               <h2 class="righteous"><span class="blue">Q</span>iuz - Select Tag</h2>
                <ul class="asap">
-                   <li>Name : Ham Sung Jun</li>
-                   <li>Phone call : 010-3455-1209</li>
-                   <li>Recommend IDE : <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-                   <li>Tasting Senior Class - <a href="About_me.html">About_me.html</a></li>
+                   <li>페이지 뷰를 보면서 어떤 태그를 써야할지 유추해 봅시다.</li>
+                   <li>내용 구분을 위해 &#60;hr&#62;태그를 이용해줍니다.</li>
+                   <li>페이지 소스보기를 통해 그대로 따라해도 좋지만 사용된 태그만 확인하고 자신이 연구해봅니다.</li>
+                   <li>잘 모르겠으면 주저없이 Slack으로 질문해주세요!</li>
+                   <li>자신이 좀더 멋진걸 만들어 보고 싶다! 하면 그것을 제출해도 좋아요 :D</li>
                </ul> 
             </div>
-            <div class="box" id="study">
-                <h2 class="righteous"><a href="Whatishtml.html">2. Today what we do?</a></h2>
-                <ul>
-                    <li>Greet each other</li>
-                    <li>Background knowledge about HTML</li>
-                    <li>Learn basic grammar</li>
-                    <li>Use few html tags</li>
-                    <li><a href="">Let's do a simple Game</a></li> 
-                </ul>
+
+            <div class="box">
+                <h3>&#187; 프로그래밍은 역시 구글서치!</h3>
+                <div class="whiteboard">
+                    <img class="codeimg" src="./Materials/Images/googlesearch.PNG" alt="">
+                </div>
+                 <div class="whiteboard">
+                    <img class="codeimg" src="./Materials/Images/w3search.PNG" alt="">
+                </div>
+                <div class="whiteboard">
+                    <img class="codeimg" src="./Materials/Images/w3use.PNG" alt="">
+                </div>
             </div>
-            <div class="box" id="assignment">
-                <h2 class="righteous"><a href="assignment.html">3. Assignment</a></h2>
-                <ul>
-                    <li>It depends on your will</li>
-                    <li>Using various html tags</li>
-                    <li>See simple page codes</li>
-                </ul>
-            </div>
-            <div class="box" id="links">
-                <h2 class="righteous">4. Useful Study Links</h2>
-                <ul>
-                    <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
-                    <li><a href="https://www.opentutorials.org/course/2039" target="_blank">opentutorials.org</a></li>
-                    <li><a href="https://hycube2017autumn.slack.com" target="_blank">hycube2017autumn.slack.com</a></li>
-                </ul>
-            </div>
+
         </section>
 
         <footer>
