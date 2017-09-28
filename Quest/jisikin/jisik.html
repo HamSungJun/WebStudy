@@ -109,23 +109,7 @@
     </a>
     
 	<script>
-        $('.project').each(function() {
-            var $imgs = $(this).find('img');
-            var cnt = $imgs.length;
-            for (var i =0; i< cnt; i++) {
-                var $img =$imgs.eq(i);
-                var gw = $('.section.group').width();
-                $img.css({width: 90/cnt+'vw'});
-               
-			    $img.on('click', function(){
-                    $(this).parent().find('img')
-                        .animate({height: '10vw', width: '10vw'});
-                    var l = 45 - 10*cnt / 2;
-                    $(this).parent().animate({width:10*cnt+'vw', left: l + 'vw', top: '50vh'});
-                
-				});
-            }
-        });
+       
        
     </script>
 </body>
