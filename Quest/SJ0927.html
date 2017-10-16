@@ -10,27 +10,30 @@
             window.onload = function () {
 
                 var initial_Width = $(".img_container img").width();
-
+              
                 $('.img_container').on('click', function () {
+        
                     var IMGS = $(this).children("img");
-
+                    
                     for (var index = 0; index < IMGS.length; index++) {
                         var IMG = IMGS.eq(index);
 
                         if(IMG.width() == initial_Width){
                             IMG.css({
-                            width : "-=18%",
-                            height : "-=18%"
+                            width : "-=10%",
+                            height : "-=10%",
+                            marginTop : "+=10%"
                             });
                         }
                         else if(IMG.width() < initial_Width){
                             IMG.css({
-                            width : "36%",
-                            height : "36%"
+                            width : "20%",
+                            height : "20%",
+                            marginTop : "-=10%"
                             });   
                         };
                 }
-
+                                
                 });
             }
         </script>

@@ -37,7 +37,12 @@ layouts
 	font-size:18px; 
 	-webkit-writing-mode: vertical-lr; 
 		-ms-writing-mode: tb-lr;  
-			writing-mode:tb-lr; 
+			writing-mode:tb-lr;
+	text-align: center;
+	box-sizing: border-box;
+	padding-bottom : 10%;
+	padding-left : 0.25%;
+	margin-top : 9.5%;
 }
 #contact{
 	position:fixed; 
@@ -49,7 +54,13 @@ layouts
 	font-size:18px; 
 	-webkit-writing-mode:vertical-lr;
 		-ms-writing-mode:tb-lr;
-			writing-mode:tb-lr; 
+		writing-mode:tb-lr; 
+	text-align: center;
+	box-sizing: border-box;
+	padding-bottom : 10%;
+	padding-left : 0.25%;
+	margin-top : 9.5%;
+	
 }
 
 /*index*/
@@ -105,28 +116,22 @@ section{
 	margin-top : 2.5%;
 	margin-bottom : 2.5%;
 }
-section h2{
+section h2 , section h3{
 	font-size : 180%;
 	margin : 0%;
+	z-index : 2;
 }
 .img_container{
 	box-sizing : border-box;
-	padding : 3%;
+	padding : 0%;
 	margin : 0% auto;
-	width : 72%;
+	margin-top : -5%;
+	margin-bottom : 10%;
+	width : 85%;
+	z-index: 3;
 }
 section img{
-	margin : 3%;
-	width : 36%;
-	height : 36%;
-}
-.sizeDown{
-	margin : 3%;
-	width : 18%;
-	height : 18%;
-}
-.sizeUp{
-	margin : 3%;
-	width : 36%;
-	height : 36%;
+	margin : 1%;
+	width : 20%;
+	height : 20%;
 }

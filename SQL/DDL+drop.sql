@@ -126,3 +126,8 @@ create table prereq
 	 foreign key (prereq_id) references course
 	);
 
+set space 1;
+set wrap on;
+set head on;
+set pagesize 20;
+set line 130;

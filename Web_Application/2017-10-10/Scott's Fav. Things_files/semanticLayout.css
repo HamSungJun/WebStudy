@@ -1,0 +1,66 @@
+/* <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /courses/cse326/2017/labs/labResources/layout.css was not found on this server.</p>
+<hr>
+<address>Apache/2.2.15 (CentOS) Server at selab.hanyang.ac.kr Port 80</address>
+</body></html> */
+#container *:hover{
+    background-color: #A6CE39;
+}
+#container{
+    border: 10px solid white;
+    background-color: white;
+    width : 80%;
+    margin : 0px auto;
+    overflow: hidden;
+    /* position: relative; */
+}
+#header2{
+   color : #CCCCCC;
+   font-size : 14pt;
+}
+.purplebox{
+    border-bottom : 2px dashed blue;
+}
+body{
+    background-image: url(http://selab.hanyang.ac.kr/courses/cse326/2017/labs/images/3/blueTextureBG.jpg);
+}
+header{
+    text-align: right;
+    background-color : #1D2475;
+    color : white;
+}
+article{
+    overflow:hidden;
+}
+section{
+    float: right;
+    border: 4px solid #1D2475;
+    border-radius: 15px;
+    background-color: #99CCFF;
+    width : 75%;
+    padding : 5px;
+    margin-top : 10px;
+}
+section img{
+    float: right;    
+}
+section{
+    text-align: justify;
+    overflow: hidden;
+}
+footer{
+    clear: both;
+    margin-left: 10%;
+}
+aside{
+    width:20%;
+    margin-top : 10px;
+    float: left;
+    border : 5px solid #1D2475;
+    border-radius: 15px;
+    background-color: #99CCFF;
+}
