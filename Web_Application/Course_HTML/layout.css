@@ -1,0 +1,70 @@
+body{
+    background-image: url("http://selab.hanyang.ac.kr/courses/cse326/2017/labs/images/3/blueTextureBG.jpg");
+}
+#container *:hover{
+    background : greenyellow;
+}
+#container {
+    border: 10px solid white;
+    background-color : white;
+    margin-left : 10%;
+    margin-right : 10%;
+
+   
+}
+header{
+ 
+    background-color :  #1D2475;
+    color : white;
+    text-align : right;
+}
+header h2{
+
+    font-size : 14pt;
+    color : #CCCCCC;
+}
+article{
+    overflow: hidden;
+}
+section {
+    overflow : hidden;
+    float: right;
+    border : 4px solid #1D2475;
+    border-radius: 15px;
+    background-color : #99CCFF;
+    padding : 5px;
+    margin-top : 10px;
+    font-size : 14pt;
+    color : #1D2475;
+    text-align : justify;
+    width : 70%;
+}
+.subjects{
+    border-bottom : 2px dashed blue;
+}
+footer{
+    margin-left : 10%;
+    margin-right : 10%;
+}
+
+img{
+    float: right;
+}
+footer img{
+    float : left;
+}
+aside{
+    width : 20%;
+    float : left;
+    border: 4px solid #1D2475;
+    background-color : blue;
+    color : orange;
+    border-radius : 15px;
+    margin : 10px;
+}
+/* 
+Change the box with the green border to have a solid, white, 10px-thick border.
+Change the boxes with the blue border to have a solid, 4px-thick border, in color , with a 15px rounded border radius.
+Change the box with the purple border to have only a bottom border: blue, dashed, and 2px-thick.
+Change the box with the red border to have a background color of, change font color to white, and get rid of its border.
+Change the font size of the Cars, Sports, and Music area to 14pt, font color to , and get rid of its border. */

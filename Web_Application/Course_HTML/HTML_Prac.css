@@ -1,0 +1,65 @@
+.italic{
+    font-style: italic;
+    color : #FFF86B;
+}
+.bold{
+    font-weight: bold;
+    color : #FFF86B;
+}
+q{
+    display: block;
+    color: #D1DFEB;
+}
+body{
+    font-family : "Helvetica" , Verdana , sans-serif;
+    color : #939396;
+    background-color: #1D2475;
+    background-image : url("../HSJPRIMELOGO.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+}
+h1{
+    font-size : 40pt;
+    text-shadow: 3px -3px green;
+}
+h1 , h2{
+    color : #F7931E;
+}
+dl{
+    font-size : 70%;
+}
+dl dt{
+    font-weight: bold;
+    color : #FFF86B;
+}
+p::first-letter{
+    font-weight: bold;
+    font-size : 150%;
+}
+a , a:visited{
+    color : #FF4F4F;
+    text-decoration: none;
+}
+a:hover{
+
+    text-decoration : underline;
+    color : #FF4F4F;
+}
+ul{
+    list-style-type : square;
+}
+ul , ol , blockquote{
+    text-align : left;
+}
+table , tr , th , td{
+    border: 2px dotted;
+    border-collapse: collapse;
+}
+img{
+    outline: medium ridge #F7931E;
+}
+a img{
+    outline : none;
+}
+

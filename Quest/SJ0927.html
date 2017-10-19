@@ -10,7 +10,7 @@
             window.onload = function () {
 
                 var initial_Width = $(".img_container img").width();
-              
+            //  이미지 클릭시 사이즈가 토글되는 코드 
                 $('.img_container').on('click', function () {
         
                     var IMGS = $(this).children("img");
@@ -33,8 +33,23 @@
                             });   
                         };
                 }
-                                
+               
+                
                 });
+
+            // Project Navigator의 개수를 확인하여 sidebar의 위치를 조정하는 코드
+                var LISTS = $(".container nav ul").children("li");
+                var container_Height = $(".container").height();
+               
+                $("#home").css({
+                    marginTop : LISTS.length*40,
+                    height : container_Height - LISTS.length*40
+                });
+                $("#contact").css({
+                    marginTop : LISTS.length*40,
+                    height : container_Height - LISTS.length*40
+                });
+
             }
         </script>
         

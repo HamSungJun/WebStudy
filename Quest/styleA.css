@@ -28,11 +28,12 @@ layouts
 
 /*anchorbar*/
 #home{
-	position:fixed; 
+	/* position:fixed;  */
+	float: left;
 	z-index:1000; 
 	left:0px; 
 	width:2rem; 
-	height:100%; 
+	/* height:;  */
 	background:#FDE002; 
 	font-size:18px; 
 	-webkit-writing-mode: vertical-lr; 
@@ -42,14 +43,15 @@ layouts
 	box-sizing: border-box;
 	padding-bottom : 10%;
 	padding-left : 0.25%;
-	margin-top : 9.5%;
+	/* margin-top : 9.5%; */
 }
 #contact{
-	position:fixed; 
+	/* position:fixed; */
+	float: right;
 	z-index:1000; 
 	right:0px; 
 	width:2rem; 
-	height:100%; 
+	/* height:auto; */
 	background:#FDE002; 
 	font-size:18px; 
 	-webkit-writing-mode:vertical-lr;
@@ -59,7 +61,7 @@ layouts
 	box-sizing: border-box;
 	padding-bottom : 10%;
 	padding-left : 0.25%;
-	margin-top : 9.5%;
+	/* margin-top : 9.5%; */
 	
 }
 
@@ -74,12 +76,16 @@ nav{
 nav ul{
 	padding : 0%;
 	margin : 0%;
+	list-style-type: none;
 }
 nav ul li{
-	padding-top : 1%;
-	padding-bottom: 1%;
 	display : block;
+	width : 100%;
+	box-sizing: border-box;
 	border-bottom: 2px solid black;
+	height : 40px;
+	padding-top : 10px;
+	/* margin-left : 0.5%; */
 }
 
 /*global*/
@@ -88,7 +94,7 @@ html {
 }
 
 body{
-	margin-top : 0%
+	margin : 0;
 }
 
 html,body {

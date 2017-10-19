@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Html Study</title>
+        <!-- info about page -->
+        <link rel="shortcut icon" href="C:\Users\admin\Desktop\WebMaster\Web_Application\HSJPRIMELOGO.png" type="image/png"> 
+        <style>
+            body{
+                background-image : url("../HSJPRIMELOGO.png");
+                background-repeat: no-repeat;
+                background-position : 320px 320px;
+            
+            }
+            p{
+                border: 5px dotted skyblue;
+                color : red;
+                background-color : yellow;
+                width : 350px;
+                height : 500px;
+
+            }
+            h1{
+                font-family : Georgia, 'Times New Roman', Times, serif;
+                font-weight : bold;
+                font-style : italic;
+                font-size : 20pt;
+            }
+            h2{
+                font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-shadow : -2px -5px gray;
+                /* shadow position 기준은 left , top 을 양의 방향으로 잡고 0,0이다. */
+            }
+            p, h1, h2 {
+                color : green;
+            }
+            h1,.text_center{
+                text-align : center;
+                text-decoration : overline underline;
+            }
+            .text_justified{
+                text-align : justify;
+            }
+            ol{
+                list-style-type :   georgian;
+            }
+            table , tr , td{
+                border-spacing: 5px;
+                border : 2px solid black;
+                /* empty-cells : hide; */
+                /* table-layout: */
+                /* border-collapse :collapse; */
+            }
+            .red{
+                background-color : pink;
+            }
+            ul:hover{
+                color : green;
+            }
+            img{
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- page contents -->
+        <p>
+            Quis id fugiat commodo dolore excepteur incididunt reprehenderit culpa incididunt pariatur minim deserunt commodo enim. Elit ut dolore voluptate ex sit amet. Proident ullamco officia do dolor labore laboris occaecat. Quis exercitation cupidatat officia ipsum irure. Incididunt elit in ipsum sit cupidatat aliquip magna veniam.
+        </p>
+        <hr>
+        <p>
+            Aliqua dolor duis tempor enim elit labore excepteur quis culpa ex pariatur consectetur cupidatat. Labore Lorem ea minim laboris sit. Ullamco magna mollit non consectetur qui cillum in. Excepteur ipsum voluptate cillum excepteur aliquip Lorem culpa voluptate occaecat reprehenderit. Nostrud dolore incididunt culpa aliquip ex tempor duis dolor ullamco irure ea qui. Labore amet excepteur dolor magna incididunt cillum. Velit duis velit enim sit velit elit reprehenderit nostrud in.
+        </p>
+        <p class="text_center">
+            Mollit do duis sit esse.
+        </p>
+        <p class="text_justified">
+            Sunt quis id irure irure pariatur voluptate laborum anim tempor ad est dolore. Quis aliqua mollit irure mollit ex excepteur eu laboris id consequat anim culpa. Et Lorem id voluptate laboris elit velit do. Commodo reprehenderit laborum anim nulla commodo elit labore quis ipsum consequat in. Laborum reprehenderit elit ea velit ut veniam aliqua sit.
+        </p>
+        <h1>This is h1</h1>
+        <h2>This is h2</h2>
+        <h3>This is h3</h3>
+        <h4>This is h4</h4>
+        <h5>This is h5</h5>
+        <h6>This is h6</h6>
+
+        
+        <h1><a href="http://www.hanyang.ac.kr" target="_blank">go HYU</a></h1>
+        <img src="http://selab.hanyang.ac.kr/courses/cse326/2017/lecture/images/gollum.jpg" alt="gollum">
+
+        <p>
+            <a href="https://theonering.net">
+                <img src="http://selab.hanyang.ac.kr/courses/cse326/2017/lecture/images/gandalf.jpg" alt="gandalf_link" title="you shall not pass!">
+            </a>
+        </p>
+
+        <br>
+
+        <ul>
+            <li>movies</li>
+            <ul>
+                <li>트랜스포머</li>
+                <li>해리포터</li>
+                <li>반지의제왕</li>
+            </ul>
+            <li>animations</li>
+            <ul>
+                <li>원피스</li>
+                <li>나루토</li>
+                <li>블리치</li>
+            </ul>
+        </ul>
+
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+
+        <dl>
+            <dt>data table</dt>
+            <dd>data data</dd>
+            <dd>data data</dd>
+        </dl>
+        <p>
+        &lt;p&gt;
+        &lt;a href=&quot;http://google.com/search?q=marty&amp;ie=utf-8&quot;&gt;
+          Search Google for Marty
+        &lt;/a&gt;
+        &lt;/p&gt;
+        </p>
+
+        <p>del ins <del>del</del> <ins>ins</ins> <abbr title="SCUBA">SCUBA</abbr></p>
+
+        <p>
+            The <code>ul</code> and <code>ol</code>
+            tags make lists.
+        </p>
+
+        <pre>
+            Reprehenderit 
+            elit adipisicing 
+            laborum officia.
+        </pre>
+
+        <code>
+            Reprehenderit 
+            elit adipisicing 
+            laborum officia.
+        <code>
+
+        <table>
+            <!-- span의 크기만큼 밀어내는 개념 , 병합되지 않음. -->
+            <col class="red">
+            <colgroup class="red" span="2"></colgroup>
+            <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
+            <tr><td >1,1-1,2</td><td>1,3-3,3</td><td>룰루</td></tr>
+            <tr><td >2,1</td><td>2,2</td><td>소라카</td></tr>
+            <tr><td>3,1</td><td>3,2</td><td>잔나</td></tr>
+        </table>
+
+        <video src="C:\Users\admin\Desktop\WebMaster\HTML_Tutorial\Videos\small.mp4" controls="true"></video>
+
+        <object data="C:\Users\admin\Desktop\WebMaster\HTML_Tutorial\Videos\small.mp4" type="video/mp4">
+            <param name="autoplay" value="true" />
+
+
+        </object>
+    </body>
+
+</html>
