@@ -1,0 +1,123 @@
+/* <!--함성준 , 2013041007 , 화요일 09시 00분--> */
+/* specification 2a (write appropriate selector) */
+@font-face{
+    font-family : 'prime';
+    src: url("./font/primer.otf");
+}
+
+
+
+
+/* specification 2a & 2b */
+body{
+	font-family : 'prime';
+	background-color : #00ABD9;
+}
+
+
+
+
+/* specification 3a & 3b */
+#page{
+	width : 950px;
+	margin : 0 auto;
+	background-color : white;
+	border-bottom : 5px solid black;
+}
+
+
+
+
+
+
+/* specification 4a 4b (write appropriate selector) */
+nav{
+	background : black;
+}
+nav ul{
+	list-style-type: none;
+	text-align : center;
+	font-weight: bold;
+	color : #A690AF; 
+	line-height: 2em;
+	padding: 0;
+}
+
+
+
+
+
+
+/* specification 4a 4c (write appropriate selector) */
+nav ul li{
+
+	display : inline-block;
+	margin-left : 1.5em;
+	margin-right : 1.5em;
+
+}
+
+
+
+
+
+
+/* specification 4b (write appropriate selector) */
+	
+nav ul li a{
+	text-decoration-line: none;
+}
+
+
+
+
+/* specification 5a (write appropriate selector) */
+article{
+	margin-left : 1.5em;
+	margin-right : 1.5em;
+}
+
+
+
+
+/* specification 5b (write appropriate selector) */
+article h2{
+	text-decoration-line: underline;
+	color : #00ABD9;
+}
+
+
+
+
+/* specification 6 */
+.mid {
+	text-align: center;
+}
+
+
+
+/* specification 7a, 7b, 7c, 7d, and 7e */
+#joinSE {
+
+	font-weight : bold;
+	font-size : 190%;
+	float:right;
+	background : #8BCBE3;
+	padding : 0.75em;
+	margin : 1em;
+
+}
+
+/* extra mark : 
+  examine 'screenshot.png' and find out which style is still not specified in CSS 
+  & create and apply an associated rule
+  
+  My Answer : The 'strong'tags used in What is SE?'s Paragraph. However, this is not good when we need to
+ modify html or rewrite contents. So, instead of using Strong tag, it will be better using Css class. under 
+ Sentence is implementation
+
+ */ 
+ .text-underlined-bold{
+	text-decoration : underline;
+	font-weight: bold;
+ }

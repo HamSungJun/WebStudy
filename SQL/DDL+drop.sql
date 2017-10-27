@@ -129,5 +129,5 @@ create table prereq
 set space 1;
 set wrap on;
 set head on;
-set pagesize 20;
-set line 130;
+set pagesize 50;
+set line 200;
