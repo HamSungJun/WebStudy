@@ -1,0 +1,13 @@
+r;r;r;Visa
+r;r;r;Visa
+r;r;r;Visa
+r;r;r;Visa
+;r;r;Visa
+scoot-lee;111;4444555566667777;Visa
+scoot-lee;111;5444555566667777;MasterCard
+scoot-lee;111;4444444444444444;Visa
+scott uk-jin lee;111;4444444444444444;Visa
+scott uk-jin lee;111;4444444444444444;Visa
+scott uk-jin lee;111;5444444444444444;MasterCard
+scott uk-jin lee;111;5444444444444444;MasterCard
+ham sung jun;2013041007;5444444422221111;MasterCard

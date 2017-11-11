@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./libraries/jquery-ui.css">
+  <link rel="stylesheet" href="./libraries/bootstrap.css">
+  <link async href="http://fonts.googleapis.com/css?family=Passero%20One" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+  <script src="./libraries/jquery-3.2.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".form-group").focusin(function () {
+        $("h1").addClass("rainbow");
+        
+      })
+  
+      })
+
+
+  
+  </script>
+  <style>
+   
+    .bg-1{
+    background-color : #1abc9c;
+    
+    }
+    .rainbow{
+      
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        cursor: pointer;
+        border: none;
+        font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+        color: tomato;
+        text-align: center;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+        -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+        -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+        -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+        transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+     
+    }
+    .container-fluid{
+      height : 100vh;
+    }
+    .header{
+      height : 20%;
+    }
+    .section{
+      height : 80%;
+    }
+    #profile_img {
+        height: 35vh;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin-bottom : 20px;
+    }
+    
+  </style>
+</head>
+<body>
+<div class="container-fluid"> 
+<div class="row">
+  <div class="col-md-12 text-center bg-primary">
+    <h1>Register</h1>
+  </div>
+</div>
+
+<div class="row align-items-center bg-1 section">
+    
+    <div class="col-md-1"></div>
+    
+    <div class="col-md-4">
+        
+          <form action="register.php" method="POST">
+            
+              <div class="form-group">
+                  <label for="name">User Email:</label>
+                  <input type="email" name="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                  <label for="pw">Password:</label>
+                  <input type="password" name="pw" class="form-control" id="pw">
+              </div>
+              <div class="form-group">
+                  <label for="pw">Name:</label>
+                  <input type="text" name="name" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                  <label for="pw">BirthDay (YYMMDD):</label>
+                  <input type="date" name="birthday" class="form-control" id="birthday">
+              </div>
+
+              <button type="submit" class="btn btn-success" id="submit">Submit</button>
+              <button type="button" class="btn btn-primary" id="clear">Clear</button>
+              
+  
+          </form>
+  
+      </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-3">
+            <img id="profile_img" class="card-img-top" src="data:image/png;base64,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" alt="Card image cap">
+        <div class="card">
+           
+            <div class="card-body text-center">
+              <h4 class="card-title">My Profile</h4>
+              <p class="card-text">Select your profile image.</p>
+              <input type="file" value="no file">
+            </div>
+        </div>    
+    </div>
+
+    <div class="col-md-1"></div>
+
+</div>
+  
+</div>
+</body>
+</html>

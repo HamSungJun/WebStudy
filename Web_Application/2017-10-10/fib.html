@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            window.onload = function () {
+                
+                function fib2(Nth){
+                    var i;
+                    var f = Array(Nth);
+                    f[0] = 0;
+                    f[1] = 1;
+                    for (var index = 2; index < f.length; index++) {
+                        
+                        f[index] = f[index-1] + f[index-2];
+                        
+                    }
+                    return f[Nth-1];
+                }
+                alert(fib2(32));
+            }
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
