@@ -152,6 +152,10 @@
                 printf($Array_to_String);
 
                 $String_to_Array = explode(",",$Array_to_String);
+                print_r($String_to_Array); $Array_to_String = implode($String_Array , ",");
+                printf($Array_to_String);
+
+                $String_to_Array = explode(",",$Array_to_String);
                 print_r($String_to_Array);
 
                 function str_Separator($str , $sep = "::")

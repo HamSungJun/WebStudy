@@ -1,0 +1,10 @@
+Freakonomics|Steven Levitt|finance|2006|18.00
+Harry Potter and the Sorceror's Stone|J.K. Rowling|children|1998|19.99
+Breakfast for Dinner|Amanda Camp|cooking|2009|22.00
+Web Programming Step-by-Step|Marty Stepp and Jessica Miller|computers|2009|999.99
+Building Java Programs|Stuart Reges and Marty Stepp|computers|2007|90.00
+Core Java, 8th edition|Cay Horstmann|computers|2007|35.00
+Personal Finance for Dummies|Eric Tyson|finance|2006|14.95
+21 Burgers for the 21st Century|Stuart Reges|cooking|2010|75.00
+The Four Food Groups of Chocolate|Victoria Kirst|cooking|2005|30.00
+Go, Dog, Go!|P.D. Eastman|children|1961|8.99

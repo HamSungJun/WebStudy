@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function () {
+                $("box").observe("mousemove",offset_Checker);
+                $("exform").observe("submit",checkData);
+                $("TimerOnOff").observe("click",TimerOnOff);
+                
+            }
+            var timer = null;
+            var num = 0;
+            function NumberIncreaser() {
+                num += 1;
+                $("number").innerHTML = num;
+            }
+            function TimerOnOff(event) {
+                if(timer == null){
+                    timer = setInterval(NumberIncreaser , 1000);
+                }
+                else{
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }
+            function offset_Checker(event) {
+                $("box").innerHTML = 
+                "pointer: (" + event.pointerX() + ", " + event.pointerY() + ")\n"
+                + "screen : (" + event.screenX + ", " + event.screenY + ")\n"
+                + "client : (" + event.clientX + ", " + event.clientY + ")\n"
+                + "offset : (" + event.offsetX + ", " + event.offsetY + ")";
+
+            }
+            function checkData(event) {
+                if ($("city") == "" || $("state").length != 2) {
+                    alert("Error, invalid city/state.");
+                    event.stop();
+                    return false;
+                }
+            }
+        </script>
+        <style>
+            #box{
+
+                margin: 0px auto;
+                width : 500px;
+                height : 500px;
+                background-color: blue;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            
+        </div>
+        <form id="exform">
+            <input type="text" id="city">
+            <input type="text" id="state">
+            <button id="submit" type="submit">submit</button>
+        </form>
+        <!-- window.onload = function() {
+            $("exampleform").observe("submit", checkData);
+        };
+        
+        function checkData(event) {
+            if ($F("city") == "" || $F("state").length != 2) {
+                alert("Error, invalid city/state.");  // show error message 
+                event.stop();
+                return false;
+            }
+        } -->
+        <!-- setTimeout(booyah(), 2000);
+        setTimeout(booyah, 2000);
+        
+        setTimeout(multiply(num1 * num2), 2000);
+        setTimeout(multiply, 2000, num1, num2); -->
+        <p id="number"></p>
+        <button id="TimerOnOff">Timer</button>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script>
+            window.onload = function() {
+                // $("toggle_size").observe("click",toggle_size);
+                // $("para").addClassName("smallsize");
+                $("Setter").observe("click",TagSetter);
+                $("list_hide").observe("click",hidelist);
+                $("bigger").observe("click",bigger_Font);
+                $("submit").observe("click",)
+            }
+            // function toggle_size() {
+            //     if ($("para").hasClassName("smallsize") === false) {
+            //         $("para").toggleClassName("smallsize");    
+            //     } 
+            //     else {
+            //         $("para").toggleClassName("smallsize");        
+            //     }
+                
+            // }
+            function TagSetter() {
+                var NotTagged = $("nameTag").siblings();
+                for (let index = 0; index < NotTagged.length; index++) {
+                    if (NotTagged[index].innerHTML.indexOf("_HSJPRIME") < 0) {
+                        NotTagged[index].innerHTML = "Apple_HSJPRIME";
+                    }
+                    
+                }
+            }
+            function hidelist() {
+                var list = $$("li");
+                for (let index = 0; index < list.length; index++) {
+                    list[index].hide();
+                    
+                }
+            }
+            function bigger_Font() {
+
+                alert("i;m running"+ Number(parseInt($("para").getStyle("font-size"))));
+                var initial_Size = parseInt($("para").getStyle("font-size"));
+                $("para").style.fontSize = (initial_Size + 4)+ "px"; 
+
+            }
+            function form_alerter() {
+                alert($F("username"));
+            }
+        </script>
+        <style>
+            #para{
+                font-size: 20px;
+            }
+            .bigsize{
+                font-size: 50px;
+            }
+            .smallsize{
+                font-size: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="toggle_size">toggle</button>
+        
+        <input id="input" type="text">
+
+        <button id="Setter">Set NameTag</button>
+        <button id="list_hide">hide_list</button>
+        <button id="bigger">bigger font</button>
+        <ul>
+            <li id="nameTag">Apple_HSJPRIME</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+            <li>Apple</li>
+        </ul>
+
+        <p id="para">Ullamco dolore labore adipisicing voluptate id ex aute eiusmod.</p>
+
+        <form id="login" action="">
+            <input id="username" type="text" name="username">
+            <input type="password" name="pw">
+            
+        </form>
+        <button id="submit">submit</button>
+    </body>
+</html>

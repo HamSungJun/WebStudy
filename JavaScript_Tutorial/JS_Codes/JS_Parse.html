@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        
+        <script>
+           window.onload = function () {
+            // $("open").observe("click",function(event) {
+            //     window.open("https://www.naver.com/");
+            // })
+            var Button_1 = document.getElementById("open");
+            Button_1.onclick = p_to_red;
+            var Button_2 = document.getElementById("make_P");
+            Button_2.onclick = make_Para;
+            var Button_3 = document.getElementById("remove_P");
+            Button_3.onclick = remove_Para;   
+            var Button_4 = document.getElementById("Grape_Checker");
+            Button_4.onclick = Grape_Checker;
+            }
+            
+           
+           function alerter() {
+               alert("booyah");
+           }
+           var flip = true;
+
+           function p_to_red(){
+            var allParas = document.querySelectorAll("p");
+
+            if (flip === true) {
+
+                for (let index = 0; index < allParas.length; index++) {
+                allParas[index].style.background = "green";
+                flip = false;
+            }
+
+            }
+            else{
+
+                for (let index = 0; index < allParas.length; index++) {
+                allParas[index].style.background = "white";
+                flip = true;
+            }
+            
+            
+           }
+           }
+
+           function make_Para(){
+                var new_P = document.createElement("p");
+                new_P.innerHTML = "I'm new_Para";
+                var div_5p = document.getElementById("5p");
+                div_5p.appendChild(new_P);
+           }
+           function remove_Para(){
+                var div_5p = document.getElementById("5p");
+                // var PinDiv = div_5p.querySelectorAll("p");
+                div_5p.removeChild(div_5p.childNodes[0]);
+                
+           }
+
+           var Grape_Num = 0;
+           function Grape_Checker() {
+               var Tree = document.getElementById("AG");
+               var fruits = Tree.querySelectorAll("li");
+
+               for (let index = 0; index < fruits.length; index++) {
+                   if (fruits[index].innerHTML === "Grape"){
+                        fruits[index].style.background = "violet";
+                        Grape_Num++;
+                   }
+                   else{
+                    // fruits[index].style.background = "red";
+                   }
+                   
+                
+               }
+               Getter();
+            
+              
+           }
+           function Getter() {
+                var Get = confirm("검색된 포도를 수확할까요?" + "검색된 포도의 개수 : " +Grape_Num);
+                if (Get === true) {
+                    
+                   for (let index = 0; index < fruits.length; index++) {
+
+                        if (fruits[index].innerHTML === "Grape"){
+                            fruits[index].parentNode.removeChild(fruits[index]);
+                        }       
+            
+                   }
+                   confirm("포도를 "+Grape_Num+" 개 수확하였습니다.");
+                }
+               else{
+                   confirm("포도를 그냥 더 자라게 두었습니다.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>This is h1 heading</h1>
+        <button id="open">New Page</button>
+        <button id="make_P">make_P</button>
+        <button id="remove_P">remove_P</button>
+        <button id="Grape_Checker">Grape</button>
+        <div id="5p">
+            <!-- <h2>This is h2 heading in div</h2> -->
+            <p>I'm First child Of div</p>
+            <p>I'm N'th child Of div</p>
+            <p>I'm N'th child Of div</p>
+            <p>I'm N'th child Of div</p>
+            <p>I'm Last child Of div</p>
+
+        </div>
+
+        <ul id="AG">
+            <li>apple</li>
+            <li>Grape</li>
+            <li>apple</li>
+            <li>apple</li>
+            <li>Grape</li>
+            <li>apple</li>
+            <li>apple</li>
+            <li>apple</li>
+            <li>apple</li>
+            <li>apple</li>
+            <li>Grape</li>
+            <li>apple</li>
+        </ul>
+    </body>
+</html>
