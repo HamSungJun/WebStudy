@@ -2,24 +2,46 @@
 window.onload = prepareButton;
 function prepareButton() {
     document.getElementById('Pimpin').onclick = Bigger_Pimpin;
+    $("Pimpin-").observe("click",Smaller_Pimpin);
     document.getElementById('Bling').onchange = Bling;
     document.getElementById('Snoopify').onclick = Snoopify;
     document.getElementById('Malkovitch').onclick = Malkovitch;
     document.getElementById('Lgpay').onclick = Lgpay;
 };
-
+var pimpiner = null; //this is timer id
 var initial_size = 12;
 function font_increaser() {
     initial_size++;
     initial_size++;
     $("my_Textarea").style.fontSize = parseInt(initial_size)+"pt";
 };
+function font_decreaser() {
+    initial_size--;
+    initial_size--;
+    $("my_Textarea").style.fontSize = parseInt(initial_size)+"pt";
+};
 
 var Bigger_Pimpin = function () {
     // alert("Hello, world!");
     // $("my_Textarea").style.fontSize;
-    setInterval(font_increaser,500);
-    
+    if(pimpiner === null){
+    pimpiner = setInterval(font_increaser,500);
+    }
+    else{
+        clearInterval(pimpiner);
+        pimpiner = null;
+    }
+};
+    function Smaller_Pimpin () {
+    // alert("Hello, world!");
+    // $("my_Textarea").style.fontSize;
+    if(pimpiner === null){
+    pimpiner = setInterval(font_decreaser,500);
+    }
+    else{
+        clearInterval(pimpiner);
+        pimpiner = null;
+    }
 };
 var Bling = function () {
     var div_1 = document.getElementById("div_1");

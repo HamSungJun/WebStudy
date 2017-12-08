@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>XML불러오기</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+        <script>
+            window.onload = function () {
+                $("GETTER").observe("click" , function () {
+                    new Ajax.Request("XML_Generator.php",{
+                        method : "GET",
+                        onSuccess : showXML,
+                        onFailure : ajaxFailed,
+                        onException : ajaxFailed
+                    });
+                });
+            }
+        </script>
+        <style>
+            #XML_BOX{
+
+                width : 400px;
+                height : 400px;
+                background : lightskyblue;
+                border: 1px solid black;
+                display: inline-block;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="XML_BOX"></div>
+        <button id="GETTER">GET_XML</button>
+    </body>
+</html>

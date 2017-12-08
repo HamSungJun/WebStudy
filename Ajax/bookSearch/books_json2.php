@@ -30,9 +30,15 @@ if (!file_exists($BOOKS_FILE)) {
 }
 
 $data = array(
-
+    "category" => "Computerrr\n",
     "books" => array(
-		
+    "name" => "HAMSUNGJUN",    
+        "book" => array(
+
+
+
+        )
+
     )
 );
 
@@ -44,7 +50,7 @@ for ($i=0; $i < count($lines); $i++) {
 
 	if($book_category == $category){
 
-		array_push($data["books"],array("title" => $title , "category" => $book_category , "author" => $author , "year" => $year , "price" => $price));
+		array_push($data["books"]["book"],array("title" => $title , "category" => $book_category , "author" => $author , "year" => $year , "price" => $price));
 
 	}
 }

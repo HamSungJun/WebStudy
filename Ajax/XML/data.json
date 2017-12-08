@@ -1,0 +1,11 @@
+{ 
+    "private" : "true",
+    "from" : "Alice Smith (alice@example.com)",
+    "to" : ["Robert Jones (roberto@example.com)","Charles Dodd (cdodd@example.com)"],
+    "subject" : "Tomorrow's \"Birthday Bash\" event!",
+    "message" : {
+        "language" : "english",
+        "text" : "Hey guys, don't forget to call me this weekend!"
+    }
+
+}

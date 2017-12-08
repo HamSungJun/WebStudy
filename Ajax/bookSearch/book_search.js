@@ -9,7 +9,7 @@ window.onload = function() {
 			onFailure : ajaxFailed,
 			onException : ajaxFailed,
 		});
-    }
+    };
     $("b_json").onclick=function(){
 		//	construct a Prototype Ajax.request object
 			new Ajax.Request("books_json.php", {
@@ -19,7 +19,7 @@ window.onload = function() {
 				onFailure : ajaxFailed,
 				onException : ajaxFailed,
 			});
-    }
+    };
 };
 
 function getCheckedRadio(radio_button){
@@ -34,7 +34,7 @@ for (var i = 0; i < radio_button.length; i++) {
 
 function showBooks_XML(ajax) {
 	alert(ajax.responseText);
-
+	
 	$("books").innerHTML = "";
 	var books = ajax.responseXML.getElementsByTagName("book");
 	
@@ -49,6 +49,8 @@ function showBooks_XML(ajax) {
 
 		$("books").appendChild(li);
 	}
+
+	
 	
 }
 
@@ -62,7 +64,7 @@ function showBooks_JSON(ajax) {
 		 li.innerHTML = data.books[i].title + ", by " +
 				 data.books[i].author + " (" + data.books[i].year + ")";
 		 $("books").appendChild(li);
-	 }
+	}
 		
 }
 

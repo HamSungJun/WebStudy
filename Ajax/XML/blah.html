@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+        <script>
+
+            window.onload = function(){
+
+                $("XMLButton").observe("click",function () {
+
+                    new Ajax.Request("Computer_XML.php",{
+                    
+                    method : "get",
+                    onSuccess : showCom_XML,
+                    onFailure : ajaxFailed,
+                    onException : ajaxFailed
+
+                    });
+
+                });
+            }
+
+            function showCom_XML(ajax) {
+                alert(ajax.responseText);
+
+                var Hardwares = ajax.responseXML.getElementsByTagName("HardWare");
+                
+                for (let index = 0; index < Hardwares.length; index++) {
+                    var name = Hardwares[index].getElementsByTagName("name")[0].firstChild.nodeValue;
+                    var price = Hardwares[index].getElementsByTagName("price")[0].firstChild.nodeValue;
+                    var location = Hardwares[index].getElementsByTagName("location")[0].firstChild.nodeValue;
+                    
+                    var li = document.createElement("li");
+                    li.innerHTML = "부품 이름 : " + name + " 부품 가격 : " + price + " 부품 소재지 : " + location;
+                    $("Computer_lists").appendChild(li);
+                }
+
+            }
+            function ajaxFailed(ajax, exception) {
+                var errorMessage = "Error making Ajax request:\n\n";
+                if (exception) {
+                    errorMessage += "Exception: " + exception.message;
+                } 
+                else {
+                    errorMessage += "Server status:\n" + ajax.status + " " + ajax.statusText + 
+                                    "\n\nServer response text:\n" + ajax.responseText;
+                }
+                alert(errorMessage);
+            }
+
+        </script>
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        <button id="XMLButton">GETXML</button>
+        <div>
+            <ul id="Computer_lists">
+                    (fetching Computer list)...
+            </ul>
+            
+        </div>
+    </body>
+</html>
