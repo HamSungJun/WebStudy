@@ -9,8 +9,6 @@ create table room(
     room_num number(3) primary key Not Null,
     capacity number(1) Not Null,
     room_type varchar2(20) Not Null
-    
-    
 );
 create table staff(
     name varchar2(20) Not Null unique,

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- 함성준 2013041007 2학년 반 : 화요일 09시 00분 -->
+<html>
+	<head>
+		<title>Q1. Forms</title>
+		<style  type="text/css">
+			label.heading {
+				float: left;
+				margin-right: 1em;
+				text-align: right;
+				width: 7em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>
+			CSE3026 Web App. Dev. : Student Survey
+		</h1>
+
+		<!-- Complete the form element with additional attribute so that it can pass form value as well as a file -->
+		<!-- form element에 attribute를 추가하여 form의 값과 파일을 같이 전송할 수 있도록 수정하시오 -->
+		<form action="formProcessor.php" method="post" enctype="multipart/form-data">
+			
+			<!-- Provide input forms as seen in the sample screenshot
+				 Provide labels for each input where all the labels under the 'Student Information' box should have class "heading"
+							
+				 Create a box surrounding different input forms below with the "Student Information:" as legend --> 
+			<!-- screenshot에 보이는 것과 같이 input form을 제공하시오
+				 각 input에 "heading"이라는 class를 속성으로 가진 labels를 더하시오
+							
+				 여러 input form을 둘러싼 상자를 만들고 "Student Information:"을 legend로 지정하시오 --> 	
+				<fieldset>
+					<legend>Student Information:</legend>
+
+					<label class="heading">Name:</label>
+					<input  type="text" name="sname" value="Scott Lee">
+					<br />
+
+					<label class="heading">Student ID:</label>
+					<input  type="text" name="sid" value="2011010528">
+					<br />
+
+					<label class="heading">Date of Birth:</label>
+					<input type="date" name="dob">
+					<br />
+
+					<label class="heading" >Email:</label>
+					<input type="email" maxlength="25" name="email">
+					<br />
+
+					<label class="heading" for="photo">Photo:</label>		
+					<input type="file">
+					<br />
+
+					<label class="heading">Class:</label>
+						<label>2nd yr
+								<input type="radio" name="sclass" value="2" checked>
+						</label>
+						<label>3rd yr
+							<input type="radio" name="sclass" value="3">
+						</label>
+					
+				</fieldset>
+				 
+				<!-- Create a text field with 
+					 "sname" as name & id, "Scott Lee" as initial value, and "Name:" as label
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<!-- name과 id로 "sname"을 가지고, 초기 값으로 "Scott Lee"를 가지며, label로 "Name:" 가진 text field를 생성하시오
+					 label에 input을 중첩하지 마시오 (<label><input .../></label> => 올바르지 않음 )	-->	
+				
+				<!-- Create a text field with 
+					 "sid" as name & id, "2011010528" as initial value, and "Studnet ID:" as label
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<!-- name과 id로 "sid"을 가지고, 초기 값으로 "2011010528"를 가지며, label로 "Studnet ID:" 가진 text field를 생성하시오
+					 label에 input을 중첩하지 마시오 (<label><input .../></label> => 올바르지 않음 )	-->	  				
+			
+				
+				<!-- Create an input with "dob" as name & id and "Date of Birth:" as label
+					 * Use HTML5's new input type so user can select a date from drop-down calendar
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<!-- name과 id로 "dob"를 가지고 label로 "Date of Birth:"를 가진 text field를 생성하시오
+					 * HTML5의 새로운 input type을 사용하여 사용자가 drop-down 달력으로 날짜를 선택할 수 있도록 하시오. 
+					  label에 input을 중첩하지 마시오 (<label><input .../></label> => 올바르지 않음 )	-->						  
+				
+				
+				<!-- Create an input with 
+					 "email" as name & id, "scottlee@hanyang.ac.kr"as initial value and "Email" as label
+					 Also set the size of this input to be 25 characters long. 
+					 * Use HTML5's new input type specifically designed to validate email as an input
+					 Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<!-- name과 id로 "email"를 가지고, 초기값으로 "scottlee@hanyang.ac.kr" 가지며, label로 "Email"을 가진 text field를 생성하시오
+					 이 input의 길이를 25 characters로 설정하시오
+					 * HTML5의 새로운 input type중 email에 대한 검사를 할 수 있도록 하시오 
+					  label에 input을 중첩하지 마시오 (<label><input .../></label> => 올바르지 않음 )	-->	
+				
+				<!-- Create an input for user to unpoad a file with "photo" as name & id and "Photo:" as lable.
+					 Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<!-- name과 id로 "photo"를 가지고 label로 "Photo:"을 가졌으며, 사용자가 파일을 업로드 할 수 있게 하는 input을 생성하시오
+					  label에 input을 중첩하지 마시오 (<label><input .../></label> => 올바르지 않음 )	-->		
+								
+												
+				<!-- You can nest input inside label for the below forms (<label><input .../></label> => OK ) -->
+				<!-- 아래 form들에 대해서는 input을 label내부로 중첩 가능 (<label><input .../></label> => OK ) -->
+				
+				<!-- Create a label "Class:" -->
+				<!-- "Class:"라는 label 생성 -->
+				
+				<!-- Create two radio buttons with 
+					 "sclass" as names, "2" & "3" as values, and "2nd yr" & "3rd yr" as labels
+					 The radio button with the value "2" and the label "2nd yr" should be checked initially
+				-->
+				<!-- names로 "sclass"를 가지고, 값으로 각각 "2"와 "3"을 가지며, 그리고 label로 "2nd yr"와 "3rd yr"를 가진 radio buttons 2개를 생성하시오 
+					 값을 2 그리고 label을 "2nd yr"를 가진 radio button은 초기에 선택되어 있어야 함
+				-->					
+				
+			
+			
+			<!-- Provide input forms as seen in the sample screenshot
+				 			
+				 Create a box surrounding different input forms below with the "Course Evaluation Survey:" as legend --> 
+			<!-- screenshot에서 보이는 것 처럼 input form을 구성하시오. 
+				 			
+				 다른 input form을 둘러싼 상자를 만들고 "Course Evaluation Survey:"를 legend로 지정하시오  -->
+			
+			<fieldset>
+				<legend>Course Evaluation Survey</legend>		
+								
+				Select your 3 favorite Chapters. <br />
+				<select name="favoriteChapter[]" size="5" multiple="multiple">
+					<optgroup label="HTML, CSS, PHP"></optgroup>
+					<option value="Basic HTML">Basic HTML</option>
+					<option value="CSS for Styling">CSS for Styling</option>
+					<option value="Page Layout">Page Layout</option>
+					<option value="Forms">Forms</option>
+					<option value="PHP">PHP</option>
+					<option value="Cookies &amp; Session">Cookies &amp; Session</option>
+					
+					<optgroup label="JavaScript, RDB, SQL"></optgroup>
+					<option value="RDB &amp; SQL">RDB &amp; SQL</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="DOM">DOM</option>
+					<option value="Prototype">Prototype</option>
+					<option value="Scriptaculous">Scriptaculous</option>
+					<option value="Ajax, XML, &amp; JSON">Ajax, XML, &amp; JSON</option>
+				
+				</select>
+				<!-- Create a drop-down list with "favoriteChapter" as name. 
+					 The list should show 5 options and user can select multiple items.--> 
+				<!-- name으로 "favoriteChapter"를 가진 drop-down list를 만드시오. 
+					 목록에는 5 개의 옵션이 표시되며 사용자는 여러 항목을 선택할 수 있습니다. --> 
+				
+					<!-- Create option group "HTML, CSS, PHP"
+						 Under this option group there are 6 options as shown below -->
+					<!-- "HTML, CSS, PHP" option group을 생성하시오
+						 이 option group은 아래와 같이 6 options을 포함함 -->	
+					
+						
+						
+						
+						
+						
+						
+					
+					<!-- Create option group "JavaScript, RDB, SQL"
+						 Under this option group there are 6 options as shown below -->
+					<!-- "JavaScript, RDB, SQL"  option group을 생성하시오
+						 이 option group은 아래와 같이 6 options을 포함함 -->	
+					
+						
+						
+						
+					
+				<hr /> 
+				<div>
+					Select the most difficult lab sessions. <br />
+					<!-- Create radio buttons for 4 lab session 
+						 The text shown below should be used as both values and label texts for radio buttons 
+						 Make aure that you add labels which user can click (label text) to check corresponding radio buttons
+						 Initially "1. Music Library" should be checked -->
+					<!-- 4 lab sessions를 위한 radio button을 생성하시오. 
+						 사용자가 클릭하여 radio button을 선택할 수 있는 label (text label)을 추가하시오.
+						 초기 값으로 "1. Music Library"가 선택되어 있음 -->
+					
+						<label>1. Music Library</label>
+						<input type="radio" name="diffLab" value="Music Libray" checked>
+						
+
+						<label>2. Grade Store</label>
+						<input type="radio" name="diffLab" value="Grade Store">
+						
+
+						<label>3. JavaScript</label>
+						<input type="radio" name="diffLab" value="JavaScript">
+						
+					
+						<label>4. Book Search</label>
+						<input type="radio" name="diffLab" value="Book Search">
+					
+				</div> 
+				<hr />
+				<div>
+					Check all assessment methods that you thought were inappropriate.<br />
+
+					<!-- Create checkboxes for 3 assessment methods
+						 Use "lab", "project", "exam" as names for checkboxes
+						 Make aure that you add labels which user can click (label text) to check corresponding checkboxes
+						 Nothing should be checked initially -->
+					<!-- 3 가지 평가 방법에 대한 check box를 생성하시오.
+						 checkbox의 name은 "lab", "project", "exam"을 사용하시오.
+						 사용자가 클릭 할 수있는 label (레이블 텍스트)을 추가하여 checkbox를 선택할 수 있도록 하시오.
+						 처음에는 아무것도 선택되지 않아야합니다. -->	
+				
+					<label>Laboratory
+					<input type="checkbox" name="lab" value="Laboratory">
+					</label>
+					<label>Team Project
+					<input type="checkbox" name="project" value="Team Project">
+					</label>
+					<label>Exams
+					<input type="checkbox" name="exam" value="Exams">
+					</label>
+					
+				</div>
+				<hr />
+				<div>
+					Provide any additional comments about the course.<br />
+					<textarea rows="3" cols="32" placeholder="Please provide additional comments here." name="comments"></textarea>
+					<!-- Create a text area with 32 characters wide and 3 line long. -->
+					<!--  32 characters의 가로길이와 3 줄 세로길이를 가진 textarea를 생성하시오 -->					
+					
+				</div>
+						
+			
+			
+			<div>
+				<!-- Provide 2 hidden inputs:
+					 with name "course" and value "CSE3026"
+					 with name "year" and value "2017"	-->
+				<!-- 2 hidden inputs을 제공하시오:
+					 name으로 "course"를 value로 "CSE3026"를 가진 
+					 name으로 "year"를 value로 "2017"을 가진 -->		
+					<input type="text" hidden name="course" value="CSE3026">
+					<input type="text" hidden name="year" value="2017">		
+			</div>
+		</fieldset>
+			<!-- Create a submit button with the button text "Submit Survey"-->
+			<!-- "Submit Survey"를 text로 가진 submit button을 생성하시오 -->
+			<button type="submit">Submit Survey</button>
+		</form>
+	</body>
+</html>
