@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+      body { padding-bottom: 50px;}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div class="container"> 
+
+ <h1>미디어 객체</h1>
+  <h4> 기본 미디어</h4>
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="pic.jpg" alt="...">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula. 
+  </div>
+</div>
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="pic.jpg" alt="...">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula. 
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" src="pic.jpg" alt="...">
+        </a>
+        <div class="media-body">
+        <h4 class="media-heading">Media heading</h4>
+        여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula.      
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+  <h4> 미디어 헤딩 부분을 제거 한 상태 </h4>
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="pic.jpg" alt="...">
+  </a>
+  <div class="media-body">
+    <p>여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula. </p>
+  </div>
+</div>
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="pic.jpg" alt="...">
+  </a>
+  <div class="media-body">
+    <p>여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula. </p>
+    <div class="clearfix"></div>
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" src="pic.jpg" alt="...">
+        </a>
+        <div class="media-body">
+       <p> 여기는 기본내용이 들어가는 곳 입니다. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non orci interdum, pharetra dui nec, eleifend ligula. Integer rutrum nunc a mi luctus vehicula.      </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<h4> 목록(ul태그)을 이용한 미디어 </h4>
+     <ul class="media-list">
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img alt="Generic placeholder image" src="pic.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+            <!-- Nested media object -->
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img alt="Generic placeholder image" src="pic.jpg">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Nested media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                <!-- Nested media object -->
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img alt="Generic placeholder image" src="pic.jpg">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Nested media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </li>
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img alt="Generic placeholder image" src="pic.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>            
+          </div>
+        </li>        
+      </ul>
+
+<hr>
+<h4> 목록 사진을 오른쪽으로 이동 </h4>
+    <div class="media">
+      <a class="pull-right" href="#">
+        <img alt="Generic placeholder image" src="pic.jpg">
+      </a>
+      <div class="media-body">
+       <h4 class="media-heading">Media heading</h4>
+         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+      </div>
+    </div>
+
+</div> <!-- container 끝 -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

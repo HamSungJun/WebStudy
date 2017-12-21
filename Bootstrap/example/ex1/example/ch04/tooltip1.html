@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+    h2 { margin: 20px 0} 
+    button.btn { margin-left: 10px;  float: left;  }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+
+ 
+    <h2>기본 링크를 이용한 툴팁</h2>
+      기본  <a href="#" data-toggle="tooltip" title="기본 툴팁">툴팁</a>은 상단에 표시됩니다.  
+      방향을 지정할 수 있으며  <a href="#" data-toggle="tooltip" data-placement="left" title="왼쪽 표시">왼쪽</a>으로 툴팁이 표시됩니다. 
+      하단으로   <a href="#" data-toggle="tooltip" data-placement="bottom" title="하단에 표시">
+         툴팁을 </a> 표시할 수 있습니다. 
+      지금 보시는 <a href="#" data-toggle="tooltip" data-placement="right" title="오른쪽에 표시">툴팁은 </a> 오른쪽에 표시됩니다. 
+  <hr>
+
+    <h2>버튼을 이용한 툴팁</h2>
+
+      <button type="button" class="btn btn-default" data-toggle="tooltip" title="기본 툴팁">  기본 툴팁 </button>
+
+      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="왼쪽">  툴팁 왼쪽 </button>
+
+      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="상단">   툴팁 상단 </button>
+
+      <button type="btton" class="btn btn-default" data-toggle="tooltip"  data-placement="bottom" title="하단"> 툴팁 하단 </button>
+
+      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="오른쪽">툴팁 오른쪽  </button>
+
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script>     
+       $("[data-toggle='tooltip']").tooltip();      
+    </script>
+
+</body>
+</html>

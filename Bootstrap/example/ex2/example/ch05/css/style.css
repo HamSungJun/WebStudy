@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+@font-face{
+font-family:'NanumBarunGothic';
+src:url("../fonts/NanumBarunGothic.eot");
+src:local("☺"),url("../fonts/NanumBarunGothic.woff") format("woff");
+}
+a:hover { text-decoration: none;}      
+body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 90px; }  
+.container-fluid { padding: 0;}
+/* nav bar customize */
+.navbar{ background-color: #fff; border: none; padding-bottom: 10px;  font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 18px;height: 90px; text-transform: capitalize; border-bottom: 1px solid #AAAAAA}
+
+.navbar-toggle {position: relative;margin-top: 40px;top: 2px;}
+.navbar-nav { padding-right: 10px;margin-top: 20px; background-color: #fff}
+.navbar-nav li { margin:0 20px; }
+.navbar-brand { padding-left: 20px;}  
+.navbar-collapse { padding-top: 10px; background-color: #fff}
+.navbar-default .navbar-nav>li>a:hover { color: #FF8000} 
+.navbar-default .navbar-nav>li.active>a,
+.navbar-default .navbar-nav>li.active>a:hover,
+.navbar-default .navbar-nav>li.active>a:focus
+ { color: #FF8000; background-color: #fff} 
+
+.control { position: inherit; top: 50%; z-index: 5; display: inline-block; right: 50%;} 
+
+@media (max-width: 320px)  {
+  .navbar-brand img { width: 80%; height: auto; margin-top:-100px}  
+}
+@media (max-width: 980px) {
+  .navbar-nav li { margin:0 10px;}
+}
+
+
+header { color: #fff; text-align: center; padding: 40px 0;}
+header small { color: #fff}
+header p { color: #C0C0C0}
+.sans {  font-family: 'Source Sans Pro', sans-serif; }
+ /*  icons */
+.service {margin: 40px 0;}
+.service a { display: block;}
+.icontxt { display: block; color: #2E2F28; text-align: left; } 
+.icontxt h4 {font-weight: bold; font-family: 'Source Sans Pro'; font-size: 20px; text-transform: uppercase; text-align: left;}
+.icons {      
+     float: left;
+     display: block;
+     font-size: 30px;
+     color: #fff;
+     background-color: #FF8000;
+     border-radius: 50%;
+     text-align: center;
+     margin-right: 15px ;
+     padding: 20px;
+     border:4px solid #FF8040;
+     transition: all 0.3s;
+    }  
+
+.service a:hover .icons  { background-color:#0080C0;}
+.service a:hover .icontxt h4 { color: #0080FF; }
+
+@media (min-width: 768px) {
+  .icons { margin: 0 auto; position: relative; left: 30%;}
+  .icontxt h4 { text-align: center;}
+}
+
+@media (max-width: 360px) {
+  .icontxt p { display: none; }
+  .icontxt {line-height:10px; padding: 0; margin: 0;}
+  .icontxt h4 { display: none; }
+  .icons { padding: 20px; margin: 10px 0 10px 20px; }
+  .book img { width: 50%; height: auto;}
+  .control { display: none;} 
+}
+
+
+.content1 {
+  background:url(../imgs/slide1_bg.jpg)  no-repeat center top fixed;
+ background-size:cover; 
+}
+.content2 {
+  background:url(../imgs/slide1_bg.jpg)  no-repeat center center fixed;
+ background-size:cover; 
+}
+.content3 {
+  background:url(../imgs/slide1_bg.jpg)  no-repeat center bottom fixed;
+ background-size:cover; 
+}
+.about p { line-height: 1.8em; font-size: 15px; color: #282923}
+
+.about, .portfolio, .contact { padding: 50px 0;}
+
+#about, #portfolio, #contact { margin-top: -85px; padding-top: 85px }  /*  nav-fix 때문에 생기는 공백 상쇄 */
+
+.panel a {  display: block; color: #000}
+.panel a.collapsed { color: #0080C0 }
+.panel-body { color:#804000}
+
+.book{ margin-left: 10px;}
+.book2, .book3, .book4 { position: relative; float: left; }
+.book2 { z-index: 1; }
+.book3 { z-index: 10; margin-left: -100px; }
+.book4 { z-index: 20; margin-left: -100px;}
+
+.site { height: 330px;}
+.site h4 { border-bottom: 1px solid #C0C0C0; font-size: 16px; padding-bottom: 5px }
+
+.form-group input[type="text"], .form-group textarea { border-radius: 0;}
+
+  .required {
+    background: url(./imgs/required.png) right top no-repeat;
+  }
+
+  button.send_btn {
+    cursor: pointer;
+    background:url(./imgs/pattern.png) repeat;
+    color: #FFF;
+    margin:0 10px 0 0;
+    display: inline-block;
+    padding: 0 20px;
+    height:40px;
+    line-height:40px;
+    font-size: 14px;
+    width: auto;
+    border:0;
+  }
+  button.send_btn:hover {
+     background-image:url(./imgs/color_pattern.png);
+     text-decoration:none;
+  }
+
+footer { padding: 40px 0; color: #fff}
+
+/*Waypoints
+========================================================================== */
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6 { visibility: hidden; }
+.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight { visibility: visible; }
+.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
+.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
+
+

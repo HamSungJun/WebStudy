@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩   </title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+     
+    <h4 class="text-primary"> 기본적인 HTML5의 폼 형태</h4>
+
+    <form >  
+        <label for="Name">이름</label>
+        <input type="text" placeholder="이름"> 
+        <label for="emailaddress">이메일</label>
+        <input type="email" placeholder="이메일">  
+        <button type="submit" > 확인</button>      
+    </form>
+
+    <hr>
+
+    <h4 class="text-primary">부트스트랩을 이용하여 폼을 변형</h4>
+
+    <form role="form">  
+    <div class="form-group">   
+        <label for="Name">이름</label>
+        <input type="text" class="form-control" placeholder="이름"> 
+    </div>       
+    <div class="form-group">  
+
+        <label for="emailaddress">이메일</label>
+        <input type="email" class="form-control" placeholder="이메일"> 
+    </div> 
+    <div class="form-group">     
+        <button type="submit"> 확인</button>    
+    </div>    
+           
+    </form>
+
+     <hr>
+
+    <h4 class="text-primary">부트스트랩 인라인 폼</h4>
+
+    <form role="form" class="form-inline">  
+    <div class="form-group">   
+        <label for="Name">이름</label>
+        <input type="text" class="form-control" placeholder="이름"> 
+    </div>       
+    <div class="form-group">  
+
+        <label for="emailaddress">이메일</label>
+        <input type="email" class="form-control" placeholder="이메일"> 
+    </div> 
+    <div class="form-group">     
+        <button type="submit"> 확인</button>    
+    </div>    
+           
+    </form>  
+
+     <hr>
+
+      <h4 class="text-primary">부트스트랩 인라인 폼 label에 .sr-only 적용 후 </h4>
+
+    <form role="form" class="form-inline">  
+    <div class="form-group">   
+        <label for="Name" class="sr-only">이름</label>
+        <input type="text" class="form-control" placeholder="이름"> 
+    </div>       
+    <div class="form-group">  
+
+        <label for="emailaddress" class="sr-only">이메일</label>
+        <input type="email" class="form-control" placeholder="이메일"> 
+    </div> 
+    <div class="form-group">     
+        <button type="submit"> 확인</button>    
+    </div>    
+           
+    </form>  
+
+     <hr>
+
+    <h4 class="text-primary">부트스트랩 수평 폼</h4>
+
+    <form class="form-horizontal" role="form">  
+    <div class="form-group">   
+        <label for="Name" class="col-xs-2 col-lg-2 control-label">이름</label>
+        <div class="col-xs-10 col-lg-10">
+            <input type="text" class="form-control" placeholder="이름"> 
+        </div>
+    </div>       
+    <div class="form-group">  
+        <label for="emailaddress" class="col-xs-2 col-lg-2 control-label">이메일</label>
+        <div class="col-xs-10 col-lg-10">
+            <input type="email" class="form-control" placeholder="이메일"> 
+        </div>
+      </div> 
+    <div class="form-group">  
+        <div class="col-xs-offset-2 col-xs-10 col-lg-offset-2 col-lg-10 ">   
+            <button type="submit"> 확인</button>    
+        </div>
+    </div>    
+           
+    </form>        
+    
+ </div> 
+</body>
+</html>

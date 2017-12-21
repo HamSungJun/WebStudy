@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 쇼핑몰 샘플</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <style>
+     body { font-size: 12px; background-color: #E9E9E9; font-family: "Malgun gothic",  sans-serif;}
+     .container { background-color: #fff; }
+     header.prodcthead { border-bottom: 1px solid #ccc; padding: 20px 0;}
+     .sns { padding-top: 10px;}
+     .sns ul li { display: inline;}
+     .sns a { padding: 10px 10px 10px 25px;  }
+     a.facebook { background: url(./imgs/facebook.png) no-repeat left center;}
+     a.twitter { background: url(./imgs/twitter.png) no-repeat left center;}
+     header.prodcthead h1 { font-size: 28px; display: inline; }
+     ul { list-style: none; padding-left: 0;}
+     .product h2 { text-align: center; font-size: 20px; padding-bottom: 10px; font-weight: bold;}
+     .product h3 { font-size: 16px; padding-bottom: 5px;font-weight: bold;}
+     .product .thumbnail { border: none;}
+     .btn-primary { padding: 7px 28px;
+        background: #7abcff; /* Old browsers */
+        background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */*/
+     }
+     .price { font-weight: bold; font-size: 14px; padding-top: 5px;}
+     .ship { padding-top: 15px; font-weight: bold; display: block;}
+     .freeship { color: #FF0000}
+
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="container">
+    <header class="prodcthead">
+     <h1>iMac 선택하기</h1>
+     <div class="sns pull-right">
+          <ul>
+            <li><a href="#" class="facebook">공유하기 </a> </li>
+            <li><a href="#" class="twitter">트윗하기</a> </li>
+          </ul>
+     </div>     
+    </header>
+    <div class="row product">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <h2 class="prohead">21.5형 iMac</h2>
+          <img src="./imgs/imac215.png" alt="...">
+          <div class="caption">
+            <h3>21.5형: 1.4GHz</h3>
+            <ul>
+              <li>1.4GHz 듀얼 코어 Intel Core i5</li>
+              <li>최대 2.7GHz Turbo Boost</li>
+              <li>8GB 메모리</li>
+              <li>500GB 하드 드라이브1</li>
+              <li>Intel HD Graphics 5000</li>
+            </ul>
+            <ul>
+              <li><span class="ship">출고 가능:</span>24시간 내 </li>
+              <li class="freeship">무료 배송</li>
+              <li class="price">￦1,370,000 </li>
+            </ul>
+            <p><a href="#" class="btn btn-primary">선택</a>
+          </div>
+        </div>  
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <h2 class="prohead">21.5형 iMac</h2>
+          <img src="./imgs/imac215.png" alt="...">
+          <div class="caption">
+            <h3>21.5 형: 2.7GHz</h3>
+            <ul>
+              <li>2.7GHz 쿼드 코어 Intel Core i5</li>
+              <li>최대 3.2GHz Turbo Boost</li>
+              <li>8GB(4GB 2개) 메모리</li>
+              <li>1TB 하드 드라이브1</li>
+              <li>Intel Iris Pro 그래픽</li>
+            </ul>
+            <ul>
+              <li><span class="ship">출고 가능:</span>24시간 내 </li>
+              <li class="freeship">무료 배송</li>
+              <li class="price">￦1,590,000 </li>
+            </ul>
+            <p><a href="#" class="btn btn-primary">선택</a>
+          </div>
+         </div> 
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+         <h2 class="prohead">21.5형 iMac</h2>
+          <img src="./imgs/imac215.png" alt="...">
+          <div class="caption">
+            <h3>21.5 형: 2.9GHz</h3>
+            <ul>
+              <li>2.9GHz 쿼드 코어 Intel Core i5</li>
+              <li>최대 3.6GHz Turbo Boost</li>
+              <li>8GB(4GB 2개) 메모리</li>
+              <li>1TB 하드 드라이브1</li>
+              <li>NVIDIA GeForce GT 750M(1GB 비디오 메모리)</li>
+            </ul>
+            <ul>
+              <li><span class="ship">출고 가능:</span>24시간 내 </li>
+              <li class="freeship">무료 배송</li>
+              <li class="price">￦1,850,000 </li>
+            </ul>
+            <p><a href="#" class="btn btn-primary">선택</a>
+          </div> 
+        </div>         
+      </div>      
+    </div>
+ <div class="row product">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <h2 class="prohead">27형 iMac</h2>
+          <img src="./imgs/imac27.png" alt="...">
+          <div class="caption">
+            <h3>27형: 3.2GHz</h3>
+            <ul>
+              <li>3.2GHz 쿼드 코어 Intel Core i5</li>
+              <li>최대 3.6GHz Turbo Boost</li>
+              <li>8GB(4GB 2개) 메모리</li>
+              <li>1TB 하드 드라이브1</li>
+              <li>NVIDIA GeForce GT 755M(1GB 비디오 메모리)</li>
+            </ul>
+            <ul>
+              <li><span class="ship">출고 가능:</span>24시간 내 </li>
+              <li class="freeship">무료 배송</li>
+              <li class="price">￦2,250,000  </li>
+            </ul>
+            <p><a href="#" class="btn btn-primary">선택</a>
+          </div>
+        </div>  
+      </div>
+
+      <div class="col-sm-4">
+        <div class="thumbnail">
+        <h2 class="prohead">27형 iMac</h2>
+          <img src="./imgs/imac27.png" alt="...">
+          <div class="caption">
+            <h3>27형: 3.4GHz</h3>
+            <ul>
+              <li>3.4GHz 쿼드 코어 Intel Core i5</li>
+              <li>최대 3.8GHz Turbo Boost</li>
+              <li>8GB(4GB 2개) 메모리</li>
+              <li>1TB 하드 드라이브1</li>
+              <li>NVIDIA GeForce GTX 775M(2GB 비디오 메모리)</li>
+            </ul>
+            <ul>
+              <li><span class="ship">출고 가능:</span>24시간 내 </li>
+              <li class="freeship">무료 배송</li>
+              <li class="price">￦2,490,000  </li>
+            </ul>
+            <p><a href="#" class="btn btn-primary">선택</a>
+          </div>
+         </div> 
+      </div>
+      <div class="col-sm-4">
+      
+    </div>
+  
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>

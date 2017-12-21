@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩의 기본 글꼴  </title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom2.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="container">    
+  <h4 class="text-primary">1.제목은 h1부터 h6까지 사용하여 처리합니다. </h4>   
+   <h1>Bootstrap 부트스트랩 h1 <small>h1 small</small></h1>  
+   <h2>Bootstrap 부트스트랩 h2 <small>h2 small</small></h2>
+   <h3>Bootstrap 부트스트랩 h4 <small>h4 small</small></h3>
+   <h4>Bootstrap 부트스트랩 h4 <small>h4 small</small></h4>
+   <h5>Bootstrap 부트스트랩 h5 <small>h5 small</small></h5>
+   <h6>Bootstrap 부트스트랩 h6 <small>h6 small</small></h6>
+
+  <h4 class="text-primary">2. 본문의 글씨체의 크기는 14px로 고정되어 있습니다. </h4>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum vitae lectus sit amet tincidunt. Aliquam id fringilla sapien. Mauris eu nulla at nunc mollis pharetra.</p>
+
+      <p>부트스트랩의 기본글꼴은 <small>Helvetica Neue</small> 라는 아주 미려한 글꼴을 기반으로 Helvetica Neue 라는 글꼴이 없으면, Helvetica, Helvetica 도 없으면, Arial을 사용하고 sans-serif 계열의 글꼴을 사용하게 설정되어 있습니다. 또한 전체적인 글꼴의 크기는 14픽셀로 고정되어 있으며, 전체의 행간은 1.42857443로 설정되어 있으며, 글꼴 색은 진한 회색이고, 배경색상은 흰색으로 되어 있습니다. </p>
+
+  <h4 class="text-primary">3. small, strong, em 태그는 의 사용법과  .lead 선택자 사용   </h4>
+      <p> <small>small태그</small>는 작은 글씨를 <strong>strong은 문장을 강조</strong>할 때, <em>em 태그는 이탤릭체</em>로 표시하게 해 줍니다.</p>
+      <p><span class="lead">리드 선택자를 이용하여 </span> 단락의 첫 문장을 강조할 수 있습니다.</p>
+
+  <h4 class="text-primary">4. 문장의 정렬은 text-left, text-center, text-right 를 사용합니다.</h4>    
+      <p class="text-left">문장 정렬 왼쪽은 text-left 클래스 선택자를 이용합니다. 왼쪽은 기본이기 때문에 다른 문장이 가운데 정렬이거나, 오른쪽 정렬일 때 왼쪽으로 정렬하고 싶을 경우 사용합니다. </p>
+      <p class="text-center">문장 정렬 가운데는 text-center 클래스 선택자를 이용합니다.</p>
+      <p class="text-right">문장 정렬 오른쪽은 text-right클래스 선택자를 이용합니다.</p>    
+
+    <h4 class="text-primary">5. 부트스트랩은 다양한 강조 클래스를 사용합니다.</h4>
+      <p class="text-muted">class="text-muted" </p>
+      <p class="text-primary">class="text-primary"</p>
+      <p class="text-success">class="text-success"</p>
+      <p class="text-info"> class="text-info" </p>
+      <p class="text-warning">class="text-warning"</p>
+      <p class="text-danger">class="text-danger" </p>
+      <p>강조 텍스트의 색 또한 사용자에 의해서 변환가능합니다. </p>
+
+    <h4 class="text-primary">6.약어를 사용할 수 있습니다.</h4>  
+      <p>약어를 사용하면 <abbr title="멘탈 붕괴">멘붕</abbr> 과 같은 약어를 표현해 줄 수 있습니다. 또한 <abbr title="United Nation" class="initialism">un </abbr> 이나, <abbr title="Cascading style sheet" class="initialism">css</abbr>와 같은 영문 약어는 class="initialism" 를 사용하게 되면 단어가 소문자인 경우에도  영문 대문자로 변환되면서 글씨 크기는 90%정도로 변환해 주게 됩니다. </p>    
+
+    <h4  class="text-info">7. 주소는 address 태그를 사용합니다.</h4>
+    <address>
+      <strong>저자:양용석</strong> <br>
+      주소:제주시 노형동 <br>      
+      전화번호 :010-234-7895 <br>
+    </address>
+
+     <h4  class="text-info">8. 인용구는 blockquote 태그를 이용하며 오른쪽 정렬도 가능합니다.  </h4>
+    <blockquote>
+      현재까지 쓰인 CSS 속성은 부트 스트랩 웹 사이트에서도 동일하게 설명이 되어 있습니다.
+      <small>CSS 속성 <cite>http://bootstrapk.com/BS3/css</cite></small>
+    </blockquote>
+    <blockquote class="pull-right">
+      인용구에 class="pull-right"를 적용해 주면 오른쪽으로 정렬됩니다.
+      <small>CSS 속성 <cite>http://bootstrapk.com/BS3/css</cite></small>
+    </blockquote>
+
+       <div class="clearfix"></div>
+
+   <h4  class="text-info">9. 목록(list)를 표시할때는 ul , ol, dt 태그를 사용합니다.  </h4>
+    <ul>
+      <li>일반적인 목록인 경우 ul과 li를 이용합니다.</li>
+      <li>이 경우 기본적으로 왼쪽에 20px 하단으로 10px의 여백이 생깁니다. </li>
+    </ul>
+
+   <ol>
+     <li>리스트의 숫자를 표시 할 때는 l, li 태그틑 사용합니다 </li>
+     <li>이 경우에도 왼쪽에 20px 하단으로 10px의 여백이 생깁니다.  </li>
+   </ol>
+
+    <ul class="list-unstyled">
+      <li>여기는 ul 또는 ol 태그에 class="list-unstyled"를 적용한 부분입니다.list-unstyled 클래스 선택자를 사용하면 왼쪽 20px 여백이 0으로 바뀝니다.</li>
+      <li>상단에 있는 ul과 ol 태그가 적용된 부분을 확인해 보세요.
+        <ul>
+          <li>목록 내부에 다시 ul 태그를 사용하면 원래의 ul 또는 ol 값과 동일한 결과를 얻을 수 있습니다.</li>
+          <li>상단의 ul 과 비교해 보시기 바랍니다.</li>
+        </ul>  
+        </li>
+      <li> 반드시 소스 파일을 확인해 보시기 바랍니다.</li>
+    </ul>
+
+   <ul class="list-inline">
+     <li>ul에  class="list-inline" 을 적용하면 </li>
+     <li>목록이 세로에서 가로로  펼쳐집니다.</li>
+     <li>각 li 사이는 오른쪽과 왼쪽으로 5픽셀의 패딩값이 적용됩니다.</li>
+   </ul>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheet</dd>
+    <dt>bootstrap</dt>
+    <dd>Twitter에서 만든 웹 사이트 제작용 프레임워크</dd>
+  </dl>
+  <dl class="dl-horizontal"> 
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheet</dd>
+    <dt>bootstrap</dt>
+    <dd>Twitter에서 만든 웹 사이트 제작용 프레임워크</dd>    
+  </dl>
+  </div> 
+</body>
+</html>

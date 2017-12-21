@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩  CSS</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom2.css" rel="stylesheet">
+    <style>
+        .box { border: 1px solid #ccc; padding: 15px;}
+        .cl1 { background-color: #80FF00}
+        .cl2 { background-color: #FF8000}
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+     
+    <h4 class="text-primary"> 반응형 유틸리티 </h4>
+
+    <div class="visible-xs box cl1">.visible-xs (모바일폰) 해상도가 768px이하 에서 보임  </div>
+    <div class="visible-sm box cl1">.visible-sm (태블릿) 해상도가 768px 보다 크거나 같은 경우에서 보임</div>
+    <div class="visible-md box cl1">.visible-md (데스크탑) 해상도가 992px보다 크거나 같은 경우에서 보임 </div>
+    <div class="visible-lg box cl1">.visible-lg (데스크탑) 해상도가1200px보다 크거나 같은 경우에서 보임</div>
+
+    <div class="hidden-xs box cl2">.hidden-xs (모바일폰) 해상도가 768px이하에서 감춰짐  </div>
+    <div class="hidden-sm box cl2">.hidden-sm (태블릿) 해상도가 768px 보다 크거나 같은 경우 감춰짐 </div>
+    <div class="hidden-md box cl2">.hidden-md (데스크탑) 해상도가 992px보다 크거나 같은 경우 감춰짐 </div>
+    <div class="hidden-lg box cl2">.hidden-lg (데스크탑) 해상도가1200px보다 크거나 같은 경우 감춰짐 </div>
+
+    <hr>
+
+    <div class="visible-print box cl2">프린터로 출력하면 나오지만 화면에서는 안 나옴.   </div>
+    <div class="hidden-print box cl1">화면에서는 나오지만 프린터에서는 안 나옴 </div>
+
+
+ </div> 
+</body>
+</html>

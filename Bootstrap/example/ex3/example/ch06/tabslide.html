@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 부트스트랩 캐러셀 응용 </title>
+
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <style>
+      body {padding-top:20px; font-family: "Malgun gothic",  sans-serif;  }
+      #custom_carousel .controls{
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding:0;
+          margin:0;
+          white-space: nowrap;
+          text-align: center;
+          position: relative;
+          background:#808080;
+      
+      }
+      #custom_carousel .controls li {
+          display: table-cell;
+          width: 1%;
+          max-width:90px;    
+      }
+      #custom_carousel .controls li.active {
+          background-color:#2A2A2A;
+          border-top:3px solid #FF0000;
+
+      }
+      #custom_carousel a { color: #fff;}
+      #custom_carousel a:hover { color: #000}
+      .controls li { border-left: 1px solid #ccc}
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<div class="container">
+    <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+               <img src="./imgs/0523_Q9000_MainKV.jpg" alt="">
+                <div class="carousel-caption"> 
+                 <h1>이렇게 또 한번 바람을 일으키다. <br> 삼성 스마트 에어컨 Q9000 </h1> 
+               </div>         
+            </div> 
+            <div class="item">
+              <img src="./imgs/20140820_UHDTV_Curved_KV.jpg" alt="">  
+               <div class="carousel-caption"> 
+                 <h1>곡면화질이 만든 압도적 몰입감 <br> 삼성 커브드 UHD TV </h1> 
+               </div>                     
+            </div> 
+            <div class="item">
+              <img src="./imgs/GalaxyS5_LTEA_KV_0623.jpg" alt=""> 
+              <div class="carousel-caption">
+                  <h1>세계 최초 광대역 LTE-A폰 <br> Samsung GALAXY S5</h1>
+                </div>          
+            </div> 
+            <div class="item">
+              <img src="./imgs/MainKV_Galaxy_Tab_S.jpg" alt="">  
+                <div class="carousel-caption">
+                  <h1 class="black">S 아몰레드로 세상을 다시 보다 <br> Samsung GALAXY Tab S</h1>
+                </div>                       
+            </div> 
+        <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+        <div class="controls">
+            <ul class="nav">
+                <li data-target="#custom_carousel" data-slide-to="0" class="active"><a href="#">이렇게 또 한번 바람을 일으키다. <br> 삼성 스마트 에어컨 Q9000  </a></li>
+                <li data-target="#custom_carousel" data-slide-to="1"><a href="#">곡면화질이 만든 압도적 몰입감 <br> 삼성 커브드 UHD TV</a></li>
+                <li data-target="#custom_carousel" data-slide-to="2"><a href="#"> 세계 최초 광대역 LTE-A폰 <br>
+                      Samsung GALAXY S5</a></li>
+                <li data-target="#custom_carousel" data-slide-to="3"><a href="#">S 아몰레드로 세상을 다시 보다 <br>
+                      Samsung GALAXY Tab S</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Carousel -->
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(ev){
+        $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+          $('#custom_carousel .controls li.active').removeClass('active');
+          $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+        })
+    });
+  </script>
+
+    
+
+</body>
+</html>

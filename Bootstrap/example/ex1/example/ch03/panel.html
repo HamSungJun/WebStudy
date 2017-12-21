@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+      body { padding-bottom: 50px;}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+
+<div class="container"> 
+
+ <h1>패널  </h1>
+
+  <h4>기본 패널 </h4>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Basic panel example
+      </div>
+    </div>
+
+<div class="col-sm-4">
+  <h4>기본 패널 상단  </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+</div>
+<div class="col-sm-4">
+  <h4>기본 패널 상단 h태그 이용   </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+</div>
+<div class="col-sm-4">     
+  <h4>기본 패널 하단  </h4>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Panel content
+      </div>
+      <div class="panel-footer">Panel footer</div>
+    </div>
+</div>
+  <h4>패널에 색상 적용  </h4>
+  <div class="col-sm-4">    
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">  
+    <div class="panel panel-success">
+        <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+   </div>
+  </div>
+   <div class="col-sm-4">  
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">  
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+   </div> 
+  <div class="col-sm-4">      
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+  </div>
+ <div class="clearfix"></div>
+
+  <h4>패널 내부에 테이블 적용  패널 내부에 panel-body 있는 경우   </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">패널 제목 </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+       <table class="table">
+        <thead>
+         <tr>
+           <th>번 호 </th>
+           <th>제 목</th>
+           <th>글쓴이</th>
+         </tr>
+         </thead>
+         <tr>
+           <td>1</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+           <td>홍길동</td>
+         </tr>
+         <tr>
+           <td>2</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+           <td>임꺽정 </td>
+         </tr>
+         <tr>
+           <td>3</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+           <td>성춘향 </td>
+         </tr>      
+       </table>
+    </div>
+
+  <h4>패널 내부에 테이블 적용 패널 내부에 panel-body 없는 경우 </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">패널 제목 </div>
+       <table class="table">
+        <thead>
+         <tr>
+           <th>번 호 </th>
+           <th>제 목</th>
+           <th>글쓴이</th>
+         </tr>
+         </thead>
+         <tr>
+           <td>1</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트 </td>
+           <td>홍길동</td>
+         </tr>
+         <tr>
+           <td>2</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+           <td>임꺽정 </td>
+         </tr>
+         <tr>
+           <td>3</td>
+           <td>테이블 테스트  테이블 테스트 테이블 테스트</td>
+           <td>성춘향 </td>
+         </tr>      
+       </table>
+    </div>
+
+  <h4>패널 내부에 리스트 그룹 적용  </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">패널 제목 </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+        <ul class="list-group">
+          <li class="list-group-item">기본 목록 </li>
+          <li class="list-group-item">기본 목록 2</li>
+          <li class="list-group-item">기본 목록 3</li>
+        </ul>
+    </div>    
+
+</div> <!-- container 끝 -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

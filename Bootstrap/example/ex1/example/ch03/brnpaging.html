@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+       .pagination { }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<div class="container">  
+<h1> 경로와 페이지네이션 </h1>
+  <h4>경로 </h4>
+  <ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">menu1 </a></li>
+    <li class="active">submenu</li>
+  </ol>
+  <hr>
+  <h4>페이지네이션 </h4>
+  <ul class="pagination">
+    <li><a href="#">«</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li><a href="#">10</a></li>
+    <li><a href="#">»</a></li>
+   </ul>
+  <hr>
+  <h4>페이지네이션 활성 또는 비활성  </h4>
+  <ul class="pagination">
+    <li class="disabled"><a href="#">«</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">»</a></li>
+   </ul>
+  <hr>
+  <h4>span을 이용해서 a 태그 제거하기   </h4>
+  <ul class="pagination">
+    <li class="disabled"><span>«</span></li>
+    <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">»</a></li>
+   </ul>
+  <hr>
+  <h4>크기조절   </h4>
+  <ul class="pagination pagination-lg">
+    <li class="disabled"><span>«</span></li>
+    <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">»</a></li>
+   </ul> 
+   <hr>
+  <ul class="pagination pagination-sm">
+    <li class="disabled"><span>«</span></li>
+    <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">»</a></li>
+   </ul>  
+  <hr>
+  <h4> 페이저 가운데 정렬 </h4>
+  <ul class="pager">
+    <li><a href="#">이전 페이지 </a></li>
+    <li><a href="#">다음 페이지 </a></li>
+  </ul>
+  <hr>
+
+  <h4> 페이저 양 끝 정렬 </h4>
+  <ul class="pager">
+    <li class="previous"><a href="#">← 이전 글 </a></li>
+    <li class="next"><a href="#">새로운 글  →</a></li>
+  </ul> 
+  <hr>
+  <h4> 페이저 비활성화  </h4>
+  <ul class="pager">
+    <li class="previous disabled"><a href="#">← 이전 글 </a></li>
+    <li class="next"><a href="#">새로운 글 →</a></li>
+  </ul> 
+</div> <!-- container 끝 -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

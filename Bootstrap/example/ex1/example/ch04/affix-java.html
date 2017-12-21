@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style type="text/css">
+        /* Custom Styles */
+        ul.nav-tabs{
+            width: 140px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+        ul.nav-tabs li{
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+        ul.nav-tabs li:first-child{
+            border-top: none;
+        }
+        ul.nav-tabs li a{
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+        ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+        ul.nav-tabs li:first-child a{
+            border-radius: 4px 4px 0 0;
+        }
+        ul.nav-tabs li:last-child a{
+            border-radius: 0 0 4px 4px;
+        }
+        ul.nav-tabs.affix{
+            top: 30px; /* Set the top position of pinned element */
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body data-spy="scroll" data-target="#myScrollspy">
+  <div class="container">    
+   <div class="jumbotron">
+      <h1>Bootstrap Affix Plugin example</h1>
+   </div>
+   <div>
+      <div class="col-xs-5 col-sm-3 col-md-2" id="myScrollspy">
+         <ul class="nav nav-tabs nav-stacked affix" id="myNav">
+            <li class="active"><a href="#one">Tutorial One</a></li>
+            <li><a href="#two">Tutorial Two</a></li>
+            <li><a href="#three">Tutorial Three</a></li>
+         </ul>
+      </div>
+      <div class="col-xs-7 col-sm-9 col-md-10">
+               <h2 id="one">Tutorial One</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus fermentum quam ut pharetra. Cras tincidunt et velit eu mattis. Duis ultricies lacus vel sapien pretium, malesuada feugiat odio laoreet. Donec vel bibendum purus, quis pellentesque tellus. Vestibulum cursus magna magna, id eleifend nibh scelerisque eu. Cras a eleifend magna. Suspendisse et vulputate quam, a tempus sem. Sed id laoreet orci. Donec eu dolor pretium, ullamcorper urna at, lobortis nunc. Nam ac nisi non sapien vestibulum sodales. Sed in tellus rutrum, porttitor diam ac, rhoncus enim. Suspendisse vulputate pharetra mi vitae porta.</p>
+
+                <p>Quisque varius arcu auctor, tristique felis eget, egestas metus. Maecenas hendrerit dolor sit amet nisi sollicitudin semper. Curabitur non felis sit amet lacus sagittis viverra. Aliquam erat volutpat. Proin accumsan turpis tortor, non hendrerit leo convallis sit amet. Aenean nisl diam, pellentesque sed metus et, placerat molestie tellus. Suspendisse aliquet dictum condimentum. Quisque dignissim ligula nec semper pulvinar. Sed eget hendrerit mauris. Nam sollicitudin, lectus scelerisque tincidunt accumsan, dolor mi molestie diam, a blandit libero mi eget neque. Curabitur ac mauris congue, cursus enim sed, vestibulum nisi. Sed gravida gravida condimentum. Ut libero orci, lacinia sed elit at, consectetur faucibus enim. Morbi consectetur nisl leo, vitae tristique urna bibendum in.</p>
+
+                <p>Etiam pretium fermentum orci, consectetur auctor velit. Nulla non sodales massa, eget aliquam urna. Vivamus nec magna dapibus augue iaculis placerat ut ut massa. Aliquam nec vehicula eros. Maecenas facilisis odio eget tincidunt pulvinar. Morbi est mi, interdum sagittis nulla vitae, porttitor volutpat nunc. Aliquam mollis pretium lorem vitae malesuada. Aliquam sit amet turpis vitae diam ultricies scelerisque. Nulla malesuada ullamcorper ipsum, quis pretium felis tincidunt ut. Sed vel lacus porta, consequat orci id, dignissim ipsum. Morbi luctus, mi non mollis bibendum, mi lacus mattis erat, non viverra quam est eget lacus. Integer id neque lorem. Phasellus quis mi in nibh pulvinar elementum eget ac dui. Donec dapibus mi arcu, at pharetra sapien elementum bibendum. In porta vulputate nibh, non pretium quam venenatis quis. Praesent et purus ante.</p>
+
+                <p>Mauris vel ornare tortor. Donec nec lobortis enim. Vestibulum orci ante, dictum et mi non, aliquet laoreet dolor. Quisque vitae leo vel lacus laoreet dictum. Suspendisse dolor lacus, semper nec tincidunt id, elementum pulvinar odio. Etiam vitae turpis vitae augue tempus ultricies. Integer ornare, lorem id lobortis convallis, lacus justo blandit leo, quis interdum velit ante non odio. Aliquam a purus felis. Aenean nunc ipsum, facilisis ut augue eu, vestibulum ullamcorper metus.</p>
+
+                <p>Curabitur lacinia tortor vitae mauris mollis ullamcorper. Sed eleifend imperdiet dolor, et semper augue auctor ac. Suspendisse potenti. Proin ac accumsan leo, vel consequat nisl. Phasellus ut mauris purus. Integer ac erat eleifend, sollicitudin ante vel, condimentum lorem. Aliquam erat volutpat. Phasellus volutpat justo ac elit suscipit placerat. Suspendisse eu libero id nulla accumsan sollicitudin. Nunc mollis urna id turpis congue interdum. Mauris vel enim eu neque tristique tempor eget sit amet orci.</p>
+
+               <hr>
+               <h2 id="two">Tutorial Two</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus fermentum quam ut pharetra. Cras tincidunt et velit eu mattis. Duis ultricies lacus vel sapien pretium, malesuada feugiat odio laoreet. Donec vel bibendum purus, quis pellentesque tellus. Vestibulum cursus magna magna, id eleifend nibh scelerisque eu. Cras a eleifend magna. Suspendisse et vulputate quam, a tempus sem. Sed id laoreet orci. Donec eu dolor pretium, ullamcorper urna at, lobortis nunc. Nam ac nisi non sapien vestibulum sodales. Sed in tellus rutrum, porttitor diam ac, rhoncus enim. Suspendisse vulputate pharetra mi vitae porta.</p>
+
+                <p>Quisque varius arcu auctor, tristique felis eget, egestas metus. Maecenas hendrerit dolor sit amet nisi sollicitudin semper. Curabitur non felis sit amet lacus sagittis viverra. Aliquam erat volutpat. Proin accumsan turpis tortor, non hendrerit leo convallis sit amet. Aenean nisl diam, pellentesque sed metus et, placerat molestie tellus. Suspendisse aliquet dictum condimentum. Quisque dignissim ligula nec semper pulvinar. Sed eget hendrerit mauris. Nam sollicitudin, lectus scelerisque tincidunt accumsan, dolor mi molestie diam, a blandit libero mi eget neque. Curabitur ac mauris congue, cursus enim sed, vestibulum nisi. Sed gravida gravida condimentum. Ut libero orci, lacinia sed elit at, consectetur faucibus enim. Morbi consectetur nisl leo, vitae tristique urna bibendum in.</p>
+
+                <p>Etiam pretium fermentum orci, consectetur auctor velit. Nulla non sodales massa, eget aliquam urna. Vivamus nec magna dapibus augue iaculis placerat ut ut massa. Aliquam nec vehicula eros. Maecenas facilisis odio eget tincidunt pulvinar. Morbi est mi, interdum sagittis nulla vitae, porttitor volutpat nunc. Aliquam mollis pretium lorem vitae malesuada. Aliquam sit amet turpis vitae diam ultricies scelerisque. Nulla malesuada ullamcorper ipsum, quis pretium felis tincidunt ut. Sed vel lacus porta, consequat orci id, dignissim ipsum. Morbi luctus, mi non mollis bibendum, mi lacus mattis erat, non viverra quam est eget lacus. Integer id neque lorem. Phasellus quis mi in nibh pulvinar elementum eget ac dui. Donec dapibus mi arcu, at pharetra sapien elementum bibendum. In porta vulputate nibh, non pretium quam venenatis quis. Praesent et purus ante.</p>
+
+                <p>Mauris vel ornare tortor. Donec nec lobortis enim. Vestibulum orci ante, dictum et mi non, aliquet laoreet dolor. Quisque vitae leo vel lacus laoreet dictum. Suspendisse dolor lacus, semper nec tincidunt id, elementum pulvinar odio. Etiam vitae turpis vitae augue tempus ultricies. Integer ornare, lorem id lobortis convallis, lacus justo blandit leo, quis interdum velit ante non odio. Aliquam a purus felis. Aenean nunc ipsum, facilisis ut augue eu, vestibulum ullamcorper metus.</p>
+
+                <p>Curabitur lacinia tortor vitae mauris mollis ullamcorper. Sed eleifend imperdiet dolor, et semper augue auctor ac. Suspendisse potenti. Proin ac accumsan leo, vel consequat nisl. Phasellus ut mauris purus. Integer ac erat eleifend, sollicitudin ante vel, condimentum lorem. Aliquam erat volutpat. Phasellus volutpat justo ac elit suscipit placerat. Suspendisse eu libero id nulla accumsan sollicitudin. Nunc mollis urna id turpis congue interdum. Mauris vel enim eu neque tristique tempor eget sit amet orci.</p>
+
+               <hr>
+               <h2 id="three">Tutorial Three</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus fermentum quam ut pharetra. Cras tincidunt et velit eu mattis. Duis ultricies lacus vel sapien pretium, malesuada feugiat odio laoreet. Donec vel bibendum purus, quis pellentesque tellus. Vestibulum cursus magna magna, id eleifend nibh scelerisque eu. Cras a eleifend magna. Suspendisse et vulputate quam, a tempus sem. Sed id laoreet orci. Donec eu dolor pretium, ullamcorper urna at, lobortis nunc. Nam ac nisi non sapien vestibulum sodales. Sed in tellus rutrum, porttitor diam ac, rhoncus enim. Suspendisse vulputate pharetra mi vitae porta.</p>
+
+                <p>Quisque varius arcu auctor, tristique felis eget, egestas metus. Maecenas hendrerit dolor sit amet nisi sollicitudin semper. Curabitur non felis sit amet lacus sagittis viverra. Aliquam erat volutpat. Proin accumsan turpis tortor, non hendrerit leo convallis sit amet. Aenean nisl diam, pellentesque sed metus et, placerat molestie tellus. Suspendisse aliquet dictum condimentum. Quisque dignissim ligula nec semper pulvinar. Sed eget hendrerit mauris. Nam sollicitudin, lectus scelerisque tincidunt accumsan, dolor mi molestie diam, a blandit libero mi eget neque. Curabitur ac mauris congue, cursus enim sed, vestibulum nisi. Sed gravida gravida condimentum. Ut libero orci, lacinia sed elit at, consectetur faucibus enim. Morbi consectetur nisl leo, vitae tristique urna bibendum in.</p>
+
+                <p>Etiam pretium fermentum orci, consectetur auctor velit. Nulla non sodales massa, eget aliquam urna. Vivamus nec magna dapibus augue iaculis placerat ut ut massa. Aliquam nec vehicula eros. Maecenas facilisis odio eget tincidunt pulvinar. Morbi est mi, interdum sagittis nulla vitae, porttitor volutpat nunc. Aliquam mollis pretium lorem vitae malesuada. Aliquam sit amet turpis vitae diam ultricies scelerisque. Nulla malesuada ullamcorper ipsum, quis pretium felis tincidunt ut. Sed vel lacus porta, consequat orci id, dignissim ipsum. Morbi luctus, mi non mollis bibendum, mi lacus mattis erat, non viverra quam est eget lacus. Integer id neque lorem. Phasellus quis mi in nibh pulvinar elementum eget ac dui. Donec dapibus mi arcu, at pharetra sapien elementum bibendum. In porta vulputate nibh, non pretium quam venenatis quis. Praesent et purus ante.</p>
+
+                <p>Mauris vel ornare tortor. Donec nec lobortis enim. Vestibulum orci ante, dictum et mi non, aliquet laoreet dolor. Quisque vitae leo vel lacus laoreet dictum. Suspendisse dolor lacus, semper nec tincidunt id, elementum pulvinar odio. Etiam vitae turpis vitae augue tempus ultricies. Integer ornare, lorem id lobortis convallis, lacus justo blandit leo, quis interdum velit ante non odio. Aliquam a purus felis. Aenean nunc ipsum, facilisis ut augue eu, vestibulum ullamcorper metus.</p>
+
+                <p>Curabitur lacinia tortor vitae mauris mollis ullamcorper. Sed eleifend imperdiet dolor, et semper augue auctor ac. Suspendisse potenti. Proin ac accumsan leo, vel consequat nisl. Phasellus ut mauris purus. Integer ac erat eleifend, sollicitudin ante vel, condimentum lorem. Aliquam erat volutpat. Phasellus volutpat justo ac elit suscipit placerat. Suspendisse eu libero id nulla accumsan sollicitudin. Nunc mollis urna id turpis congue interdum. Mauris vel enim eu neque tristique tempor eget sit amet orci.</p>
+            </div>
+         </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+            $('#myNav').affix({
+              offset: {
+                top: 125
+              , bottom: function () {
+                  return (this.bottom = $('.bs-footer').outerHeight(true))
+                }
+              }
+            })
+    </script>
+</body>
+</html>

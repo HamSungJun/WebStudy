@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+    h2 { margin: 20px 0} 
+    button.btn { margin-left: 10px;  float: left;  }
+    .inner { margin: 200px auto; width: 70%}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+<h2>팝오버 </h2>
+
+  <div class="inner" >
+    
+       <button type="button" class="btn btn-default popover-show" title="팝 오버 제목 " data-container="body" data-toggle="popover" data-placement="left" data-content="show 메소드 일때 팝오버 상태 ">
+         팝오버 왼쪽 
+       </button>
+       <button type="button" class="btn btn-primary popover-hide" title="팝 오버 제목 " data-container="body" data-toggle="popover" data-placement="top" data-content="Hide  메소드일 때 ">
+         팝오버 상단        </button>
+       <button type="button" class="btn btn-success popover-destroy" title="팝 오버 제목 " data-container="body" 
+          data-toggle="popover" data-placement="bottom" data-content="Destory 메소드 일 때 ">
+         팝오버 하단
+       </button>
+       <button type="button" class="btn btn-warning popover-toggle" title="팝 오버 제목 " data-container="body" 
+          data-toggle="popover" data-placement="top" data-content="toggle 메소들 일 때 ">
+         팝오버 오른쪽 
+       </button>
+
+        <div class="clearfix"></div>
+
+        <hr>
+
+
+       <p class="popover-options">
+          <a href="#" type="button" class="btn btn-warning" title="<h3>제목 </h3>"  
+             data-container="body" data-toggle="popover" data-placement="bottom" data-content="<h4>팝오버 옵션 메소드 일때 HTML 태그도 적용할 수 있음.</h4>">
+            여기를 토글하면 HTML 적용된 팝오버 보임.
+          </a>
+       </p>
+
+
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+   <script>
+      $(function () { $('.popover-show').popover('show');});
+      $(function () { $('.popover-hide').popover('hide');});
+      $(function () { $('.popover-destroy').popover('destroy');});
+      $(function () { $('.popover-toggle').popover('toggle');});
+     $(function () { $(".popover-options a").popover({html : true });});
+   </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Menu Sample</title>
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/menubarcolor.css" rel="stylesheet">
+    <style>
+      body {font-family: "Malgun gothic",  sans-serif;}
+      p {padding: 50px 0}    
+      .topfix .navbar-brand { padding: 0 50px 0 0 }
+      .topfix .navbar-nav > li > a {
+         color: #fff; padding: 15px 50px; border-right: 1px solid rgba(255,255,255,0.5); margin-top: 0px;
+       }
+      .topfix .navbar-nav > li:first-child > a {
+         border-left: 1px solid rgba(255,255,255,0.5); 
+       } 
+      .topfix .navbar-form { margin-top: 8px;}
+      .topfix .navbar-toggle { border-color: #ddd; }
+      .topfix .navbar-toggle:hover,
+      .topfix .navbar-toggle:focus {
+        background-color: #ddd;
+      }
+      .topfix .navbar-toggle .icon-bar { background-color: #fff;}
+      .topfix .navbar-nav > li > a:hover,
+      .topfix .navbar-nav > li > a:focus {
+        color: #fff;
+        background-color: #4B4B4B;
+      }
+      .topfix .navbar-nav > .active > a,
+      .topfix .navbar-nav > .active > a:hover,
+      .topfix .navbar-nav > .active > a:focus {
+        color: #fff;
+        background-color: #000;
+      }
+      .menu .navbar-form { margin-top: 80px; }
+      .nav { margin-left: -15px}   
+      .navbar-default .navbar-nav > ul { padding: 0; margin: 0}   
+      .navbar-default .navbar-nav > li > a { color: #fff; padding: 15px 50px; border-right: 1px solid #fff }
+
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="container">
+    <!-- 스크롤이 되면 나타나는 메뉴 -->
+   <nav class="navbar navbar-fixed-top topfix hidden" role="navigation">
+      <div class="container">  
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="./imgs/smalllogo.png" alt=""> </a>
+      </div>     
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">메뉴1 </a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="검색">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+     </div>
+  </nav>
+
+   <div class="menu"> <!-- 초기 메뉴  -->
+    <div class="row">
+      <div class="col-xs-8"> <img src="./imgs/biglogo.png" alt=""></div>
+      <div class="col-xs-4">
+          <form class="navbar-form  navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="검색">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+         </form>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div> 
+      <div class="collapse navbar-collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">메뉴1 </a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+        </ul>
+      </div>
+     </nav>
+  </div>
+
+
+  <article>
+    <h1>스크롤을 밑으로 내려 보세요.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque, lorem vel aliquam imperdiet, risus dui tincidunt nibh, sollicitudin aliquet felis enim quis nibh. Duis dapibus leo sed justo egestas, non ultricies justo tempor. Mauris purus elit, feugiat sodales purus sed, semper fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam malesuada velit quis magna rhoncus, vel congue lorem varius. Aenean rutrum urna eget tortor ultricies, vel imperdiet est interdum. Donec nec suscipit lectus. Vestibulum egestas faucibus tellus, vitae rhoncus est elementum in. Duis egestas interdum risus eget ornare.</p>
+    <div class="fix"> </div>
+    <img src="./imgs/DSC_2830.jpg" alt="" class="img-responsive">  
+   
+  <p>Curabitur consectetur consequat leo, a consectetur dui laoreet ac. Aenean gravida, ligula pharetra tempor egestas, ipsum nulla porta lectus, id rhoncus odio lectus vitae augue. Donec hendrerit libero nec nulla faucibus, in ornare lorem auctor. In vel lorem ullamcorper, gravida eros id, viverra urna. Curabitur ultricies felis et magna pellentesque scelerisque. Integer ac velit aliquam, posuere massa at, auctor lectus. Cras tempus lectus volutpat neque vestibulum, porta tincidunt urna vulputate. Nulla elit risus, ornare a dui vestibulum, volutpat mattis dui. Nam posuere volutpat libero, sed imperdiet diam venenatis eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam rhoncus tortor nibh, sit amet viverra felis lobortis ac. In ultricies et metus in ornare. Donec porttitor pellentesque libero nec condimentum.</p>
+
+  <p>Sed porta sapien nibh, in dignissim nunc posuere sed. Nulla at augue id enim vehicula faucibus. Nunc id nisi enim. Duis tempor ligula a nunc pretium vehicula. Proin aliquet imperdiet cursus. Aliquam et hendrerit arcu. Phasellus malesuada vitae leo ultrices eleifend. Suspendisse lacinia vestibulum purus at ornare. In ut accumsan lorem. Nam iaculis enim magna, eget egestas lectus fringilla vel. Mauris ac urna eu justo tristique vestibulum. Cras condimentum dui nisi, vel auctor orci facilisis ac. Sed in quam volutpat, auctor nisi eget, dapibus erat.</p>
+
+  <p>Aliquam quis ullamcorper elit, sollicitudin porta nisi. Morbi elit justo, gravida sed eleifend vitae, consequat cursus augue. Sed rutrum mi id ligula congue, eu rutrum dolor cursus. Duis dignissim vehicula convallis. Nullam gravida augue sed odio dignissim, vel tincidunt est tempor. Cras pharetra imperdiet elit sit amet aliquet. Etiam ornare lacus non molestie ornare. Cras varius vulputate lacus vel fermentum. In metus ligula, laoreet vitae tristique a, venenatis at odio. Nam ut odio hendrerit, ullamcorper quam eu, bibendum turpis. Donec cursus magna a orci blandit rutrum. Vivamus lobortis augue a felis egestas consequat. Sed risus enim, semper quis metus eget, lobortis condimentum lectus. Phasellus eu dolor ut felis cursus commodo. Nullam ligula nunc, pellentesque non faucibus sit amet, euismod et massa.</p>
+
+  <p>Quisque a justo venenatis, condimentum dolor non, tempus sapien. Curabitur dapibus dui quis adipiscing fringilla. In rutrum enim in elit porttitor vulputate. Cras sollicitudin venenatis luctus. Cras vitae blandit lorem. Nullam risus magna, ultrices sed aliquam a, tristique varius nibh. Vivamus in dapibus leo. Sed eu lobortis urna. Fusce interdum ligula at diam pulvinar aliquam. Phasellus risus urna, rhoncus venenatis elit in, faucibus iaculis libero. Duis dapibus pellentesque ipsum, nec imperdiet sapien viverra sit amet. Curabitur sit amet elit sodales, congue urna nec, tristique magna. Suspendisse lobortis dapibus leo in lacinia.</p>
+  </article>
+
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script>
+      $('.fix').waypoint(function(direction) { // 스크롤이 .fix를 가리키는 경우
+        if (direction === 'down') { // 스크롤 방향이 down 이면
+          $('.topfix').removeClass('hidden'); // .topfix 메뉴(하단) 부분에 있는 hidden 속성을 제거
+          $('.menu').addClass('hidden'); // 상단 메뉴에는 hidden 속성을 부여 한다.
+        }
+      }, {
+        offset: '10'
+      }).waypoint(function(direction) {
+        if (direction === 'up') { // 스크롤 방향이 up 이면 
+           $('.topfix').addClass('hidden'); //  // 반대로 적용되게 처리함
+           $('.menu').removeClass('hidden'); 
+        }
+      });
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 7단 그리드 </title>
+
+    <!-- Bootstrap -->
+    <link href="./css/nomalize.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body { padding-top: 20px }
+    @media (min-width: 768px){
+        .seven-cols .col-md-1,
+        .seven-cols .col-sm-1,
+        .seven-cols .col-lg-1 {
+          width: 14.285714285714285714285714285714%;
+          *width: 14.285714285714285714285714285714%;
+        }
+    }
+    .seven-cols { border: 1px solid #ccc; }
+    .seven-cols .col-md-1 { border-left: 1px solid #ccc; padding: 10px; text-align: center;}
+    .seven-cols .col-md-1:first-child { border:none;}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+     <div class="container">
+      <div class="row seven-cols">
+        <div class="col-md-1">Col 1</div>
+        <div class="col-md-1">Col 2</div>
+        <div class="col-md-1">Col 3</div>
+        <div class="col-md-1">Col 4</div>
+        <div class="col-md-1">Col 5</div>
+        <div class="col-md-1">Col 6</div>
+        <div class="col-md-1">Col 7</div>
+      </div>
+    </div>
+
+</body>
+</html>

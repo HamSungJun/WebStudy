@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+    h2 { margin: 20px 0} 
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container"> 
+    <h2>컬랩스 이벤트 </h2>
+    <div class="panel-group" id="accordion">
+       <div class="panel panel-info">
+          <div class="panel-heading">
+             <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                   href="#collapsesample">
+                여기 클릭하면 펼쳐지고, 다시 클릭하면 접힙니다. - shown 이벤트 
+                </a>
+             </h4>
+          </div>
+          <div id="collapsesample" class="panel-collapse collapse">
+             <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit velit sit amet tristique tincidunt. Fusce dapibus tortor ut est ornare porttitor. Aliquam auctor bibendum posuere. Fusce laoreet tincidunt lacinia. Aliquam posuere pharetra auctor. Pellentesque et eleifend nibh, a bibendum lacus. Pellentesque sit amet dignissim mauris. Suspendisse a erat congue nunc auctor malesuada. Mauris ultricies magna quis neque egestas, eu vehicula sapien luctus. Aenean id condimentum mauris.
+
+                Integer urna enim, vehicula non nunc non, feugiat imperdiet eros. Morbi vitae est at erat tristique facilisis. Mauris pulvinar vel arcu vel ultrices. Mauris a nisi sit amet urna elementum semper. Etiam dignissim pharetra mauris. Donec rhoncus nisl sem, ut ultrices odio porttitor sed. Donec consequat facilisis velit. Cras feugiat tincidunt fermentum. Duis interdum nec quam id eleifend.
+             </div>
+          </div>
+       </div>
+    </div>
+
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+       $(function () { 
+          $('#collapsesample').on('show.bs.collapse', function () {
+             alert('펼쳐질 때 이 메시지가 보입니다.');})
+       });
+    </script> 
+</body>
+</html>

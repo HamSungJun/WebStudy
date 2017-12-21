@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+
+  <h1> 입력 그룹   </h1>
+
+    <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>
+        <input type="text" class="form-control" placeholder="아이디">
+    </div> 
+     <br>
+    <div class="input-group">
+        <span class="input-group-addon">  <span class="glyphicon glyphicon-lock"></span> </span>
+        <input type="text" class="form-control" placeholder="암 호">
+    </div>
+    <br>
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  Cm  </span>
+    </div>    
+    <br>
+    <div class="input-group">
+       <span class="input-group-addon">  금액  </span>
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  원  </span>
+    </div> 
+  
+    <hr>
+  <h4> 입력 그룹  크기조절 </h4>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  Cm  </span>
+    </div>    
+    <br>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  Cm  </span>
+    </div> 
+    <br>
+    <div class="input-group input-group-sm">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">  Cm  </span>
+    </div> 
+    <hr>
+
+  <h4> 입력 그룹  체크 박스 또는 라디오 버튼 추가  </h4>
+
+    <div class="input-group">
+        <span class="input-group-addon">  <input type="checkbox"> </span>            
+        <input type="text" class="form-control">
+    </div> 
+    <br>
+   <div class="input-group">
+        <span class="input-group-addon">  <input type="radio"> </span>            
+        <input type="text" class="form-control">
+    </div> 
+
+
+<hr>
+
+  <h4> 입력 그룹 버튼 애드온 추가   </h4>
+
+    <div class="input-group">
+         <span class="input-group-btn"> <button class="btn btn-default" type="button">Go!</button> </span>        
+        <input type="text" class="form-control">
+    </div> 
+    <br>
+   <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>            
+        <input type="text" class="form-control">
+         <span class="input-group-btn">   <button class="btn btn-default" type="button">Go!</button> </span>  
+    </div> 
+    <br>
+ 
+ <hr>
+  <h4> 입력 그룹 버튼 드롭다운 또는 드롭업 추가   </h4>
+    <div class="input-group">
+         <div class="input-group-btn"> 
+             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 버튼1  <span class="caret"></span>
+         </button>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">다른 메뉴 </a></li>
+          </ul>
+         </div>        
+        <input type="text" class="form-control">
+    </div> 
+    <br>
+   <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>            
+        <input type="text" class="form-control">
+          <div class="input-group-btn dropup"> 
+             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> 버튼1  <span class="caret"></span>
+         </button>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#">메뉴 2</a></li>
+            <li><a href="#">메뉴 3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">다른 메뉴 </a></li>
+          </ul>
+         </div>         
+    </div> 
+
+
+ <hr>
+  <h4> 입력 그룹 분할된 버튼 추가   </h4>
+    <div class="input-group">
+      <div class="input-group-btn">
+         <button type="button" class="btn btn-default"> 버튼1 </button> 
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+         </button>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+        <li class="divider"></li>
+        <li><a href="#">다른 메뉴 </a></li>
+      </ul>
+    </div> 
+        <input type="text" class="form-control">
+    </div> 
+    <br>
+
+   <div class="input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-user"> </span> </span>            
+        <input type="text" class="form-control">
+         <div class="input-group-btn dropup">
+         <button type="button" class="btn btn-default"> 버튼1 </button> 
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+         </button>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+        <li class="divider"></li>
+        <li><a href="#">다른 메뉴 </a></li>
+      </ul>
+    </div>       
+    </div> 
+
+
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <style>
+    h2 { margin: 20px 0} 
+    button.btn { margin-left: 10px;  float: left;  }
+    .inner { padding: 50px 0;}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+<h2>툴팁 메소드 </h2>
+  <div class="inner">
+     여기  <a href="#" class="tooltip-show" data-toggle="tooltip" title="show">툴팁</a>은 항상 보여집니다.
+
+     <hr>
+     이곳에 적용된  <a href="#" class="tooltip-hide" data-toggle="tooltip" data-placement="top" title="hide">툴팁</a>은 hide 속성이 적용되어 있습니다.
+
+    <hr>
+     여기 <a href="#" class="tooltip-destroy" data-toggle="tooltip" data-placement="top" title="destroy">툴팁</a>은 destory 속성이 적용되어 보이지 않습니다.
+    <hr>
+     여기 <a href="#" class="tooltip-toggle" data-toggle="tooltip" data-placement="bottom" title="toggle">툴팁</a>은 toggle 이 적용되어 있습니다.
+     <hr>
+
+     <p class="tooltip-options" >
+        이곳에 적용된 <a href="#" data-toggle="tooltip" title="<h2>h2 속성 적용 </h2>" data-placement="bottom">툴팁</a>은 HTML 속성이 적용되어 있습니다.
+     </p>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+   <script>
+      $('.tooltip-show').tooltip('show');
+      $('.tooltip-hide').tooltip('hide');
+      $('.tooltip-destroy').tooltip('destroy');
+      $('.tooltip-toggle').tooltip('toggle');
+      $(".tooltip-options a").tooltip({html : true});
+   </script>
+</body>
+</html>

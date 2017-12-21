@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+
+
+<h1> 드롭다운 메뉴 </h1>
+
+<hr>
+<h4>기본적인 드롭다운 </h4>
+<div class="dropdown">
+   <a data-toggle="dropdown" href="#">여기를 클릭하세요.</a>
+   <ul class="dropdown-menu" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">분리된 메뉴 </a></li>
+  </ul>
+</div>
+
+<hr>
+<h4>data-toggle="dropdown"이 없는 경우 아무 것도 없음.   </h4>
+<div class="dropdown">
+  <!--data-toggle="dropdown" 부분이 없으면 아무것도 보이지 않음 -->
+   <ul class="dropdown-menu" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">분리된 메뉴 </a></li>
+  </ul>
+</div>
+
+<hr>
+<h4>pull-right를 이용한 우측 정렬</h4>
+<div class="dropdown">
+   <a data-toggle="dropdown" href="#">여기를 클릭하세요.</a>
+   <ul class="dropdown-menu pull-right" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">분리된 메뉴 </a></li>
+  </ul>
+</div>
+
+<hr>
+<h4>드롭다운에 별도의 헤더 추가 가능</h4>
+<div class="dropdown">
+   <input type="button" data-toggle="dropdown" class="btn btn-default btn-primary" value="여기를 클릭하세요.">
+   <ul class="dropdown-menu" role="menu">
+    <li role="presentation" class="dropdown-header">헤더 </li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation" class="dropdown-header">다른 헤더  </li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">분리된 메뉴 </a></li>
+  </ul>
+</div>
+
+<hr>
+<h4>li 에 disabled 속성 추가로 비활성화 가능 </h4>
+<div class="dropdown">
+   <button data-toggle="dropdown" class="btn btn-default btn-primary">여기를 클릭하세요.</button>
+   <ul class="dropdown-menu" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 1</a></li>
+    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">메뉴 2</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">메뉴 3</a></li>
+
+  </ul>
+</div>
+
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

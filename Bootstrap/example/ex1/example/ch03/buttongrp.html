@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>부트스트랩</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/kfonts2.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="container">  
+
+
+<h1> 버튼그룹 </h1>
+    <h4>일반적인 버튼 </h4>
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+       <button type="button" class="btn btn-default">버튼 4 </button>
+
+    <hr>
+    <h4>버튼 그룹으로 묶은 후 모습 </h4>
+    <div class="btn-group">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+       <button type="button" class="btn btn-default">버튼 4 </button>
+    </div>   
+
+    <hr>
+    <h4>버튼 그룹을 툴바 형식으로 변환  </h4>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+         <button type="button" class="btn btn-default">버튼 1 </button>
+         <button type="button" class="btn btn-default">버튼 2 </button>
+         <button type="button" class="btn btn-default">버튼 3 </button>       
+      </div> 
+      <div class="btn-group">
+         <button type="button" class="btn btn-default">버튼 4 </button>
+         <button type="button" class="btn btn-default">버튼 5 </button>      
+      </div>
+    </div>
+
+    <hr>
+    <h4>버튼 그룹을 이용해서 버튼 크기 일괄 조절  </h4>
+    <div class="btn-group btn-group-lg">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+    </div>  
+         <div class="btn-group">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+    </div>  
+    <div class="btn-group btn-group-sm">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+    </div>   
+    <div class="btn-group btn-group-xs">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+       <button type="button" class="btn btn-default">버튼 3 </button>
+    </div>  
+
+    <hr>
+    <h4>중첩하기  </h4>
+    <div class="btn-group">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+        <div class="btn-group">     
+           <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"> 클릭 <span class="caret"> </span>
+           </button>
+           <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">메뉴 1</a></li>
+            <li><a tabindex="-1" href="#">메뉴 2</a></li>
+          </ul>
+        </div>
+    </div>  
+     
+
+    <hr>
+    <h4>수직정렬 하기  </h4>
+    <div class="btn-group-vertical">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>
+        <div class="btn-group">     
+           <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"> 클릭 <span class="caret"> </span>
+           </button>
+           <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">메뉴 1</a></li>
+            <li><a tabindex="-1" href="#">메뉴 2</a></li>
+          </ul>
+        </div>
+    </div>  
+
+    <hr>
+    <h4>양쪽 정렬 (a 태그로 이루어진 버튼에 한해서만 가능 </h4>
+    <div class="btn-group  btn-group-justified">
+      <a href="#" class="btn btn-default">버튼 1</a>
+      <a href="#" class="btn btn-default">버튼 2</a>
+      <a href="#" class="btn btn-default">버튼 3</a>
+      <a href="#" class="btn btn-default">버튼 4</a>        
+    </div> 
+
+    <h4>button 태그는 양쪽 정렬이 안됨. </h4>
+    <div class="btn-group  btn-group-justified">
+       <button type="button" class="btn btn-default">버튼 1 </button>
+       <button type="button" class="btn btn-default">버튼 2 </button>   
+       <button type="button" class="btn btn-default">버튼 3 </button>
+       <button type="button" class="btn btn-default">버튼 4 </button>       
+    </div>        
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
