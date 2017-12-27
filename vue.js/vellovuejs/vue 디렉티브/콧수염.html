@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        Vue.config.devtools = true;
+
+        window.onload = function () {
+    
+        var message_view = new Vue({
+            el : '#message_box',
+            data : {
+                message : "메세지키값의 이 value"
+            }
+        })
+
+        var img_view = new Vue({
+            el : '#img_box',
+            data : {
+                imgpath : "../images/error.png"
+            }
+        })
+
+        var if_view = new Vue({
+            el : '#if_box',
+            data : {
+                seen : true
+            }
+        })
+        
+        var for_view = new Vue({
+            el : '#for_box',
+            data : {
+                todos : [
+                { text: 'JavaScript 배우기' },
+                { text: 'Vue 배우기' },
+                { text: '무언가 멋진 것을 만들기' }
+                ]
+            }
+        })
+
+        var on_view = new Vue({
+            el : '#on_box',
+            data : {
+             message : "Hello Vue.js!"   
+            },
+            methods : {
+                ToUpper : function () {
+                    this.message = this.message.toUpperCase();
+                }
+            }
+        })
+
+//         <div id="v-model_box">
+//     <h1>{{message}}</h1>
+//     <input type="text" v-model="MyInput">
+// </div>
+        var model_view = new Vue({
+            el : '#v-model_box',
+            data : {
+                message : ''
+            }
+        })
+    }
+
+
+    </script>
+
+    
+</head>
+
+<body>
+  
+  <div id="message_box">
+      <h1 v-text="message"></h1>
+  </div>
+
+  <div id="img_box">
+      <!-- v-bind:(엘리먼트 속성이름) 속성을 컨트롤 할 수 있게 해줌. -->
+      <img  v-bind:src="imgpath" alt="">
+  </div>
+
+  <div id="if_box">
+      <p v-if="seen">true일때 보여집니다.</p>
+  </div>
+   
+  <div id="for_box">
+    <ol>
+        <li v-for="todo in todos">{{ todo.text }}</li>
+    </ol>
+</div>
+
+<div id="on_box">
+    <p>{{message}}</p>
+    <button v-on:click="ToUpper">UpperCase</button>
+</div>
+
+<div id="v-model_box">
+    <h1>{{message}}</h1>
+    <input type="text" v-model="message">
+</div>
+</body>
+
+</html>
