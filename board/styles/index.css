@@ -1,0 +1,27 @@
+.bg-ivory {
+    background-color: ivory;
+}
+
+#background {
+    background-image: url("../images/background_board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#login_box {
+    background-color: aliceblue;
+    width: 50%;
+    height: 100%;
+    opacity: 0.8;
+    margin: 0px auto;
+}
+
+.form_box {
+    width: 100%;
+}
+#profile_img{
+    width: 100%;
+    height: 250px;
+}
+

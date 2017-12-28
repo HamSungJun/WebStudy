@@ -1,53 +1,227 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-        <head>
-                <title>Bootstarp CDN</title>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <link rel="stylesheet" href="./libraries/bootstrap.css">
-                <script
-                src="./libraries/jquery-3.2.1.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-                <script src="./libraries/bootstrap.js"></script>
-                <style>
+<head>
+    <title>Bootstarp CDN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./libraries/bootstrap.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="./libraries/bootstrap.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap-filestyle.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+
+            $("#ModalTrigger").on("click", function () {
+                $("#Mymodal").modal("show");
+            });
+
+            $("#file_input").on("change",function () {
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+
+                $("#profile_img").attr("src",tmppath);
+                $("#profile_img").hide();
+                $("#profile_img").fadeIn("slow");
                 
-                </style>
-        </head>
+            });
 
-    <body>
-        
-        <div class="container-fluid bg-dark h-100 position-absolute">
-            <div class="row">
-                <div class="col-md-12 text-center text-white">
-                    <h1 class="display-2 font-weight-bold mb-md-4"> Study Group Board </h1>
-                </div>
-            </div>
-
-            <div class="row h-50">
-                <div class="py-md-auto offset-md-2 col-md-4 rounded bg-danger mr-md-2">
-                    <form action="">
-                        ID : 
-                        <input type="text" class="form-control">
-                        PW :
-                        <input type="password" class="form-control">
-                    </form>
-                </div>
-
-                <div class="ml-md-2 col-md-4 rounded bg-danger">
-                    <img src="" alt="">
-                </div>
-
+            $("#Register_Submit").on("click",function () {
                 
+                var email = $("#email_input").val();
+                var password = $("#pw_input").val();
+                var nickname = $("#nickname_input").val();
+                var file = $("file_input").text;
+                alert(toString(file));
+
+                RegisterData_Validator(email , password , nickname , file);
+
+                if(RegisterData_Validator === true){
+                $.ajax({
+                type: "post",
+                url: "./php/Register.php",
+                data: "data",
+                success: function (response) {
+                    
+                }
+            });
+            };
+            });
+
+        })
+
+        function RegisterData_Validator(email , password , nickname , file) {
+            var AllPass = false;
+
+            var email_pattern = new RegExp('^[A-Za-z0-9]+@[A-Za-z0-9]+.[A-Za-z]{2,4}$');
+            var email_res = email_pattern.test(email);
+            var password_pattern = new RegExp('^[A-Za-z0-9_-]{6,10}$');
+            var password_res = password_pattern.test(password);
+            var nickname_pattern = new RegExp('^[가-힣A-Za-z0-9_-]{4,10}$');
+            var nickname_res = nickname_pattern.test(nickname);
+            
+
+            if(!email_res){
+                alert("잘못된 이메일 계정입니다.");
+                AllPass = false;
+            }
+            else{
+                alert("아이디 좋습니다.");
+                AllPass = true;
+            }
+
+            if(!password_res){
+                alert("잘못된 비밀번호 패턴입니다.");
+                AllPass = false;
+            }
+            else{
+                alert("비밀번호 좋습니다.");
+                AllPass = true;
+            }
+            if(!nickname_res){
+                alert("잘못된 닉네임입니다.");
+                AllPass = false;
+            }
+            else{
+                alert("닉네임 좋습니다.");
+                AllPass = true;
+            }
+        }
+    </script>
+   
+</head>
+
+<body>
+
+    <div class="modal fade" id="Mymodal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: ivory; opacity: 0.9;">
+                <div class="modal-header justify-content-center bg-white">
+                    <h3 class="modal-title font-weight-bold">Join</h4>
+
+                    <!-- <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                      <div class="row align-center">
+                          <div class="col-xl-6 p-xl-3">
+                           
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon"><i class="far fa-id-card fa-2x"></i></span>
+                                    <input id="email_input" type="email" class="form-control text-center" placeholder="Type Your ID here...">
+                                </div>
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon"><i class="fas fa-key fa-2x"></i></span>
+                                    <input id="pw_input" type="password" class="form-control text-center" placeholder="Type Your PW here...">
+                                </div>
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon"><i class="fas fa-child fa-2x" style="width : 32px;"></i></span>
+                                    <input id="nickname_input" type="text" class="form-control text-center" placeholder="Type Your Nickname here...">
+                                </div>
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon"><i class="far fa-folder-open fa-2x" style="width : 32px;"></i></span>
+                                    <input id="file_input" type="file" class="form-control text-center" placeholder="Type Your PW here...">
+                                </div>
+                    
+                          </div>
+                          <div class="col-xl-6 mt-xl-3 py-xl-3 text-center">
+                               
+                                <img id="profile_img" class="img-thumbnail" src="./images/default_img.png" alt="">
+                              
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-footer bg-white">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <!-- <div class="alert alert-warning m-0" role="alert">
+                                    This is a warning alert—check it out!
+                                </div> -->
+                            </div>
+                            <div class="col-xl-4 text-right">
+                                <button id="Register_Submit" type="button" class="btn btn-outline-success text-justify h-100">Submit</button>
+                                <button type="button" class="btn btn-outline-danger h-100" data-dismiss="modal">Cancel</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-       
-
+    </div>
 
 
-   
-        
-         
-    </body>
+    <div id="background" class="container-fluid h-100 position-absolute p-xl-0">
+        <div id="#inner" class="container-fluid position-absolute h-100">
+            <div class="row h-25 "></div>
+            <div class="row h-50">
+                <div class="offset-xl-3 col-xl-6 text-center">
+                    <div id="login_box" class="rounded">
+                        <div class="logo_box pt-xl-3">
+                            <span class="fas fa-book fa-7x mb-xl-3"></span>
+                        </div>
+                        <h1 class="font-weight-bold m-xl-0">Study Board</h1>
+                        <div class="form_box">
+
+
+                            <form class="px-xl-5 py-xl-2">
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon">
+                                        <i class="far fa-id-card fa-2x"></i>
+                                    </span>
+                                    <input type="text" class="form-control text-center font-weight-bold" placeholder="ID">
+                                </div>
+                                <div class="input-group mt-xl-3">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-key fa-2x"></i>
+                                    </span>
+                                    <input type="password" class="form-control text-center font-weight-bold" placeholder="PASSWORD">
+                                </div>
+
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <button type="button" class="btn btn-outline-primary btn-block mt-xl-3 font-weight-bold">Login</button>
+
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <button type="button" id="ModalTrigger" class="btn btn-outline-success btn-block mt-xl-3 font-weight-bold">Join</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <button type="button" class="btn btn-outline-dark btn-block  mt-xl-3 font-weight-bold">Find ID/PW</button>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <button type="button" class="btn btn-outline-dark btn-block mt-xl-3 font-weight-bold">Creator</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-xl-3">
+
+            </div>
+
+        </div>
+
+      
+    </div>
+    </div>
+
+</body>
+
 </html>
