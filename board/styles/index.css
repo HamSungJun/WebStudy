@@ -12,9 +12,11 @@
 #login_box {
     background-color: aliceblue;
     width: 50%;
-    height: 100%;
+    height: auto;
     opacity: 0.8;
     margin: 0px auto;
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
 }
 
 .form_box {

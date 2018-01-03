@@ -15,6 +15,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <script type="text/javascript" src="./scripts/bootstrap-filestyle.min.js"> </script>
     <script>
+        var Duplication_Check = false;
+
         $(document).ready(function () {
 
             $("#ModalTrigger").on("click", function () {
@@ -30,32 +32,70 @@
                 
             });
 
+            $("#Duplication_Check").on("click",function (){
+                var email = $("#email_input").val();
+                
+                var email_pattern = new RegExp('^[A-Za-z0-9]+@[A-Za-z0-9]+.[A-Za-z]{2,4}$');
+                var email_res = email_pattern.test(email);
+
+                if(!email_res){
+                alert("잘못된 이메일 계정 형식입니다.");
+                }
+                else{
+                
+                  $.ajax({
+                      type: "POST",
+                      url: "./php/Duplication_Checker.php",
+                      data: { Email : "god1857@naver.com"},
+                      dataType: "json",
+                      success: function (response) {
+                        alert("잘 왔어요");
+                        alert(JSON.stringify(response)
+                        );
+                    },
+                      error:function(request,status,error){
+                        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                  });
+                }
+            })
+
             $("#Register_Submit").on("click",function () {
                 
+                //입력한 아이디의 중복을 Check하고 file_name 변수 제외 5개의 변수를 전달하여 유효성 검사.
+                if(Duplication_Check === true){
+
                 var email = $("#email_input").val();
                 var password = $("#pw_input").val();
                 var nickname = $("#nickname_input").val();
-                var file = $("file_input").text;
-                alert(toString(file));
+                var profile_Img = $("#file_input")[0].files[0];
+                var file_name = $("#file_input").val().split("\\");
+                var basename = file_name[file_name.length-1];
+                // alert();
+            
 
-                RegisterData_Validator(email , password , nickname , file);
+                RegisterData_Validator(email , password , nickname , profile_Img , basename);
 
-                if(RegisterData_Validator === true){
-                $.ajax({
-                type: "post",
-                url: "./php/Register.php",
-                data: "data",
-                success: function (response) {
+            //     if(RegisterData_Validator === true){
+            //     $.ajax({
+            //     type: "post",
+            //     url: "./php/Register.php",
+            //     data: "data",
+            //     success: function (response) {
                     
-                }
-            });
-            };
+            //     }
+            // });
+            // };
+            }
+            else{
+                alert("아이디 중복성 확인을 먼저 진행해 주세요.");
+            }
             });
 
         })
 
-        function RegisterData_Validator(email , password , nickname , file) {
-            var AllPass = false;
+        function RegisterData_Validator(email , password , nickname , profile_Img , basename) {
+            var Pass_Counter = 0;
 
             var email_pattern = new RegExp('^[A-Za-z0-9]+@[A-Za-z0-9]+.[A-Za-z]{2,4}$');
             var email_res = email_pattern.test(email);
@@ -64,31 +104,46 @@
             var nickname_pattern = new RegExp('^[가-힣A-Za-z0-9_-]{4,10}$');
             var nickname_res = nickname_pattern.test(nickname);
             
-
             if(!email_res){
                 alert("잘못된 이메일 계정입니다.");
-                AllPass = false;
+              
             }
             else{
                 alert("아이디 좋습니다.");
-                AllPass = true;
+                Pass_Counter++;
             }
 
             if(!password_res){
                 alert("잘못된 비밀번호 패턴입니다.");
-                AllPass = false;
+                
             }
             else{
                 alert("비밀번호 좋습니다.");
-                AllPass = true;
+                Pass_Counter++;
             }
             if(!nickname_res){
                 alert("잘못된 닉네임입니다.");
-                AllPass = false;
+               
             }
             else{
                 alert("닉네임 좋습니다.");
-                AllPass = true;
+                Pass_Counter++;
+            }
+            if(profile_Img === undefined){
+                alert("프로필 파일을 설정하지 않았습니다.");
+               
+            }
+            else{
+                var $IMGS = ["jpg" , "jpeg" , "png" , "bmp" , "JPG" , "JPEG" , "PNG" , "BMP"];
+                if($IMGS.indexOf(basename.substring(basename.length-3,basename.length)) == -1){
+                    alert("이미지 파일이 아니잖습니까?");
+                     
+                }
+                else{
+                    alert("이미지 좋습니다.");
+                    
+                }
+                
             }
         }
     </script>
@@ -109,6 +164,7 @@
                     </button> -->
                 </div>
                 <div class="modal-body">
+               
                   <div class="container-fluid">
                       <div class="row align-center">
                           <div class="col-xl-6 p-xl-3">
@@ -116,6 +172,7 @@
                                 <div class="input-group mt-xl-3">
                                     <span class="input-group-addon"><i class="far fa-id-card fa-2x"></i></span>
                                     <input id="email_input" type="email" class="form-control text-center" placeholder="Type Your ID here...">
+                                    <span class="input-group-addon"><button class="btn btn-danger" id="Duplication_Check" type="button">중복체크</button></span>
                                 </div>
                                 <div class="input-group mt-xl-3">
                                     <span class="input-group-addon"><i class="fas fa-key fa-2x"></i></span>
@@ -125,10 +182,15 @@
                                     <span class="input-group-addon"><i class="fas fa-child fa-2x" style="width : 32px;"></i></span>
                                     <input id="nickname_input" type="text" class="form-control text-center" placeholder="Type Your Nickname here...">
                                 </div>
+                           
                                 <div class="input-group mt-xl-3">
-                                    <span class="input-group-addon"><i class="far fa-folder-open fa-2x" style="width : 32px;"></i></span>
-                                    <input id="file_input" type="file" class="form-control text-center" placeholder="Type Your PW here...">
+
+                                        <span class="input-group-addon"><i class="far fa-folder-open fa-2x" style="width : 32px;"></i></span>
+                                        <input id="file_input" type="file" class="form-control text-center" placeholder="Type Your PW here...">
+                                  
                                 </div>
+                          
+                            
                     
                           </div>
                           <div class="col-xl-6 mt-xl-3 py-xl-3 text-center">
@@ -149,7 +211,7 @@
                                 </div> -->
                             </div>
                             <div class="col-xl-4 text-right">
-                                <button id="Register_Submit" type="button" class="btn btn-outline-success text-justify h-100">Submit</button>
+                                <button id="Register_Submit" type="submit" class="btn btn-outline-success text-justify h-100">Submit</button>
                                 <button type="button" class="btn btn-outline-danger h-100" data-dismiss="modal">Cancel</button>
                             </div>
                     
@@ -159,6 +221,7 @@
             </div>
         </div>
     </div>
+
 
 
     <div id="background" class="container-fluid h-100 position-absolute p-xl-0">
@@ -174,7 +237,7 @@
                         <div class="form_box">
 
 
-                            <form class="px-xl-5 py-xl-2">
+                            <form action="./php/Login.php" class="px-xl-5 py-xl-2" method="POST">
                                 <div class="input-group mt-xl-3">
                                     <span class="input-group-addon">
                                         <i class="far fa-id-card fa-2x"></i>
