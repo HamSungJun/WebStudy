@@ -22,10 +22,10 @@
 
     $Search_SQL = "SELECT email FROM Users WHERE email ='$user_email'";
     $result = $dbconn->query($Search_SQL);
-
+  
     if(mysqli_num_rows($result) == 0){
         $Registerble = array(
-            "TF" => "true"
+            "TF" => "true",
         );
 
         header("Content-Type: application/json; charset=UTF-8");
@@ -34,7 +34,7 @@
 
     else {
         $Registerble = array(
-            "TF" => "false"
+            "TF" => "false",
         );
         header("Content-Type: application/json; charset=UTF-8");
         print json_encode($Registerble);
