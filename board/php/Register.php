@@ -6,7 +6,8 @@
     $dbname = "god1857";       // MySQL DB명
 
     $dbconn = new mysqli($host,$user,$password,$dbname);
-
+    
+    
     if(!$dbconn) {
        echo("DB 연결 실패");
        exit;

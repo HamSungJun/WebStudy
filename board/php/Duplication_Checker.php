@@ -16,9 +16,9 @@
     mysqli_query($dbconn, "set session character_set_connection=utf8;");
     mysqli_query($dbconn, "set session character_set_results=utf8;");
     mysqli_query($dbconn, "set session character_set_client=utf8;");
-
+    
     $user_email = $_POST["Email"];
-   
+    
 
     $Search_SQL = "SELECT email FROM Users WHERE email ='$user_email'";
     $result = $dbconn->query($Search_SQL);

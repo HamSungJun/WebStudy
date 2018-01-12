@@ -1,0 +1,26 @@
+create database parking_lot;
+use parking_lot;
+
+create table PARKING_LOT(
+    P_LOT_NAME VARCHAR(100) NOT NULL,
+    IS_FREE VARCHAR(100) NOT NULL,
+    IS_INOUTSIDE VARCHAR(100) NOT NULL,
+    TOTAL_SPACE INT NOT NULL,
+    USING_SPACE INT default 0 NOT NULL,
+    PRIMARY KEY(P_LOT_NAME)
+);
+create table PARKING_LOT_SPACE(
+
+    P_LOT_NAME VARCHAR(100),
+    P_LOT_SPACE_ID INT,
+    IS_PARKING VARCHAR(100) NOT NULL,
+    CAR_OWNER VARCHAR(100) NOT NULL,
+    CAR_NUMBER VARCHAR(100) NOT NULL UNIQUE,
+    PHONE_CALL VARCHAR(100) NOT NULL,
+    PARK_TIME DATETIME default '0000-00-00 00:00:00',
+    PRIMARY KEY(P_LOT_SPACE_ID),
+    constraint fk_id foreign key ( P_LOT_NAME ) references PARKING_LOT ( P_LOT_NAME ) on delete cascade
+
+);
+
+INSERT INTO PARKING_LOT VALUES('A1' , '유료주차장' , '실내주차장' , 24 , 0);
