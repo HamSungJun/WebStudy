@@ -15,11 +15,11 @@
     
     <!-- <script src="./scripts/index.js"></script> -->
     <script>
-        var parked;
+        var parked = [];
 
         $(document).ready(function () {
             data_check();
-
+            setInterval(clock , 1000);
             $("#park_btn").on("click", function () {
                 $("#insert").modal("show");
             });
@@ -41,6 +41,13 @@
             
         })
 
+        function clock() {
+            var Time = new Date()
+            var S_Time = Time.toLocaleDateString();
+            var S_Time2 = Time.toLocaleTimeString();
+            $("#clock").html(S_Time + S_Time2); 
+        }
+
         function data_check() {
 
             $.ajax({
@@ -52,6 +59,8 @@
                 dataType: "json",
                 success: function (response) {
                     // 주자중인 space id 넘버 확인후 해당 space를 붉게 변경
+                    var data_pointer = 0;
+                    
                     parked = response.NUMBERS;
 
                     for (var index = 1; index < 25; index++) {
@@ -70,14 +79,47 @@
                         
                     }
                     
-                    // alert(parked);
+                    for(var i = 1 ; i <= 24 ; i++){
+                        
+                        if($('#'+i).css("background-color") == 'rgb(255, 99, 71)'){
+                            $('#'+i).popover({
+                            "container" : "body",
+                            "html" : true,
+                            "trigger" : "hover",
+                            "title" : "스페이스 넘버 : " + i,
+                            "content": '<p class="text-center m-0">주차중</p><hr class="m-2">' + '<span class="text-center m-0">주차한 사람 : </span>' + response.CAR_OWNER[data_pointer] + '<hr class="m-2"><span class="text-center m-0">차량번호 : </span>' + response.CAR_NUMBER[data_pointer] + '<hr class="m-2"><span class="text-center m-0">연락처 : </span>' + response.PHONE_CALL[data_pointer] + '<hr class="m-2"><span class="text-center m-0">주차시각 : </span>' + response.PARK_TIME[data_pointer++]
+                            })
+                        }
+                        else{
+
+                        $('#'+i).popover({
+
+                        "html" : true,
+                        "trigger" : "hover",
+                        "animation" : true,
+                        "title" : "스페이스 넘버 : " + i,
+                        "content" :  '<p class="text-center m-0">주차가능</p>'
+                   
+                        })
+                    }
+                    }
+
                 }
             });
 
         }
 
         function data_insert(){
-            
+            var parkable = true;
+
+            for(var i = 0 ;  i < parked.length ; i++){
+                if (parseInt($("#space_id").val()) == parked[i]){
+                    alert("이미 주차된 자리입니다.");
+                    parkable = false;
+                }
+            }
+
+            if(parkable === true){
             $.ajax({
                 type: "POST",
                 url: "./PHP/insert.php",
@@ -89,8 +131,10 @@
                 },
                 success: function () {
                     data_check();
+                    location.reload();
                 }
             });
+        }
         }
         function data_delete(){
             $.ajax({
@@ -101,6 +145,7 @@
                 },
                 success: function () {
                     data_check();
+                    location.reload();
                 }
             });
         }
@@ -128,9 +173,7 @@
 
         }
         
-        function data_status(){
-
-        }
+      
 
     </script>
     <style>
@@ -318,7 +361,7 @@
                 <h1>NAME : A1</h1>
             </div>
         </div>
-        <div class="row align-items-center bg-ivory h-50">
+        <div class="row align-items-center bg-ivory">
                 <div class="col-md-12 p-0 text-center">
                     <div class="table-responsive m-0 p-3">
                         <table class="table collapsed text-center">
@@ -350,6 +393,12 @@
                 <button id="p_info" class="btn btn-block btn-outline-dark">주차장 정보</button>
             </div>
            
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 id="clock"></h1>
+            </div>
         </div>
     </div>
 </body>

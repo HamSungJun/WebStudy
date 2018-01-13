@@ -5,7 +5,7 @@ $user = "root";                  // MySQL DB서버 접속 id
 $password = "root";  // MySQL DB서버 접속 password
 $dbname = "parking_lot";       // MySQL DB명
 
-$dbconn = new mysqli($host,$user,$password,$dbname);
+$dbconn = mysqli_connect($host,$user,$password,$dbname);
 
 
 if(!$dbconn) {
@@ -20,8 +20,12 @@ else{
 
         $UPDATE_SQL = "UPDATE parking_lot set USING_SPACE = USING_SPACE - 1";
     
-        $dbconn->query($DELETE_SQL);
-        $dbconn->query($UPDATE_SQL);
+        $delete_result = mysqli_query($dbconn,$DELETE_SQL);
+
+        if(mysqli_affected_rows($dbconn) > 0){
+            $dbconn->query($UPDATE_SQL);
+        }
+        
     
 }
 ?>

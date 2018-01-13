@@ -5,7 +5,7 @@ $user = "root";                  // MySQL DB서버 접속 id
 $password = "root";  // MySQL DB서버 접속 password
 $dbname = "parking_lot";       // MySQL DB명
 
-$dbconn = new mysqli($host,$user,$password,$dbname);
+$dbconn = mysqli_connect($host,$user,$password,$dbname);
 
 
 if(!$dbconn) {
@@ -31,15 +31,19 @@ else{
     // PHONE_CALL VARCHAR(100),
     // PARK_TIME DATETIME default '0000-00-00 00:00:00',
     
-    if(isset($SPACE_ID) && isset($CAR_OWNER) && isset($CAR_NUMBER) && isset($PHONE_CALL)){
+        if(preg_match('/^[0-9]{1,2}$/',$SPACE_ID) && preg_match('/[\xE0-\xFF][\x80-\xFF][\x80-\xFF]/', $CAR_OWNER) && preg_match('/^[0-9]{2}[\xE0-\xFF][\x80-\xFF][\x80-\xFF]{1}\s[0-9]{4}$/',$CAR_NUMBER) && preg_match('/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/',$PHONE_CALL)){
+
+  
         $INSERT_SQL = "INSERT INTO parking_lot_space VALUES('A1' , $SPACE_ID , '주차중' , '$CAR_OWNER' , '$CAR_NUMBER' , '$PHONE_CALL' , '$PARK_TIME')";
-
         $UPDATE_SQL = "UPDATE parking_lot set USING_SPACE = USING_SPACE + 1";
-    
-        $dbconn->query($INSERT_SQL);
-        $dbconn->query($UPDATE_SQL);
-    }
 
-   
+          $insert_result = mysqli_query($dbconn,$INSERT_SQL);
+
+          if($insert_result){
+            mysqli_query($dbconn,$UPDATE_SQL);
+          }
+         
+        }      
+    
 }
 ?>
