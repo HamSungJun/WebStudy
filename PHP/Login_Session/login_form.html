@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>로그인 화면</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../libraries/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../../libraries/bootstrap.js"></script>
+
+    <style>
+        .bg-ivory{
+            background-color: ivory;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid position-absolute h-100">
+        <div class="row h-25"></div>
+        <div class="row h-50 align-items-center bg-ivory">
+            <div class="offset-md-4 col-md-4">
+                <form action="login_check.php" method="post">
+
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">ID</span>
+                            </div>
+                            <input type="text" class="form-control" name="ID">           
+                        </div>
+                        <div class="w-100 my-2"></div>
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">PW</span>
+                            </div>
+                            <input type="password" class="form-control" name="PASSWORD">           
+                        </div>
+                        <div class="w-100 mt-5"></div>
+                        <button class="btn btn-block btn-outline-success" type="submit">login</button>
+                </form>
+            </div>
+            <div class="offset-md-4"></div>
+        </div>
+        <div class="row h-25"></div>
+    </div>
+
+</body>
+</html>
