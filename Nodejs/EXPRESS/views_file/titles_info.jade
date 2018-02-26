@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    body
+        h1 My Server Languages
+
+        ul
+            each language in languages
+                li
+                    a(href="../title/"+language)=language
+        
+        h2=title
+        h3="description : " + description
+        h3="author : " + author
+                
+                
