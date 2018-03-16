@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Content Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" />
+    <script src="jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.js"></script>
+    <script>
+
+        var clicked_num = 0;
+
+        $(document).ready(function () {
+
+              $("#number").text(clicked_num);
+
+            $("#badge").on("click",function () {
+                $("#number").text(clicked_num++);
+            })
+        });
+    </script>
+    <style>
+        #my_container {
+            margin: 0px auto;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my_container">
+        <h1>Example heading
+            <span class="badge badge-secondary">New</span>
+        </h1>
+        <h2>Example heading
+            <p class="badge badge-secondary mb-0">New</p>
+        </h2>
+        <h3>Example heading
+            <span class="badge badge-secondary">New</span>
+        </h3>
+        <h4>Example heading
+            <span class="badge badge-secondary">New</span>
+        </h4>
+        <h5>Example heading
+            <span class="badge badge-secondary">New</span>
+        </h5>
+        <h6>Example heading
+            <span class="badge badge-secondary">New</span>
+        </h6>
+
+
+        <button id="badge" type="button" class="btn btn-primary">
+            Notifications
+            <span id="number" class="badge badge-light"></span>
+        </button>
+
+        <span class="badge badge-danger badge-pill">badge-pill</span>
+        <span class="badge badge-danger">badge-danger</span>
+
+        </div>
+</body>
+
+</html>

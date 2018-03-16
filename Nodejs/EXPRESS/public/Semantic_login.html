@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Semantic Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./semantic.css" />
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./semantic.js"></script>
+
+    <style>
+        *{
+            padding : 0;
+            margin : 0;
+            box-sizing: border-box;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width : 100%;
+            height : 100%;
+            display: flex;
+            color: #000;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+        }
+        #login_container {
+            /* margin: 0px auto; */
+            width: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login_container">
+        <form class="ui form" action="/login/" method="POST">
+            <div class="field">
+                <label>ID</label>
+                <input type="text" name="ID" placeholder="First Name">
+            </div>
+            <div class="field">
+                <label>PASSWORD</label>
+                <input type="password" name="PASSWORD" placeholder="Last Name">
+            </div>
+            <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

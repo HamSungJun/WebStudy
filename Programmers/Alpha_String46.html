@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        
+        alert(alpha_string46("1234"));
+
+    }
+
+    function alpha_string46(s){
+    var result = true
+    var re = new RegExp(/^[0-9]*$/);
+    
+    // 함수를 완성하세요
+    if (s.length == 4 || s.length == 6) {
+        if(re.test(s)){
+            result = true;
+        }
+        else{
+            result = false;
+        }    
+    }
+    else{
+        result = false;
+    }
+  
+    return result;
+  }
+   
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+

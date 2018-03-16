@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>로그인</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="./libraries/bootstrap.css">
+    <link rel="shortcut icon" href="./Materials/images/favicon.PNG" type="image/png">
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./libraries/bootstrap.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#join").on("click", function () {
+
+                window.location.href = "join.html";
+
+            })
+        })
+    </script>
+    <style>
+        * {
+            /* border : 1px solid black; */
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lavender;
+        }
+
+        #icon {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid position-absolute h-100">
+
+        <div class="row h-100 align-items-center">
+            
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <form action="./php/login.php" method="POST">
+                <div class="row h-50 align-items-center">
+                    <div class="offset-md-4 offset-sm-4 offset-xs-4 col-md-4 col-sm-4 col-xs-4 rounded bg-white p-3">
+                        <div class="row align-items-center mb-3">
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1 col-md-10 col-sm-10 col-xs-10 text-center">
+                                <h1 class="m-0 text-center">Free Board</h1>
+                            </div>
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1"></div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1 col-md-10 col-sm-10 col-xs-10">
+
+                                <div class="input-group input-group-lg mb-1">
+                                    <span id="icon" class="input-group-addon">
+                                        <i class="fas fa-id-badge fa-1x"></i>
+                                    </span>
+                                    <input name="ID" class="form-control text-center" type="text" placeholder="ID">
+                                </div>
+                                <div class="input-group input-group-lg">
+                                    <span id="icon" class="input-group-addon">
+                                        <i class="fas fa-unlock-alt fa-1x"></i>
+                                    </span>
+                                    <input name="PASSWORD" class="form-control text-center" type="password" placeholder="PASSWORD">
+                                </div>
+                              
+                            </div>
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1 col-md-10 col-sm-10 col-xs-10">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 mb-1">
+                                        <button type="submit" id="login" class="btn btn-outline-primary btn-block">Login</button>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <button type="button" id="join" class="btn btn-outline-primary btn-block">Join</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1 col-md-10 col-sm-10 col-xs-10">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <button id="find" class="btn btn-outline-dark btn-block">Find</button>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <button id="creator" class="btn btn-outline-dark btn-block">Creator</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offset-md-1 offset-sm-1 offset-xs-1"></div>
+                        </div>
+                    </div>
+                    <div class="offset-md-4 offset-sm-4 offset-xs-4"></div>
+                </div>
+            </div>
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

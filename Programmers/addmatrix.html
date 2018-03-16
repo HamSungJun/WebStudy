@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        
+        alert(sumMatrix([[1,2], [2,3]], [[3,4],[5,6]]));
+
+    }
+
+    function sumMatrix(A,B){
+        // A = [[1,2], [2,3]]
+        // B = [[3,4],[5,6]]
+        var answer = Array();
+        var Length_X = A.length;
+        var Length_Y = A[0].length;
+
+        var answer_arr = new Array(Length_X);
+        for (let index = 0; index < Length_X; index++) {
+            answer_arr[index] = new Array(Length_Y);
+        }
+
+        // X*Y 행렬이다.
+
+        for (let index_X = 0; index_X < Length_X; index_X++) {
+            var row = new Array();
+            for (let index_Y = 0; index_Y < Length_Y; index_Y++) {
+                answer_arr[index_X][index_Y] = A[index_X][index_Y] + B[index_X][index_Y];
+                // answer[index_X][index_Y] = A[index_X][index_Y] + B[index_X][index_Y];
+                row.push(answer_arr[index_X][index_Y]);
+                
+            }
+            
+            answer.push(row);
+        }
+        return answer;
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+

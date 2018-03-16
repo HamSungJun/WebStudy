@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>김다람 토익시계</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <script>
+        var OPERATION;
+
+        $(document).ready(function () {
+            
+            time_reset();
+
+            $("#reset").on("click",function () {
+                time_reset();
+            })
+
+            $("#apply").on("click",function () {
+                var HOUR = $("#input_hour").val();
+                var MINUTE = $("#input_minute").val();
+                var SECOND = $("#input_second").val();
+                time_apply(HOUR,MINUTE,SECOND);
+            })
+
+            $("#start").on("click",function () {
+            OPERATION = setInterval(time_start,1000);
+                
+            })
+        })
+        function time_apply(HOUR,MINUTE,SECOND) {
+            if(HOUR < 0 || MINUTE < 0 || SECOND <0){
+                alert("음의 시간값은 상식적으로 불가능하잖아");
+
+            }
+            else{
+
+                if (MINUTE >= 60) {
+                    alert("분단위는 59분까지 설정가능합니다. 그 이상은 시간으로 입력해주세요.");
+
+                }
+                else{
+                    if (SECOND >= 60) {
+                        alert("초단위는 59초까지 설정가능합니다. 그 이상은 분으로 입력해주세요.");
+                    }
+                    else{
+
+                        if (HOUR.length > 2 || MINUTE.length > 2 || SECOND.length > 2) {
+                            alert("세자리수는 입력 할 수 없어 ㅎㅎ");
+                        }
+                        else{
+                            if(HOUR.length == 2){
+                                $("#hour_ten").text(HOUR.substr(0,1));
+                                $("#hour_one").text(HOUR.substr(1,1));
+                            }
+                            else if (HOUR.length == 1) {
+                                $("#hour_one").text(HOUR.substr(0,1));
+                            }
+
+                            if(MINUTE.length == 2){
+                                $("#minute_ten").text(MINUTE.substr(0,1));
+                                $("#minute_one").text(MINUTE.substr(1,1));
+                            }
+                            else if (MINUTE.length == 1) {
+                                $("#minute_one").text(MINUTE.substr(0,1));
+                            }
+
+                            if(SECOND.length == 2){
+                                $("#second_ten").text(SECOND.substr(0,1));
+                                $("#second_one").text(SECOND.substr(1,1));
+                            }
+                            else if (SECOND.length == 1) {
+                                $("#second_one").text(SECOND.substr(0,1));
+                            }
+
+                            var HOUR = $("#input_hour").val("");
+                            var MINUTE = $("#input_minute").val("");
+                            var SECOND = $("#input_second").val("");
+
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        function time_reset() {
+            $(".time_number").text(0);
+        }
+        function time_start() {
+            
+            if($("#hour_ten").text() == 0 && $("#hour_one").text() == 0 && $("#minute_ten").text() == 0 && $("#minute_one").text() == 0 && $("#second_ten").text() == 0 && $("#second_one").text() == 0){
+                alert("타이머 종료.");
+                clearInterval(OPERATION);
+            }
+            else{
+                second_decrease();
+            }
+        }
+        function second_decrease() {
+            if($("#second_one").text() != 0){
+                $("#second_one").text($("#second_one").text()-1);
+            }
+            else{
+                // 초의 1단위가 0이 됬을경우
+                // 초의 10단위를 먼저 조사.
+
+                if($("#second_ten").text() != 0){
+                    $("#second_ten").text($("#second_ten").text()-1);
+                    $("#second_one").text(9);
+                }
+                else{
+                    // 초의 10단위가 0이 됬을 경우
+                    // 분의 1단위를 조사.
+                    if ($("#minute_one").text() != 0) {
+                        $("#minute_one").text($("#minute_one").text()-1);
+                        $("#second_ten").text(5);
+                        $("#second_one").text(9);
+
+                    }
+                    else{
+                        if($("#minute_ten").text() != 0){
+                            $("#minute_ten").text($("#minute_ten").text() -1);
+                            $("#minute_one").text(9);
+                            $("#second_ten").text(5);
+                            $("#second_one").text(9);
+
+                        }
+                        else{
+                            if ($("#hour_one").text() != 0) {
+                                $("#hour_one").text($("#hour_one").text()-1);
+                                $("#minute_ten").text(5);
+                                $("#minute_one").text(9);
+                                $("#second_ten").text(5);
+                                $("#second_one").text(9);
+
+                            }
+                            else{
+                                if($("#hour_ten").text() !=0 ){
+                                    $("#hour_ten").text($("#hour_ten").text()-1);
+                                    $("#hour_one").text(9);
+                                    $("#minute_ten").text(5);
+                                    $("#minute_one").text(9);
+                                    $("#second_ten").text(5);
+                                    $("#second_one").text(9);          
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    </script>
+    <style>
+        #wrapper{
+            height : 800px;
+        }
+        #header{
+            height : 80px;
+        }
+        #timer_view_row{
+            height : 350px;
+            font-weight: bold;
+            font-size : 150px;
+            color: white;
+        }
+        #timer{
+            font-size: 200px;
+        }
+        .font_20{
+            font-size: 20pt;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div id="wrapper" class="container-fluid p-0">
+        <div id="timer_view_row" class="row align-items-center bg-dark text-white">
+            <div class="offset-2 col-8 text-center">
+                <!-- 시계 뷰어 -->
+                <span id="hour_ten" class="time_number"></span><span id="hour_one" class="time_number"></span> : <span id="minute_ten" class="time_number"></span><span id="minute_one" class="time_number"></span> : <span id="second_ten" class="time_number"></span><span id="second_one" class="time_number"></span>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row bg-white no-gutters py-5">
+            <!-- 시계 컨트롤러  -->
+        <div class="col-4 text-center">
+                <input id="input_hour" class="form-control-lg d-inline-block w-50 text-center" type="number">
+                <span class="font_20 w-25 d-inline-block text-center font-weight-bold text-primary">시간</span>
+        </div>
+
+        <div class="col-4 text-center">
+                <input id="input_minute" class="form-control-lg d-inline-block w-50 text-center" type="number">
+                <span class="font_20 w-25 d-inline-block text-center font-weight-bold text-primary">분</span> 
+        </div>
+        <div class="col-4 text-center">
+                <input id="input_second" class="form-control-lg d-inline-block w-50 text-center" type="number">
+                <span class="font_20 w-25 d-inline-block text-center font-weight-bold text-primary">초</span> 
+        </div>
+        
+        </div>
+        <div class="row">
+            <div class="col-md-4 px-5">
+                <button id="apply" class="btn btn-block btn-dark">입력한 시간으로 적용</button>
+            </div>
+            <div class="col-md-4 px-5">
+                <button id="start" class="btn btn-block btn-success">타이머 작동시작</button>
+            </div>
+            <div class="col-md-4 px-5">
+                    <button id="reset"  class="btn btn-block btn-danger">타이머 리셋</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

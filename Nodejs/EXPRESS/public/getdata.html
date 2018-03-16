@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <title>Page Title</title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").on("click",function () {
+                
+                $.ajax({
+                type: "GET",
+                url: "../",
+                dataType: "json",
+                success: function (response) {
+                    $("#data").text(JSON.stringify(response));
+                }
+            });
+
+
+            })
+           
+        })
+    </script>
+</head>
+<body>
+    <button type="button" id="btn">데이터주셈</button>
+    <div id="data">
+
+    </div>
+</body>
+</html>

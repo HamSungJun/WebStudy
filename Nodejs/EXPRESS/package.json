@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-error-handler": "^1.1.0",
     "express-session": "^1.15.6",
@@ -23,6 +25,8 @@
     "passport": "^0.4.0",
     "passport-google-oauth2": "^0.1.6",
     "passport-local": "^1.0.0",
-    "serve-static": "^1.13.2"
+    "semantic-ui": "^2.3.0",
+    "serve-static": "^1.13.2",
+    "socket.io": "^2.0.4"
   }
 }

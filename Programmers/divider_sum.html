@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        alert(fibonacci(3));
+    }
+
+    var Fibo_Memory = Array();
+    Fibo_Memory[0] = 0;
+    Fibo_Memory[1] = 1;
+
+ 
+    function fibonacci(num) {
+	var answer = 0;
+
+    if (num > 1) {
+        var need_calculation_num = num-1;
+    
+    for (let index = 0; index < need_calculation_num; index++) {
+        Fibo_Memory[index+2] = Fibo_Memory[index+1] + Fibo_Memory[index];
+    }
+
+    answer = Fibo_Memory[num];
+}
+	return answer;
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+

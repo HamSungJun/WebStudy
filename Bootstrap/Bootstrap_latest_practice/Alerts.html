@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Content Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" />
+    <script src="jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#test').alert('close');
+
+            $('#close_alert').on('close.bs.alert', function () {
+                alert("닫기 누르자마자 뜸");
+            })
+            $('#close_alert').on('closed.bs.alert', function () {
+                alert("다 닫혀서 뜸");
+            })
+        })
+    </script>
+    <style>
+        #my_container {
+            margin: 0px auto;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="my_container">
+        <div class="alert alert-danger ">
+            <p class="m-0 text-center">This is Alert - Danger Div</p>
+        </div>
+        <div class="alert alert-light ">
+            <p class="m-0 text-center">This is Alert - Light Div</p>
+        </div>
+        <div class="alert alert-dark ">
+            <p class="m-0 text-center">This is Alert - Dark Div</p>
+        </div>
+        <div class="alert alert-primary ">
+            <p class="m-0 text-center">This is Alert - Primary Div</p>
+        </div>
+        <div class="alert alert-success ">
+            <p class="m-0 text-center">This is Alert - Success Div</p>
+        </div>
+        <div class="alert alert-warning ">
+            <p class="m-0 text-center">This is Alert - Warning Div</p>
+        </div>
+        <div id="test" class="alert alert-secondary ">
+            <p class="m-0 text-center">This is Alert - Secondary Div</p>
+        </div>
+        <div class="alert alert-info ">
+            <p class="m-0 text-center">This is Alert - Info Div</p>
+        </div>
+        <div class="alert alert-info">
+            <p class="m-0 text-center">
+                <a class="alert-link" href="#">This is link in Alert Div</a>
+            </p>
+            <button id="collapse_show" type="button" class="btn btn-dark" data-toggle="collapse" data-target="#collapsed">show</button>
+        </div>
+
+        <div id="collapsed" class="alert alert-success collapse">
+            <h4 class="alert-heading text-center">My Alert Heading</h4>
+            <p class="text-center">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+                so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="text-center">Aliquip consequat ut aliquip fugiat veniam nulla quis elit ut. Reprehenderit laboris aute veniam tempor culpa
+                cillum sit consectetur. Adipisicing ea est veniam consectetur eiusmod do. Exercitation commodo ipsum reprehenderit
+                deserunt minim laborum id veniam non esse tempor aute veniam et. Velit laboris nostrud proident qui ullamco
+                quis laborum duis. Eu excepteur sint labore voluptate consectetur velit sit mollit ea tempor ad amet exercitation.
+                Elit commodo sunt excepteur ullamco proident fugiat laborum aute.</p>
+        </div>
+        <div id="close_alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+        <div class="alert alert-info ">
+            <p class="m-0 text-center">This is Alert - Info Div</p>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

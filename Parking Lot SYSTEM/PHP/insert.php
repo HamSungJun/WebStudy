@@ -7,7 +7,6 @@ $dbname = "parking_lot";       // MySQL DB명
 
 $dbconn = mysqli_connect($host,$user,$password,$dbname);
 
-
 if(!$dbconn) {
    echo("DB 연결 실패");
    exit;
@@ -15,8 +14,7 @@ if(!$dbconn) {
 else{
     $now = new DateTime();
     $now->setTimezone(new DateTimeZone("Asia/Seoul"));
-    
-
+   
     $SPACE_ID = $_POST["P_LOT_SPACE_ID"];
     $CAR_OWNER = $_POST["CAR_OWNER"];
     $CAR_NUMBER = $_POST["CAR_NUMBER"];

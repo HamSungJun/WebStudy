@@ -1,0 +1,252 @@
+
+* {
+    font-family: "Nanum GothicCoding", sans-serif;
+}
+
+html {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #eddbc3;
+    background-image: url("./public/Materials/Images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.fixed_header_panel {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    background-color: #2B3643;
+    /* opacity: 0.7;  */
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+
+
+
+}
+
+.DOMAIN_BOX {
+    background-color: #2B3643;
+    width: 15%;
+    height: 100%;
+    border-bottom: 1px solid #DF8C8C;
+
+}
+
+.SEARCH_BOX {
+    background-color: #2B3643;
+    width: 42.5%;
+    height: 100%;
+}
+
+.fluid_input {
+    border: none;
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fluid_input input {
+    border: none;
+    width: 80%;
+    height: 100%;
+    background-color: whitesmoke;
+    padding-left: 3%;
+    font-weight: bold;
+
+}
+
+.fluid_input input:focus {
+    border: none;
+    outline: none;
+    width: 90%;
+    height: 100%;
+    background-color: whitesmoke;
+    padding-left: 3%;
+}
+
+.fluid_input .icon {
+    background-color: whitesmoke;
+    width: 20%;
+    height: 100%;
+
+
+    /* background-color: tomato; */
+}
+
+.fluid_input .icon svg {
+
+    cursor: pointer;
+
+    /* background-color: tomato; */
+}
+
+.SNS_BOX {
+    width: 42.5%;
+    height: 100%;
+}
+
+.SNS_BOX h4 {
+    letter-spacing: 0.3em;
+    font-weight: 900;
+    font-family: 'Dosis', 'Nanum Gothic Coding', sans-serif;
+    background: -webkit-linear-gradient(#eee, rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wrapper_background {
+    /* margin-top : 50px; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.left_side_bar_background {
+    width: 15%;
+    height: 100%;
+    background-color: #2B3643
+}
+
+.body_panel_background {
+    width: 85%;
+    height: 100%;
+
+}
+
+.wrapper {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    position: absolute;
+}
+
+.left_side_bar {
+    width: 15%;
+    height: auto;
+    background-color: #2B3643;
+    z-index: 2;
+}
+
+.body_panel {
+    width: 85%;
+    height: auto;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.content_panel {
+    width: 100%;
+    height: 300px;
+    background-color: #F4B2A6;
+}
+
+
+h4 a{
+
+    font-family: 'Dosis', 'Nanum Gothic Coding', sans-serif;
+    background: -webkit-linear-gradient(#eee, rgb(218, 108, 108));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #60BDAF;
+}
+
+.card_article {
+    border: 2px ridge white;
+    width: 20%;
+    height: 75%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_article:hover {
+    transform: rotate(2.5deg);
+}
+
+.card_article_img {
+    /* border-top-left-radius: 2%;
+    border-top-right-radius: 2%; */
+    background-color: tomato;
+    opacity: 0.3%;
+    width: 100%;
+    height: 50%;
+}
+
+.card_article_img img {
+    /* border-top-left-radius: 2%;
+    border-top-right-radius: 2%; */
+    width: 100%;
+    height: 100%;
+}
+
+.card_article_body {
+    box-sizing: border-box;
+    /* padding:%; */
+    /* border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%; */
+    background-color: white;
+    opacity: 0.99;
+    width: 100%;
+    height: 50%;
+}
+
+.card_article_body h5 {
+    border-bottom: 1px solid black;
+
+}
+
+.card_article_body h5 {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card_article_body p {
+    /* white-space : nowrap; */
+    overflow: hidden;
+}
+
+.link_div {
+
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    letter-spacing: 0.2em;
+}
+
+.link_div a {
+    font-family: 'Dosis', 'Nanum Gothic Coding', sans-serif;
+}

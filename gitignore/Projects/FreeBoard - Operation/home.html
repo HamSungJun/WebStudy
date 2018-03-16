@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<?
+        session_start();
+        $ID = $_SESSION["ID"];
+        $PW = $_SESSION["PASSWORD"];
+        $NICKNAME = $_SESSION["NICKNAME"];
+        $TEL = $_SESSION["TEL"];
+        $PATH = $_SESSION["PATH"];
+       ?>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HSJPRIME's FreeBoard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <link rel="stylesheet" href="./libraries/bootstrap.css">
+        <link rel="shortcut icon" href="./Materials/images/favicon.png" type="image/png">
+        <script src="./libraries/jquery-3.2.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="./libraries/bootstrap.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+        <script>
+             var Button_Switch = false;
+
+            $(document).ready(function () {
+
+                $("#logout").on("click",function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "./php/logout.php",
+                        data: {
+                            "LOGOUT" : "TRUE"
+                        },
+                        dataType : "json",
+                        success: function (response) {
+                            alert(response.logout);
+                            window.location.href = "./index.html";
+                        },
+                        error:function(request,status,error){
+                        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                    });
+                }); 
+
+                $("#profile_box").hide();
+
+                $("#profile").click(function () {
+                    $("#profile_box").fadeIn(600);
+                })
+                
+                $("#profile").on("focusout",function () {
+                    $("#profile_box").fadeOut(600);
+                })
+
+                $("#write_btn").on("click", function () {
+                    $("#TITLE").val("");
+                    $("#CONTENT").val("");
+                    $("#write").modal("show");
+                });
+                $("#write_done").on("click", function () {
+                    // alert();
+                    Article_insert();
+                    $("#write").modal("hide");
+                });
+                $("#REPLY_WRITE").on("click",function () {
+                    // alert("클릭이벤트 발생");
+                    $("#read").modal("hide");
+                    
+                    // $("#read").modal("show");
+                    Article_read(Reply_insert());
+
+                    function modal_reload() {
+                        $('#read').on('hidden.bs.modal', function () {
+                        $('#read').modal('show');
+                        });
+                    }
+                    setTimeout(5000);
+                    modal_reload();
+                    
+                    
+                });
+                $("#CLOSE_ARTICLE").on("click",function () {
+                    $("#REPLY_AREA").val("");
+                    $("#read").off('hidden.bs.modal');
+                })
+
+                Login_Check();
+
+            });
+
+            function Article_Call() {
+                $.ajax({
+                    type: "POST",
+                    url: "./php/Article_sender.php",
+                    dataType: "json",
+                    success: function (response) {
+                        // alert(JSON.stringify(response));
+                        Article_Drawer(response);
+                    },
+                    error:function(request,status,error){
+                        alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                });
+            };
+
+            function Article_Drawer(response) {
+                var before_datas = $("table").find("tr");
+                for (var index = 1; index < before_datas.length; index++) {
+                    before_datas[index].remove();
+                };
+                for (var index = 0; index < response.ARTICLE_NO.length; index++) {
+                    // alert(response.ARTICLE_NO[index]);
+                    var table_row = document.createElement("tr");
+
+                    var table_td_ARTICLE_NO = document.createElement("td");
+                    $(table_td_ARTICLE_NO).text(response.ARTICLE_NO[index]);
+                    $(table_td_ARTICLE_NO).addClass("w-10");
+
+                    var table_td_ARTICLE_NICKNAME = document.createElement("td");
+                    $(table_td_ARTICLE_NICKNAME).text(response.NICKNAME[index]);
+                    $(table_td_ARTICLE_NICKNAME).addClass("w-10");
+
+                    var table_td_ARTICLE_TITLE = document.createElement("td");
+                    var table_td_ARTICLE_TITLE_LINK = document.createElement("a");
+                    $(table_td_ARTICLE_TITLE_LINK).prop("href","#");
+                    $(table_td_ARTICLE_TITLE_LINK).attr("id", response.ARTICLE_NO[index]);
+                    $(table_td_ARTICLE_TITLE_LINK).addClass("my-a");
+                    $(table_td_ARTICLE_TITLE_LINK).text(response.TITLE[index]);
+                    $(table_td_ARTICLE_TITLE).addClass("w-70");
+                    $(table_td_ARTICLE_TITLE_LINK).appendTo(table_td_ARTICLE_TITLE);
+
+                    var table_td_ARTICLE_CREATION_TIME = document.createElement("td");
+                    $(table_td_ARTICLE_CREATION_TIME).text(response.CREATION_TIME[index]);
+                    $(table_td_ARTICLE_CREATION_TIME).addClass("w-10");
+
+                    $(table_td_ARTICLE_NO).appendTo(table_row);
+                    $(table_td_ARTICLE_NICKNAME).appendTo(table_row);
+                    $(table_td_ARTICLE_TITLE).appendTo(table_row);
+                    $(table_td_ARTICLE_CREATION_TIME).appendTo(table_row);
+
+                    var last_tr = $("table").last("tr");
+                    $(last_tr).append(table_row);
+
+                };
+
+                $("a").on("click", function () {
+
+                    var ARTICLE_NO = $(this).attr("id");
+                    // alert($(this).attr("id"));
+                    Article_read(ARTICLE_NO);
+                });
+
+                // alert("작성 완료");
+            };
+
+            function Article_insert() {
+               var USER_ID = document.getElementById("USER_ID");
+               var myid = USER_ID.innerHTML.split(" ");
+            //    alert("인서트함수실행");
+
+                $.ajax({
+                    type: "POST",
+                    url: "./php/Article_inserter.php",
+                    data: {
+                        "TITLE" : $("#TITLE").val(),
+                        "CONTENT" : $("#CONTENT").val(),
+                        "USER_ID" : $("#USER_ID").text()
+                    },
+                    success: function (response) {
+                      //alert(JSON.stringify(response));
+                      Article_Call();
+                    },
+                    error:function(request,status,error){
+                        //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                });
+               
+            };
+            function Reply_insert() {
+                // alert("댓글 인서트 함수 실행됨");
+                
+                var content = $("#REPLY_AREA").val();
+                // alert($("#READ_NO").text() + $("#USER_NICKNAME").text() + content);
+                if (content.length <= 0) {
+                    alert("최소 한글자는 입력해야 합니다.");
+                }
+                else{
+                    $.ajax({
+                        type: "POST",
+                        url: "./php/Reply_inserter.php",
+                        data: {
+                            "ARTICLE_NO" : $("#READ_NO").text(),
+                            "NICKNAME" : $("#USER_NICKNAME").text(),
+                            "CONTENT" : content
+                        },
+                        success: function (response) {
+                            // alert(JSON.stringify(response));
+                            $("#REPLY_AREA").val("");
+                        }
+                    });
+                    return $("#READ_NO").text();
+                }
+            }
+
+            function Article_read(ARTICLE_NO) {
+                // alert("함수 실행됨"+ARTICLE_NO);
+                $.ajax({
+                    type: "POST",
+                    url: "./php/Article_reader.php",
+                    data: {
+                        "ARTICLE_NO": ARTICLE_NO
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        //alert(JSON.stringify(response));
+                        READDATA_Drawer(response);
+                     
+                    },
+                    error:function(request,status,error){
+                        //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                    }
+                });
+            }
+            function READDATA_Drawer(response) {
+                // alert(JSON.stringify(response));
+                $("#READ_TITLE").text(response.TITLE);
+                $("#READ_IMG").prop("src",response.IMAGEPATH);
+                $("#READ_NICKNAME").prop("value",response.NICKNAME);
+                $("#READ_TEL").prop("value",response.TEL);
+                $("#READ_CONTENT").text(response.CONTENT);
+                $("#READ_NO").text(response.ARTICLE_NO);
+                // 아티클 넘버에 대한 댓글기록도 그리도록 추가해 줘야함.
+                var $REPLY_LIST_LI = $("#REPLY_LIST").find("li");
+                for (var index = 1; index < $REPLY_LIST_LI.length; index++) {
+                    $REPLY_LIST_LI[index].remove();
+                }
+                for (var index = 0; index < response.REPLY_NICKNAME.length; index++){
+
+                    var REPLY_NICKNAME = response.REPLY_NICKNAME[index];
+                    var REPLY_CONTENT = response.REPLY_CONTENT[index];
+                    var REPLY_CREATION_TIME = response.REPLY_CREATION_TIME[index];
+
+                    var li = $( "<li/>" , {
+                        class : "list-group-item text-dark"
+                    });
+                    var row_div = $("<div/>",{
+                        class : "row align-items-center"
+                    })
+                    var col_nickname_div = $("<div/>",{
+                        class : "col-lg-3 text-center text-primary"
+                    })
+                    var col_content_div = $("<div/>",{
+                        class : "col-lg-6 text-center"
+                    })
+                    var col_creation_time_div = $("<div/>",{
+                        class : "col-lg-3 text-center"
+                    })
+                    
+                    col_nickname_div.text(REPLY_NICKNAME);
+                    col_content_div.text(REPLY_CONTENT);
+                    col_creation_time_div.text(REPLY_CREATION_TIME);
+
+                    row_div.append(col_nickname_div);
+                    row_div.append(col_content_div);
+                    row_div.append(col_creation_time_div);
+
+                    li.append(row_div);
+                    
+                    $("#REPLY_LIST").append(li);
+
+                }
+                $("#read").modal("show");
+            }
+           
+            function Login_Check() {
+                var ISID = $("#USER_ID").text();
+                if (ISID.length <= 0) {
+                    alert("로그인 하신 후 이용가능합니다.");
+                    window.location.href = "./index.html";
+                }
+                else{
+                    Article_Call();
+                    REPLY_INITIALIZE();
+                }
+            }
+            function REPLY_INITIALIZE() {
+               
+                $("#REPLY_SHOW").on("click",function () {
+                    if (Button_Switch === false) {
+                    $("#REPLY_SHOW").text("댓글 접기");
+                    Button_Switch = true;
+                }
+                else{
+                    $("#REPLY_SHOW").text("댓글 펼치기");
+                    Button_Switch = false;
+                };
+                });
+
+            }
+
+        </script>
+        <style>
+            * {
+                /* border : 1px solid black; */
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+                /* background-image: url("https://wallpaperscraft.com/image/question_marks_3d_shape_112826_1920x1080.jpg"); */
+            }
+
+            #brand {
+                width: 40px;
+                height: 40px;
+            }
+
+            .circle {
+                display: block;
+                border-radius: 50%;
+            }
+
+            #profile_box {
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0px;
+                display: flex;
+                flex-direction: row;
+                width: 350px;
+                height: 200px;
+                background-color: ivory;
+                align-items: center;
+                border-radius: 0.5%;
+            }
+
+            .profile_content {
+                display: block;
+                margin: 0px auto;
+
+            }
+            .profile_content > span , p{
+                border-bottom: 1px solid black;
+            }
+
+            .w-70 {
+                width: 70%;
+                vertical-align: middle !important;
+            }
+
+            .w-10 {
+                width: 10%;
+                vertical-align: middle !important;
+            }
+            .w-15{
+                width: 15%;
+                vertical-align: middle !important; 
+            }
+
+            .my-a {
+                color: black;
+            }
+
+            .my-a:hover {
+                text-decoration: none;
+                color: dodgerblue !important;
+            }
+            .btn-write {
+            color: #ffc107;
+            background-color: transparent;
+            background-image: none;
+            border-color: #ffc107;
+            }
+            .btn-write:hover {
+            color: black !important;
+            background-color: #ffc107;
+            border-color: #ffc107;
+            }
+            .table-white{
+                background-color: ivory;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="modal fade" id="write" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background-color: ivory; opacity: 0.9;">
+                    <div class="modal-header justify-content-center bg-white">
+                        <h3 class="modal-title font-weight-bold">글 쓰기</h3>
+
+                        <!-- <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button> -->
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-xl-12 p-xl-3 col-md-12 p-xl-6">
+
+                                    <div class="input-group mt-xl-3 mt-md-3">
+                                        <span class="input-group-addon">제목</span>
+                                        <input id="TITLE" type="text" class="form-control text-center">
+                                    </div>
+                                    <div class="input-group mt-xl-3 mt-md-3">
+                                        <span class="input-group-addon">내용</span>
+                                        <textarea class="form-control text-justify" name="content" id="CONTENT" cols="90" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-white">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xl-8 col-md-8">
+                                    <!-- <div class="//alert //alert-warning m-0" role="//alert">
+                                    This is a warning //alert—check it out!
+                                </div> -->
+                                </div>
+                                <div class="col-xl-4 col-md-4 text-right">
+                                    <button id="write_done" type="button" class="btn btn-outline-success text-justify h-100">작성완료</button>
+                                    <button type="button" class="btn btn-outline-danger h-100" data-dismiss="modal">취소</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="read" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background-color: ivory; opacity: 0.9;">
+                    <div class="modal-header bg-white">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-2 text-center">
+                                    <h3 id="READ_NO" class="modal-title font-weight-bold"></h3>
+                                </div>
+                                <div class="col-10 text-center">
+                                    <h3 id="READ_TITLE" class="modal-title font-weight-bold"></h3>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                       
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-xl-12 p-xl-3 col-md-12 p-xl-6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <!-- 글 작성자의 프로필 이미지 -->
+                                            <img width="100px" height="100px" class="circle mx-auto mb-1" id="READ_IMG" src="" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-addon">작성자</span>
+                                                <input readonly id="READ_NICKNAME" type="text" class="form-control text-center">
+                                            </div>
+
+                                            <div class="input-group mb-1">
+                                                <span class="input-group-addon">연락처</span>
+                                                <input readonly id="READ_TEL" type="text" class="form-control text-center">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mt-2 mt-xl-3 mt-md-3">
+                                        <span class="input-group-addon">내용</span>
+                                        <textarea readonly class="form-control text-justify" name="content" id="READ_CONTENT" cols="90" rows="10"></textarea>
+                                    </div>
+
+                                    <hr style="border: 1px solid black">
+                                    
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button id="REPLY_SHOW" class="btn btn-dark mb-3" data-toggle="collapse"
+                                                data-target="#REPLY_BOX">댓글 펼치기</button>
+                                                <div id="REPLY_BOX" class="text-center bg-dark collapse show text-white">
+                                                    <h5 class="m-0">REPLY</h5>
+                                                    <ul id="REPLY_LIST" class="list-group text-dark">
+                                                        <li class="list-group-item p-2">
+                                                            <div class="row align-items-center no-gutters">
+                                                                <div class="col-10 text-center px-2">
+                                                                    <textarea name="REPLY_AREA" id="REPLY_AREA" class="form-control rounded" cols="50" rows="2"></textarea>
+                                                                </div>
+                                                                <div class="col-2 text-center px-2">
+                                                                    <a id="REPLY_WRITE" href="#"><span class="far fa-edit fa-2x text-primary"></span></a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <!-- <li class="list-group-item text-dark">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-lg-3 text-center text-primary">웹성준</div>
+                                                                <div class="col-lg-6 text-center">이걸 게시글이라고... 이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...이걸 게시글이라고...</div>
+                                                                <div class="col-lg-3 text-center">2018-02-02</div>
+                                                            </div>
+                                                        </li> -->
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-white">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xl-8 col-md-8">
+                                    <!-- <div class="//alert //alert-warning m-0" role="//alert">
+                                    This is a warning //alert—check it out!
+                                </div> -->
+                                </div>
+                                <div class="col-xl-4 col-md-4 text-right">
+                                    <button id="CLOSE_ARTICLE" type="button" class="btn btn-outline-danger h-100" data-dismiss="modal">닫기</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="profile_box" class="bg-warning">
+            <div class="profile_content text-center">
+                <img width="100px" height="100px" class="circle mb-3" src=<?= $PATH ?> alt="">
+                <span id="USER_NICKNAME"><?= $NICKNAME ?></span>
+            </div>
+            <div class="profile_content">
+                <p class="text-center" id="USER_ID"><?= $ID ?></p>
+                <p class="text-center"><?= $TEL ?></p>
+            </div>
+        </div>
+        <!-- 글 쓰기 모달 -->
+
+
+        <div class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img class="rounded" src="./Materials/images/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span class="text-white font-weight-bold">자유게시판</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item active">
+                        <a class="my-1 ml-1 nav-link" href="#">Board
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li
+                    >
+                    <li class="nav-item">
+                        <button id="write_btn" class="my-1 ml-1 btn btn-write text-white font-weight-bold">Write</button>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button type="button" id="profile" class="my-1 ml-1 btn btn-write text-white font-weight-bold"><?= $NICKNAME ?>님</button>
+                    </li>
+
+                </ul>
+                <button type="button" id="logout" class="my-1 ml-1 btn btn-outline-danger text-white font-weight-bold">Logout</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-1 col-10 text-center">
+                    <table border="2px solid black" class="table-white table-hover">
+                        <tr>
+                            <th class="w-10">글번호</th>
+                            <th class="w-10">닉네임</th>
+                            <th class="w-70">제목</th>
+                            <th class="w-10">작성시각</th>
+                        </tr>
+                    </table>
+                    
+                    
+                </div>
+                <div class="col-1"></div>
+
+
+
+
+            </div>
+        </div>
+
+
+    </body>
+
+</html>

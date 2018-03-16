@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HSJPRIME's FreeBoard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./libraries/bootstrap.css">
+    <link rel="shortcut icon" href="./Materials/images/favicon.png" type="image/png">
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./libraries/bootstrap.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <script>
+        
+        window.onpageshow = function () {
+
+            $("#file_input").val("");
+            // middle_container();
+        }
+        $(window).resize(function () {
+                middle_container();
+        });
+        
+        $(document).ready(function () {
+
+            middle_container();
+            
+            
+            $("#file_input").on("change",function () {
+                image_Preview();
+            });
+
+                    $("#ID").popover({
+                                "container" : "body",
+                                "placement" : "top",
+                                "trigger" : "focus",
+                                "title" : "아이디 정규식",
+                                "content": '사용중인 이메일 주소중 1개 예) abc123@naver.com'
+                    });
+                
+                    $("#PASSWORD").popover({
+                                "container" : "body",
+                                "placement" : "top",
+                                "trigger" : "focus",
+                                "title" : "비밀번호 정규식",
+                                "content": '띄어쓰기를 포함하지 않는 8~12글자의 영대소문자+숫자조합'
+
+                    });
+              
+              
+                    $("#TEL").popover({
+                                "container" : "body",
+                                "placement" : "top",
+                                "trigger" : "focus",
+                                "title" : "전화번호 정규식",
+                                "content": '000-0000-0000의 형태로 입력'
+
+                    });
+               
+            
+                    $("#NICKNAME").popover({
+                                "container" : "body",
+                                "placement" : "top",
+                                "trigger" : "focus",
+                                "title" : "닉네임 정규식",
+                                "content": '띄어쓰기를 포함한 8글자의 한글 , 영대소문자 , 숫자'
+
+                    });
+                    $("#file_input").popover({
+                                "container" : "body",
+                                "placement" : "top",
+                                "trigger" : "focus",
+                                "title" : "이미지 파일",
+                                "content": '2MB 이하의 jpg , jpeg , bmp , png 파일만 허용.'
+
+                    });
+              
+            });
+                
+        
+ 
+        function image_Preview() {
+
+                var tmppath = URL.createObjectURL(event.target.files[0]);
+
+                $("#profile_img").attr("src",tmppath);
+                $("#profile_img").hide();
+                $("#profile_img").fadeIn("slow");
+                
+        }
+        function middle_container(){
+                var Get_Window_Height = window.outerHeight;
+                var Container_Height = $("#join_container").height();
+                var marginY = ((Get_Window_Height - Container_Height) / 2);
+
+                $("#join_container").css({
+                    "marginTop" : marginY/2+"px",
+                    "marginBottom" : marginY/2 + "px"
+                });
+
+               
+        }
+     
+        
+        
+    </script>
+    <style>
+        * {
+            /* border : 1px solid black; */
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background-color: ivory; */
+            background-image: url("https://wallpaperscraft.com/image/question_marks_3d_shape_112826_1920x1080.jpg");
+        }
+
+        .font_32 {
+            width: 1em !important;
+            font-size: 32px;
+        }
+
+        .outline-right {
+            border-right: 1px solid rgba(0, 0, 0, 0.1)
+        }
+
+        #profile_img {
+            width: 225px;
+            height: 225px;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="join_container" class="container bg-white rounded mx-auto p-3">
+                <form action="./php/join.php" method="post" enctype="multipart/form-data">
+                    <div class="row ">
+                        <div class="col-md-12 text-center">
+                            <h1 class="m-0 py-3">회원가입</h1>
+                            <hr class="m-0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 outline-right">
+
+                            <!-- 아이디 , 비밀번호 , 닉네임 , 연락처 , -->
+                            <div class="input-group input-group-lg my-3">
+                                <span class="input-group-addon p-3 bg-dark text-white">
+                                    <i class="fas fa-id-badge font_32"></i>
+                                </span>
+                                <input id="ID" name="ID" class="form-control text-center user_Info" type="text" placeholder="아이디">
+                            </div>
+                            <div class="input-group input-group-lg my-3">
+                                <span class="input-group-addon p-3 bg-dark text-white">
+                                    <i class="fas fa-unlock-alt font_32"></i>
+                                </span>
+                                <input id="PASSWORD" name="PASSWORD" class="form-control text-center user_Info" type="password" placeholder="비밀번호">
+                            </div>
+                            <div class="input-group input-group-lg my-3">
+                                <span class="input-group-addon p-3 bg-dark text-white">
+                                        <i class="fas fa-child font_32"></i>
+                                </span>
+                                <input id="NICKNAME" name="NICKNAME" class="form-control text-center user_Info" type="text" placeholder="닉네임">
+                            </div>
+                            <div class="input-group input-group-lg my-3">
+                                <span class="input-group-addon p-3 bg-dark text-white">
+                                    <i class="fas fa-phone font_32"></i>
+                                </span>
+                                <input id="TEL" name="TEL" class="form-control text-center user_Info" type="tel" placeholder="연락처">
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row h-75 align-items-center">
+                                <div class="offset-md-2 col-md-8 text-center">
+                                    <img id="profile_img" class="img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnzk5fiGIFYTARfhpwMGq1IPWeP47fZTI1gtehZV2iNYJ6rOhH-Q"
+                                        alt="">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                            <div class="row h-25 align-items-center">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="offset-md-1 col-md-7">
+                                            <input id="file_input" name="upload" class="form-control" type="file">
+                                        </div>
+                                        <div class=" offset-lg-1 col-md-3 text-center">
+                                            <button type="submit" class="btn btn-outline-dark my-1">가입하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

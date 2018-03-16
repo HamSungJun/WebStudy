@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script>
+        window.onload = function () {
+            alert(gcdlcm(6,8));
+        }
+        function gcdlcm(a, b) {
+            var answer = [];
+            
+            if(a<b){
+                if(b%a == 0){
+                    answer.push(a);
+                    answer.push(b);
+                }
+                else{
+
+                    var a_divider = 1;
+                    var a_divider_group = [];
+                    
+                    while (a_divider <= a) {
+                        if(a % a_divider == 0){
+                            a_divider_group.push(a_divider++);
+                        }
+                        else{
+                            a_divider++;
+                        }
+                    };
+
+                    for (let index = a_divider_group.length-1; index >= 0; index--) {
+                        if(b%a_divider_group[index] == 0){
+                            answer.push(a_divider_group[index]);
+                            answer.push(a*b/a_divider_group[index]);
+                            break;
+                        }
+                    }
+                }
+            }
+            else if(a>b){
+                if(a%b == 0){
+                    answer.push(b);
+                    answer.push(a);
+                }
+                else{
+
+                    var b_divider = 1;
+                    var b_divider_group = [];
+                    
+                    while (b_divider <= b) {
+                        if(b % b_divider == 0){
+                            b_divider_group.push(b_divider++);
+                            
+                        }
+                        else{
+                            b_divider++;
+                        }
+                    };
+
+                    for (let index = b_divider_group.length-1; index >= 0; index--) {
+                        if(a%b_divider_group[index] == 0){
+                            answer.push(b_divider_group[index]);
+                            answer.push(b*a/b_divider_group[index]);
+                            break;
+                        }
+                    }
+                }
+            }
+            else if(a==b){
+                answer.push(a);
+                answer.push(b);
+            }
+            
+            return answer;
+        }
+
+        // 아래는 테스트로 출력해 보기 위한 코드입니다.
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

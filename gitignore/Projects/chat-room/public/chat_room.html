@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./libraries/bootstrap.css" />
+
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./libraries/bootstrap.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            
+            
+            var static_user = {
+                name: "함성준",
+                info: "내일부터 롤 접음",
+                src: ""
+            }
+
+            $("#input_send").on("click", function () {
+                var text = $("#input_text").val();
+                var name = static_user.name;
+
+                var text_block = $("<div></div>").addClass("alert alert-info text-left").text(name +
+                    " : " + text);
+
+                $("#content_box").append(text_block);
+                $("#input_text").val("");
+
+            })
+            $(document).on("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    var text = $("#input_text").val();
+                    var name = static_user.name;
+
+                    var text_block = $("<div></div>").addClass("alert alert-info text-left m-1").text(
+                        name + " : " + text);
+
+                    $("#content_box").append(text_block);
+                    $("#input_text").val("");
+                }
+            })
+
+
+        })
+    </script>
+
+    <style>
+        .bg-ivory {
+            background-color: ivory;
+        }
+
+        .no-radius {
+            border-radius: 0;
+        }
+
+        html {
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        body {
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #page {
+            height: 92.5%;
+            /* border : 1px solid black; */
+        }
+
+        #chat_bar {
+            height: 7.5%;
+        }
+
+        #header_row {
+            height: 15%;
+        }
+
+        #content_list_row {
+            height: 85%;
+            background: white;
+            border: 1px solid gray;
+        }
+
+        #content_box {
+            overflow: scroll;
+        }
+
+        .gray_border {
+            border: 1px solid gray;
+        }
+
+        #img_view {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-ivory">
+    <div id="page" class="container-fluid no-gutters">
+        <div id="header_row" class="row bg-success align-items-center">
+            <div class="col-md-12 text-center">
+                <h1 class="m-0">Public Chat Room BY Socket.io</h1>
+            </div>
+        </div>
+        <div id="content_list_row" class="row">
+            <div id="content_box" class="col-md-9 gray_border px-0">
+
+            </div>
+            <div id="userlist_box" class="col-md-3 p-0">
+                <!-- ///////////////////////////////////////////////////////////// -->
+                <div class="alert alert-danger no-radius text-center">접속자</div>
+                <button class="btn btn-block alert alert-danger no-radius text-center m-0" type="button" data-toggle="collapse" data-target="#collapsed">함성준</button>
+                <div id="collapsed" class="collapse">
+                    <div class="card">
+                        <img id="img_view" class="card-img-bottom" src="./asdf-profile_img.jpg" alt="profile_img">
+                        <div class="card-body">
+                            <h5 id="username" class="card-title text-center">함성준</h5>
+                            <p id="userinfo" class="card-text text-center">내일부터 롤 접음</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /////////////////////////////////////////////////////////////// -->
+            </div>
+        </div>
+    </div>
+    <div id="chat_bar" class="container-fluid px-0">
+        <div class="row no-gutters h-100">
+            <div class="col-md-9">
+                <input type="text" class="form-control no-radius text-center h-100" id="input_text" placeholder="텍스트입력">
+            </div>
+            <div class="col-md-3">
+                <button id="input_send" class="btn btn btn-primary btn-block no-radius h-100">보내기</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".link").on("click",function (event) {
+                var url = $(this).prop("href");
+                alert(url);
+                var frame = $("<iframe></iframe>").prop("src",url);
+                frame.css({
+                    width : 100+"%",
+                    height : 100+"%"
+                })
+                $("#view_pointer").append(frame);
+            })
+        })
+    </script>
+    <style>
+        /* *{
+            box-sizing: border-box;
+        } */
+        html{
+            width : 100%;
+            height : 100%
+        }
+        body{
+            width : 100%;
+            height : 100%;
+        }
+        #FULLBODY_BOX{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .w-20{
+            width: 24%;
+        }
+        .font_20{
+            font-size: 20pt;
+            font-weight: bold;
+        }
+        .font_15{
+            font-size: 15pt;
+            font-weight: normal;
+        }
+        #header{
+           height : 56px;
+        }
+        .h-10{
+            height : 10%;
+        }
+        .link{
+            color : white;
+            text-decoration: none;
+        }
+        .link:hover{
+            color : royalblue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="FULLBODY_BOX" class="fixed h-100">
+        <div id="NAV_BOX" class="bg-dark container p-0 m-0 h-100 w-25">
+        
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="bg-warning">
+                        <p class="m-0 py-2 font_20">Navigations</p>
+                    </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item font_15 pt-4 pb-2"><a class="link" href="" onclick="return false;">View One</a></li>
+                            <li class="nav-item font_15 "><a class="link" href="#">View Two</a></li>
+                            <li class="nav-item font_15 pt-2"><a class="link" href="#">View Three</a></li>
+                            <li class="nav-item font_15 pt-2"><a class="link" href="#">View Four</a></li>
+                        </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div id="CONTENT_BOX" class="container bg-success d-inline-block h-100 w-75 p-0 m-0">
+            <div id="header" class="row bg-primary no-gutters align-items-center">
+                <div class="col-md-12 px-5">
+                   
+                        <p class="m-0 text-white">사이드 네비게이션</p> 
+               
+                </div>
+            </div>
+            <div class="row no-gutters align-items-center">
+                <div id="view_pointer" class="col-md-12">
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
