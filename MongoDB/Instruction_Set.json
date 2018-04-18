@@ -56,6 +56,21 @@
 
     "db.collection.find({'status' : 'A'},{'field1' : 1 , 'field2' : 1})" : "컬렉션에서 status가 A인 다큐먼트에서 status , field1 , field2 필드를 가져옵니다.",
 
+    "db.collection.createIndex('name' : 'text' , 'description' : 'text')" : "컬렉션에서 String 혹은 String 원소를 갖고있는 배열에 대해서 TEXT인덱스를 매길 수 있습니다.",
+
+    "db.collection.find({'$text' : {'$search' : 'text1 text2 text3'})" : "텍스트 인덱스가 매겨진 컬렉션에서 text1,2,3에 대해 OR연산으로 셀렉션 합니다.",
+
+    "db.stores.find( { $text: { $search: 'java' \"coffee shop\" } } )" : "슬래시로 감싸주면 정확히 coffee shop을 value로 갖는 다큐먼트를 가져옵니다.",
+
+    "db.stores.find( { $text: { $search: 'java shop -coffee' } } )" : "java or shop but not coffee",
+
+    "db.collection.aggregate($match , $group)" : "집계 파이프라이닝 기법으로 매치되는 다큐먼트들을 어떤 그룹 조건으로 그룹화합니다.",
+
+    "db.collection.count() or distinct()" : "싱글 집계함수 카운트 , 중복제거",
+
+    
+
+
     
 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <script src="./libraries/jquery-3.2.1.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+        
+                $.ajax({
+                    type: "GET",
+                    url: "/storelist",
+                    dataType: "json",
+                    success: function (response) {
+                        // alert(JSON.stringify(response));
+                        for (let index = 0; index < response.length; index++) {
+                            var li = document.createElement("li");
+                            li.textContent = response[index].name + " " + response[index].description;
+
+                            $("#STORE_LIST").append(li);
+                            
+                        }
+                    }
+                });
+           
+
+        })
+    
+    </script>
+</head>
+<body>
+    <h1>This is Index.html</h1>
+
+    <hr>
+
+    <h2>Store Lists.</h2>
+    <button id="GET_STORE">GET STORE LIST</button>
+    <ul id="STORE_LIST">
+        
+    </ul>
+</body>
+</html>
