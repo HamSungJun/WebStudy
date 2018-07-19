@@ -1,0 +1,92 @@
+대문자로 작성된 컴포넌트 호출 규칙
+
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <script>
+            Vue.component('myComponent', {
+                template : '<span>myComponent 컴포넌트는 my-component로 호출해야 하는 규칙이 있음.</span>'
+            });
+     
+            new Vue({
+                el : '#app'
+            });
+         </script>
+</body>
+
+========================================================================================================
+루트 , 전역 , 지역 컴포넌트
+
+    <script>
+        window.onload = () => {
+           
+            Vue.component('helloComp', {
+                render: (h) => {
+                    return h("span", "안녕하세요. Vue입니다.");
+                }
+            })
+
+            Vue.component('globalComp', {
+                template: '<span>This is Global Component.</span>'
+            })
+
+            new Vue({
+                components: {
+                    'localComp': {
+                        template: '<span>This is Local Component.</span>'
+                    }
+                }
+            })
+
+             var vm = new Vue({
+                el: '#app'
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="app">
+        <hello-comp></hello-comp>
+        <global-comp></global-comp>
+    </div>
+
+</body>
+
+### 왜 vm 루트 컴포넌트 선언 순서가 중요한거지?
+
+
+========================================================================================================
+
+옵션 , 상태 , 데이터 
+
+    <script>
+        window.onload = () => {
+           
+           new Vue({
+               data : {
+                    name : "Editor"
+               },
+               // 함수형 속성 특정 실행 로직 , 실행 결과
+               computed : {
+                   merge_name : function () {
+                       return "Ham Sung Jun"
+                   }
+               },
+               //감시자 상태값 변경시 수행할 펑션
+               watch : {
+                   name : (new_value , old_value) => {
+                    //    상태값 변경시 할 일.
+                   }
+               }
+           })
+
+        }
+    </script>
+
+    ========================================================================================================
+
+    

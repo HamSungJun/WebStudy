@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vue.js"></script>
+    <script>
+        window.onload = () => {
+           
+           new Vue({
+               data : {
+                    name : "Editor"
+               },
+               // 함수형 속성 특정 실행 로직 , 실행 결과
+               computed : {
+                   merge_name : function () {
+                       return "Ham Sung Jun"
+                   }
+               },
+               //감시자 상태값 변경시 수행할 펑션
+               watch : {
+                   name : (new_value , old_value) => {
+                    //    상태값 변경시 할 일.
+                   }
+               }
+           })
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="app">
+        <hello-comp></hello-comp>
+        <global-comp></global-comp>
+    </div>
+
+</body>
+
+</html>
